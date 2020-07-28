@@ -1,8 +1,8 @@
 <?php
 /**
- * myTheme Theme Customizer
+ * yakumocafe Theme Customizer
  *
- * @package myTheme
+ * @package yakumocafe
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function mytheme_customize_register( $wp_customize ) {
+function yakumocafe_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -20,26 +20,26 @@ function mytheme_customize_register( $wp_customize ) {
 			'blogname',
 			array(
 				'selector'        => '.site-title a',
-				'render_callback' => 'mytheme_customize_partial_blogname',
+				'render_callback' => 'yakumocafe_customize_partial_blogname',
 			)
 		);
 		$wp_customize->selective_refresh->add_partial(
 			'blogdescription',
 			array(
 				'selector'        => '.site-description',
-				'render_callback' => 'mytheme_customize_partial_blogdescription',
+				'render_callback' => 'yakumocafe_customize_partial_blogdescription',
 			)
 		);
 	}
 }
-add_action( 'customize_register', 'mytheme_customize_register' );
+add_action( 'customize_register', 'yakumocafe_customize_register' );
 
 /**
  * Render the site title for the selective refresh partial.
  *
  * @return void
  */
-function mytheme_customize_partial_blogname() {
+function yakumocafe_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -48,14 +48,14 @@ function mytheme_customize_partial_blogname() {
  *
  * @return void
  */
-function mytheme_customize_partial_blogdescription() {
+function yakumocafe_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function mytheme_customize_preview_js() {
-	wp_enqueue_script( 'mytheme-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+function yakumocafe_customize_preview_js() {
+	wp_enqueue_script( 'yakumocafe-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
-add_action( 'customize_preview_init', 'mytheme_customize_preview_js' );
+add_action( 'customize_preview_init', 'yakumocafe_customize_preview_js' );

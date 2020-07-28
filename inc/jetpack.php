@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package myTheme
+ * @package yakumocafe
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function mytheme_jetpack_setup() {
+function yakumocafe_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'mytheme_infinite_scroll_render',
+			'render'    => 'yakumocafe_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function mytheme_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'mytheme-style',
+				'stylesheet' => 'yakumocafe-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,12 +48,12 @@ function mytheme_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'mytheme_jetpack_setup' );
+add_action( 'after_setup_theme', 'yakumocafe_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function mytheme_infinite_scroll_render() {
+function yakumocafe_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

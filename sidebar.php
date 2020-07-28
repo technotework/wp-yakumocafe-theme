@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package myTheme
+ * @package yakumocafe
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
