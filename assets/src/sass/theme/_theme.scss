@@ -1,0 +1,86 @@
+/*=========================
+project vars
+=========================*/
+/*色*/
+$theme: #262c33;
+$base: #ececec;
+$primary: #7f549d;
+$text: #272c32;
+
+/*角丸*/
+$radius: 0.8rem;
+$radiusL: 0.8rem;
+$radiusS: 0.4rem;
+
+/*ドロップシャドウ*/
+$shadowLength: 5px;
+$shadowOpacity: 0.4;
+
+/*ベースの幅*/
+$baseWidht: 748px;
+
+/*=========================
+Override Button vars
+=========================*/
+
+$button-padding: 12px 23px;
+$button-radius: 8px;
+$button-primary: $primary;
+$button-hprimary: #9869b8;
+$button-text: $white;
+$button-size: 1.8rem;
+$button-spacing: 0.15rem;
+$button-side-margin: 4px;
+
+/*=========================
+base
+=========================*/
+@mixin base {
+    @include ff;
+    @include textFactory($f16, $text, "medium");
+    @include containerFactory($base, 0, 0 0 0 0);
+    font-feature-settings: "palt" 1;
+}
+
+/*=========================
+override aside
+=========================*/
+$aside-width: 100vw;
+$aside-bg: $theme;
+
+/*=========================
+override footer
+=========================*/
+$footer-width: 100vw;
+$footer-bg: $theme;
+
+/*=========================
+h
+=========================*/
+
+@mixin h2 {
+    @include textFactory(3.2rem, $text, "en");
+    line-height: 3.8rem;
+    letter-spacing: 0.08rem;
+    font-feature-settings: "palt" 1;
+}
+
+/*=========================
+p
+=========================*/
+
+@mixin p {
+    @include textFactory(1.6rem, $text, "medium");
+    letter-spacing: 0.17rem;
+    line-height: 3.3rem;
+
+    @include tablet {
+        @include textFactory(1.5rem, $text, "medium");
+        text-align: justify;
+    }
+}
+
+/*=========================
+override responsive
+=========================*/
+$break_br: $baseWidht;
