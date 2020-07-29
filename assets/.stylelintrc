@@ -1,0 +1,8 @@
+{
+  "extends": ["./node_modules/stylelint-config-wordpress/scss"],
+  "rules": {
+    "selector-class-pattern": null,
+    "font-weight-notation": null,
+    "declaration-property-unit-whitelist": null
+  }
+}

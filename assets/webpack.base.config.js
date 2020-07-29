@@ -1,14 +1,14 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
     entry: {
         index: "./src/js/app.js",
     },
     output: {
         filename: "[name].bundle.js",
-        path: path.resolve(__dirname, "dist/js"),
+        path: path.resolve(__dirname, "../js"),
     },
-    devtool: "cheap-module-eval-source-map",
     module: {
         rules: [
             {
@@ -39,7 +39,7 @@ module.exports = {
                 test: /\.scss$/,
                 include: path.resolve(__dirname, "src/sass"),
                 use: [
-                    "style-loader",
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader",
                     "import-glob-loader",
@@ -47,4 +47,10 @@ module.exports = {
             }
         ],
     },
+    plugins: [
+        new MiniCssExtractPlugin({
+          filename: '../style1.css',
+          ignoreOrder: true,
+        })
+      ]
 };
