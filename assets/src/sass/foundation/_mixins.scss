@@ -1,10 +1,109 @@
+/*=====================================
+CONST
+=====================================*/
+
+/*=========================
+layout
+=========================*/
+
+$base-width:1024px;
+$space-unit:2.8rem;
+$break_tablet: 768px;
+$break_mobile: 559px;
+$break_br:768px;
+
+/*=========================
+font
+=========================*/
+$base-fsize: 62.5%;
+$f-main: 1.6rem;
+$f-caption: 1.4rem;
+$line-height: 1.75;
+
+/*=========================
+color
+=========================*/
+$black: #000;
+$white: #fff;
+$trans: transparent;
+
+$base1: $white;
+$theme1:#224a05;
+$theme2:#3f6125;
+$theme3:#96e5e4;
+$text:$black;
+$text2:#545454;
+
+
+/*=========================
+radius
+=========================*/
+$radius: 5px;
+
+/*=========================
+button
+=========================*/
+$button-padding: 12px 23px;
+$button-side-margin: 4px;
+$button-radius: $radius;
+$button-fs:1.6rem;
+$button-spacing:0.01;
+$button-text:$white;
+$primary:#224a05;
+$primary-ov:#356e08;
+$secondary:#8d8d8d;
+$secondary-ov:#afafaf;
+$alt1:#1b585d;
+$alt1-ov:#2f898f;
+
+
+/*=========================
+見出し設定
+=========================*/
+
+@mixin h-page {
+
+	@include textFactory(2.8rem,$white,"bold",$space-unit);
+}
+
+@mixin h-article {
+
+	@include textFactory(2.2rem,$theme1,"bold",$space-unit);
+}
+
+@mixin h-content1 {
+
+	@include textFactory(2rem,$theme1,"bold",$space-unit);
+}
+
+@mixin h-content2 {
+
+	@include textFactory(1.8rem,$black,"bold",$space-unit);
+}
+
+@mixin h-lv1 {
+
+	@include textFactory(1.6rem,$black,"bold",$space-unit);
+}
+
+/*=====================================
+mixins
+=====================================*/
+
 /*=========================
 font mixins
 =========================*/
+@mixin base {
+
+	@include ff;
+	@include textFactory($f-main, $text, "regular", 2.8rem);
+	@include containerFactory($base1, 0, 0 0 0 0);
+	font-feature-settings: "palt" 1;
+}
 
 @mixin ff {
 	font-family:
-		"Noto Sans JP",
+		fot-tsukubrdgothic-std,
 		"HiraginoSans-W3",
 		"Hiragino Kaku Gothic ProN",
 		"Hiragino Kaku Gothic Pro",
@@ -54,28 +153,26 @@ Base Layout Vars
 	}
 }
 
-@mixin mobile {
+//space
+@function unit($num) {
 
-	@media screen and (max-width: $break_mobile) {
-		@content;
-	}
+	@return $num * $space-unit;
 }
 
-@mixin tablet {
+//行の頭と合わせたい時に文字上部のline-height分だけずらず
+@function headShift($num,$fs) {
 
-	@media screen and (max-width: $break_tablet) {
-		@content;
-	}
+	@return ($space-unit - $fs)/2;
 }
 
 /*=========================
-sass fanction
+factory関数
 =========================*/
 
-@mixin textFactory($f, $c, $style) {
+@mixin textFactory($f, $c, $style, $line) {
 	font-size: $f;
-	line-height: $f * 1.75;
 	color: $c;
+	line-height: $line;
 
 	@if $style == "heavy" {
 
@@ -113,21 +210,6 @@ sass fanction
 shadow
 =========================*/
 
-@mixin shadow {
-	box-shadow: 0 0 $shadowLength rgba(0, 0, 0, $shadowOpacity);
-}
-
-/*=========================
-animation
-=========================*/
-
-@mixin keyframes($animation-name) {
-
-	@keyframes #{$animation-name} {
-		@content;
-	}
-}
-
-@mixin animation($animation-name) {
-	animation: $animation-name;
+@mixin shadow($length,$opacity) {
+	box-shadow: 0 0 $length rgba(0, 0, 0, $opacity);
 }

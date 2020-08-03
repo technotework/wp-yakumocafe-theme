@@ -1,4 +1,27 @@
-.c-h2 {
+.c-h {
 
-	@include h2;
+	&__page {
+
+		@include h-page;
+	}
+
+	&__article {
+
+		@include h-article;
+	}
+
+	&__content1 {
+
+		@include h-content1;
+	}
+
+	&__content2 {
+
+		@include h-content2;
+	}
+
+	&__lv1 {
+
+		@include h-lv1;
+	}
 }

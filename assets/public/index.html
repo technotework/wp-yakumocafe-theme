@@ -15,18 +15,50 @@
 </head>
 
 <body>
+	<div id="grid"></div>
 	<!--header-->
 	<header class="p-top-header">
+
+		<!--logo-->
 		<h1 class="p-top-header__logo">
-			<img src="images/header/top_logo.gif" alt="YAKUMO CAFE" class="c-res-img">
+			<div class="p-top-header__logo-img">
+				<img src="/images/top_logo.gif" alt="YAKUMO CAFE" class="c-res-img">
+			</div>
 		</h1>
+		<!--badge-->
+		<div class="p-top-header__badge">
+			<img src="/images/chofu_badge.png" alt="CHOFU GUIDE" class="c-res-img">
+		</div>
+
+		<!--mainImage-->
+		<div class="p-top-header-main">
+
+			<svg class="p-top-header-main__mask" height="0" width="0">
+
+				<clipPath id="mask" clipPathUnits="objectBoundingBox">
+					<path transform="scale(0.00075975,0.001532)"
+						d=" M0,0V558.07S71,647,198.35,647c157.12,0,224.83-101.42,224.83-101.42S471.47,603,555.58,603C623.32,603,666,547.57,666,547.57S708.68,603,776.42,603c84.11,0,132.4-57.45,132.4-57.45S976.53,647,1133.65,647C1261,647,1332,558.07,1332,558.07V0Z" />
+				</clipPath>
+
+			</svg>
+
+			<svg class="p-top-header-main__image">
+				<image xlink:href="images/top_main.jpg" width="100%" height="100%" clip-path="url(#mask)" />
+			</svg>
+
+		</div>
+
+		<!--seo copy here-->
+		<div class="p-top-header__copyline">
+		</div>
 
 		<!--装飾要素-->
-		<img src="images/header/top_cloud" alt="雲" class="p-top-header__onepoint">
-
+		<div class="p-top-header__onepoint">
+			<img src="images/top_cloud_deco.gif" class="c-res-img">
+		</div>
 		<!--nav-->
-		<nav class="p-top-header-nav c-nav">
-			<ul class="p-top-header-nav__list">
+		<nav class="p-top-header-nav">
+			<ul class="p-top-header-nav__list l-flex-center">
 				<li>
 					<a href="">ABOUT</a>
 				</li>
@@ -42,141 +74,30 @@
 				<li>
 					<a href="">RESERVE</a>
 				</li>
-				<li class="p-top-header-nav__badge">
-					<a href=""><img src="images/header/top_chofuguide.png" alt="CHOFU GUIDE" class="c-res-img"></a>
-				</li>
 			</ul>
 		</nav>
 
-		<img src="images/header/top_main.jpg" alt="YAKUMO CAFE" class="p-top-header__mainImage c-res-img">
+
+
 	</header>
 
+	<!--
+
+		<div class="p-top-header-main">
+
+			<svg class="p-top-header-main__mask" height="0" width="0">
+
+				<clipPath id="mask" clipPathUnits="objectBoundingBox">
+					<path transform="scale(0.00075975,0.001544)"
+						d=" M0,0V558.07S71,647,198.35,647c157.12,0,224.83-101.42,224.83-101.42S471.47,603,555.58,603C623.32,603,666,547.57,666,547.57S708.68,603,776.42,603c84.11,0,132.4-57.45,132.4-57.45S976.53,647,1133.65,647C1261,647,1332,558.07,1332,558.07V0Z" />
+				</clipPath>
+
+			</svg>
+			<img src="images/top_main.jpg" alt="" class="p-top-header-main__image" />
+		</div>
+	-->
+
 	<!--main-->
-	<main class="p-main">
-		<article class="p-main__article">
-			<!--今月のおすすめ-->
-			<section class="p-main__section">
-				<h2 class="p-h__content-level">今月のおすすめ</h2>
-
-				<!--コンテンツ-->
-				<div class="p-content-monthly">
-
-					<!--装飾要素-->
-					<div class="p-content-monthly__badge">
-						July
-					</div>
-
-					<img src="images/top/rightCloud.png" alt="雲" class="p-content-monthly__right-cloud">
-					<img src="images/top/leftCloud.png" alt="雲" class="p-content-monthly__left-cloud">
-
-					<!--コンテンツ-->
-					<ul class="js-content-monthly">
-						<li>
-							<figuar>
-								<img src="" alt="" class="c-res-img">
-								<figcaption></figcaption>
-							</figuar>
-						</li>
-						<li>
-							<figuar>
-								<img src="" alt="" class="c-res-img">
-								<figcaption></figcaption>
-							</figuar>
-						</li>
-						<li>
-							<figuar>
-								<img src="" alt="" class="c-res-img">
-								<figcaption></figcaption>
-							</figuar>
-						</li>
-					</ul>
-				</div>
-
-				<!--リンク-->
-				<a class="c-button p-button__alt1">
-					MENU
-				</a>
-			</section>
-
-			<!--EVENT&TOPICS-->
-			<section class="p-main__section">
-				<h2 class="p-h__content-level"></h2>
-
-				<!--コンテンツ-->
-				<div class="p-content-event">
-					<ul>
-						<li>
-							<a href="">
-								<figuar>
-									<img src="" alt="" class="c-res-img">
-									<figcaption></figcaption>
-								</figuar>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<figuar>
-									<figcaption></figcaption>
-								</figuar>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<figuar>
-									<figcaption></figcaption>
-								</figuar>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-			<!--INFO-->
-			<section class="p-main__section">
-				<h2 class="p-h__content-level">INFO</h2>
-
-				<!--コンテンツ-->
-				<div class="p-content-info">
-					<ul>
-						<li>
-							<a href="">
-								<span class="p-info__date"></span>
-								<span class="p-content-info__content"></span>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<span class="p-content-info__date"></span>
-								<span class="p-content-info__content"></span>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<span class="p-content-info__date"></span>
-								<span class="p-content-info__content"></span>
-							</a>
-						</li>
-					</ul>
-				</div>
-
-			</section>
-
-			<!--ACCESS-->
-			<section class="p-main__section">
-				<div class="p-content-access">
-					<h2 class="p-h__content-level--flat">ACCESS</h2>
-					<span class="p-content-access__shopname">YAKUMO CAFE</span>
-					<span class="p-content-access__address">
-						<address>東京都調布市八雲台1-2-3 京王線調布駅から徒歩3分</address><a href="tel:042-000-000">TEL:042-000-000</a>
-					</span>
-
-					<div class="p-content-access__map">
-
-					</div>
-				</div>
-			</section>
-		</article>
-	</main>
 
 	<aside class="p-aside">
 		<nav class="p-asid-nav">
