@@ -1,0 +1,100 @@
+
+.p-content-monthly {
+	position: relative;
+
+	background-image: url(/images/top-menu-bg1.gif), url(/images/top-menu-bg2.gif);
+	background-repeat: no-repeat, no-repeat;
+	background-position: top 6px left calc(50% + 684px), bottom 1px left calc(50% - 492px);
+
+	padding-top: unit(2);
+	padding-bottom: unit(3);
+
+	&__container {
+
+		position: relative;
+		width: 677px;
+		padding-top: unit(1);
+	}
+
+	&__image {
+
+		width: 677px;
+
+		> img {
+
+			border-radius: $radius;
+		}
+	}
+
+	&__text {
+
+		display: block;
+		letter-spacing: 0.5rem;
+		text-align: justify;
+		width: 385px;
+		margin-top: unit(0.55);
+	}
+
+	&__badge {
+		position: absolute;
+		top: 0;
+		right: 30px;
+
+		display: inline-block;
+		background-image: url(/images/top-menu-monthbg.png);
+		background-color: $theme4;
+		background-size: 80%;
+
+		@include textFactory(3.6rem,$white,"regular",$space-unit);
+
+		border-radius: $radius;
+		padding: 1.4rem 1.6rem 1.8rem 1.6rem;
+		letter-spacing: 0.3rem;
+	}
+
+	&__nav {
+
+		position: absolute;
+		width: 61px;
+		height: 61px;
+		top: 288px;
+	}
+
+	&__button {
+		width: 685px;
+		text-align: right;
+		margin-top: unit(0.5);
+	}
+
+	&__back {
+
+		@extend .p-content-monthly__nav;
+		left: calc(50% - 454px);
+	}
+
+	&__next {
+
+		@extend .p-content-monthly__nav;
+		left: calc(50% + 390px);
+	}
+
+
+	&__left-cloud {
+
+		position: absolute;
+		top: 24px;
+		left: calc(50% - 480px);
+		width: 251px;
+		height: 121px;
+	}
+
+	&__right-cloud {
+
+		position: absolute;
+		width: 233px;
+		height: 120px;
+		top: 442px;
+		left: calc(50% + 270px);
+	}
+
+}

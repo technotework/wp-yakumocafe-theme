@@ -31,6 +31,7 @@ $base1: $white;
 $theme1:#224a05;
 $theme2:#3f6125;
 $theme3:#96e5e4;
+$theme4:#1b585d;
 $text:$black;
 $text2:#545454;
 
@@ -43,11 +44,11 @@ $radius: 5px;
 /*=========================
 button
 =========================*/
-$button-padding: 12px 23px;
+$button-padding: 5px 15px;
 $button-side-margin: 4px;
 $button-radius: $radius;
 $button-fs:1.6rem;
-$button-spacing:0.01;
+$button-spacing:0.01rem;
 $button-text:$white;
 $primary:#224a05;
 $primary-ov:#356e08;
@@ -68,7 +69,7 @@ $alt1-ov:#2f898f;
 
 @mixin h-article {
 
-	@include textFactory(2.2rem,$theme1,"bold",$space-unit);
+	@include textFactory(2.2rem,$black,"bold",$space-unit);
 }
 
 @mixin h-content1 {

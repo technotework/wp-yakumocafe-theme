@@ -5,7 +5,6 @@
 
 	position: relative;
 	width: 100%;
-	height: calc(100vw * 0.48);
 	border: none;
 	padding: 0;
 
@@ -36,7 +35,7 @@
 		position: absolute;
 		width: 8vw;
 		height: 8vw;
-		bottom: 1.9vw;
+		top: 38.1vw;
 		left: calc(50% + 31.3vw);
 		transform: translateX(-50%);
 		z-index: 999999;
@@ -45,10 +44,10 @@
 	&__onepoint {
 		position: absolute;
 		width: 4.5vw;
+		max-width: 65px;
 		height: 2.4vw;
-		bottom: 4px;
+		top: 46.3vw;
 		left: calc(50% - 1.69vw);
-
 	}
 
 }
@@ -83,6 +82,8 @@
 ========================*/
 
 .p-top-header-nav {
+
+	margin-bottom: unit(2);
 
 	&__list {
 

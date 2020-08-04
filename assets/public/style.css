@@ -304,7 +304,7 @@ button:focus {
 #grid {
   width: 100%;
   height: 6000px;
-  opacity: 0.3;
+  opacity: 0.1;
   position: absolute;
   top: 12px;
   left: 0;
@@ -334,14 +334,14 @@ a:active {
 
 .c-button, .c-button__primary, .c-button__secondary, .c-button__alt1 {
   display: inline-block;
-  padding: 12px 23px;
+  padding: 5px 15px;
   border-radius: 5px;
   text-align: center;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
   font-size: 1.6rem;
-  letter-spacing: 0.01;
+  letter-spacing: 0.01rem;
   margin: 0 4px; }
 
 .c-button__primary {
@@ -368,7 +368,7 @@ a:active {
 
 .c-h__article {
   font-size: 2.2rem;
-  color: #224a05;
+  color: #000;
   line-height: 2.8rem;
   font-weight: 700;
   font-style: normal; }
@@ -398,13 +398,24 @@ a:active {
   width: 100%;
   height: auto; }
 
+.p-button__alt1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem; }
+
+.p-h__article {
+  display: inline-block;
+  background-image: url(/images/h_cloud.gif), url(/images/h_cloud.gif);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  padding: 0 60px; }
+
 /*========================
 * ヘッダ要素
 ========================*/
 .p-top-header {
   position: relative;
   width: 100%;
-  height: calc(100vw * 0.48);
   border: none;
   padding: 0; }
   .p-top-header__copyline {
@@ -430,15 +441,16 @@ a:active {
     position: absolute;
     width: 8vw;
     height: 8vw;
-    bottom: 1.9vw;
+    top: 38.1vw;
     left: calc(50% + 31.3vw);
     transform: translateX(-50%);
     z-index: 999999; }
   .p-top-header__onepoint {
     position: absolute;
     width: 4.5vw;
+    max-width: 65px;
     height: 2.4vw;
-    bottom: 4px;
+    top: 46.3vw;
     left: calc(50% - 1.69vw); }
 
 /*========================
@@ -463,28 +475,93 @@ a:active {
 /*========================
 * ナビ
 ========================*/
-.p-top-header-nav__list {
-  width: 100%;
-  text-align: center; }
-  .p-top-header-nav__list > li {
+.p-top-header-nav {
+  margin-bottom: 5.6rem; }
+  .p-top-header-nav__list {
+    width: 100%;
+    text-align: center; }
+    .p-top-header-nav__list > li {
+      position: relative;
+      margin: 30px 25px 0 25px; }
+      .p-top-header-nav__list > li > a {
+        font-size: 1.6rem;
+        color: #545454;
+        line-height: 2.8rem;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: 0.1rem; }
+      .p-top-header-nav__list > li > a:hover {
+        color: #96e5e4; }
+      .p-top-header-nav__list > li ::after {
+        position: absolute;
+        content: url(/images/top_nav_point.gif);
+        top: -2px;
+        right: -25px; }
+    .p-top-header-nav__list > li:last-child ::after {
+      content: none; }
+
+.p-content-monthly {
+  position: relative;
+  background-image: url(/images/top-menu-bg1.gif), url(/images/top-menu-bg2.gif);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 6px left calc(50% + 684px), bottom 1px left calc(50% - 492px);
+  padding-top: 5.6rem;
+  padding-bottom: 8.4rem; }
+  .p-content-monthly__container {
     position: relative;
-    margin: 30px 25px 0 25px; }
-    .p-top-header-nav__list > li > a {
-      font-size: 1.6rem;
-      color: #545454;
-      line-height: 2.8rem;
-      font-weight: 700;
-      font-style: normal;
-      letter-spacing: 0.1rem; }
-    .p-top-header-nav__list > li > a:hover {
-      color: #96e5e4; }
-    .p-top-header-nav__list > li ::after {
-      position: absolute;
-      content: url(/images/top_nav_point.gif);
-      top: -2px;
-      right: -25px; }
-  .p-top-header-nav__list > li:last-child ::after {
-    content: none; }
+    width: 677px;
+    padding-top: 2.8rem; }
+  .p-content-monthly__image {
+    width: 677px; }
+    .p-content-monthly__image > img {
+      border-radius: 5px; }
+  .p-content-monthly__text {
+    display: block;
+    letter-spacing: 0.5rem;
+    text-align: justify;
+    width: 385px;
+    margin-top: 1.54rem; }
+  .p-content-monthly__badge {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    display: inline-block;
+    background-image: url(/images/top-menu-monthbg.png);
+    background-color: #1b585d;
+    background-size: 80%;
+    font-size: 3.6rem;
+    color: #fff;
+    line-height: 2.8rem;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 5px;
+    padding: 1.4rem 1.6rem 1.8rem 1.6rem;
+    letter-spacing: 0.3rem; }
+  .p-content-monthly__nav, .p-content-monthly__back, .p-content-monthly__next {
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    top: 288px; }
+  .p-content-monthly__button {
+    width: 685px;
+    text-align: right;
+    margin-top: 1.4rem; }
+  .p-content-monthly__back {
+    left: calc(50% - 454px); }
+  .p-content-monthly__next {
+    left: calc(50% + 390px); }
+  .p-content-monthly__left-cloud {
+    position: absolute;
+    top: 24px;
+    left: calc(50% - 480px);
+    width: 251px;
+    height: 121px; }
+  .p-content-monthly__right-cloud {
+    position: absolute;
+    width: 233px;
+    height: 120px;
+    top: 442px;
+    left: calc(50% + 270px); }
 
 /*=========================
 center
@@ -492,6 +569,9 @@ center
 .u-center {
   margin-left: auto;
   margin-right: auto; }
+
+.u-i-center {
+  text-align: center; }
 
 /*=========================
 opacity hover

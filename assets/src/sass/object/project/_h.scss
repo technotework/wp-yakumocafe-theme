@@ -1,0 +1,27 @@
+.p-h {
+
+	&__page {
+
+	}
+
+	&__article {
+
+		display: inline-block;
+		background-image: url(/images/h_cloud.gif), url(/images/h_cloud.gif);
+		background-repeat: no-repeat, no-repeat;
+		background-position: top left, bottom right;
+		padding: 0 60px;
+	}
+
+	&__content1 {
+
+	}
+
+	&__content2 {
+
+	}
+
+	&__lv1 {
+
+	}
+}
