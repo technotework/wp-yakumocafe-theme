@@ -50,6 +50,20 @@ z-index util
 }
 
 /*=========================
+grid order
+=========================*/
+$grid-order-min: 1;
+$grid-order-max: 30;
+
+@for $i from $grid-order-min through $grid-order-max {
+
+	.u-order#{$i} {
+
+		order: #{$i};
+	}
+}
+
+/*=========================
 margin padding generator
 =========================*/
 $margin-min: 1;

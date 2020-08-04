@@ -413,6 +413,66 @@ a:active {
   font-weight: 400;
   letter-spacing: 0.1rem; }
 
+.p-footer {
+  background-color: #224a05;
+  padding-bottom: 25px; }
+  .p-footer__container {
+    background-color: #365d1b;
+    background-image: url(/images/footer-bg.png);
+    background-position-y: -61px; }
+  .p-footer__content-group {
+    position: relative;
+    width: 1024px; }
+  .p-footer__copy {
+    display: block;
+    width: 200px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+    padding-bottom: 5.6rem; }
+  .p-footer__pagetop {
+    position: absolute;
+    top: -29px;
+    right: -40px;
+    width: 58px;
+    height: 29px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer; }
+
+.p-footer-nav {
+  width: 440px; }
+  .p-footer-nav__list {
+    display: grid;
+    grid-template-columns: 126px 1fr;
+    grid-template-rows: 36px 36px 36px;
+    padding-top: 82px; }
+    .p-footer-nav__list a {
+      color: #fff;
+      letter-spacing: 0.2rem; }
+  .p-footer-nav__place {
+    width: 440px;
+    padding: 82px 0 0 95px; }
+  .p-footer-nav__logo {
+    font-size: 1.1rem;
+    width: 144px;
+    padding: 41px 0 23px 0; }
+  .p-footer-nav__chofu {
+    margin-bottom: 26px; }
+    .p-footer-nav__chofu a {
+      color: #fff;
+      letter-spacing: 0.2rem; }
+  .p-footer-nav__chofu-logo {
+    width: 24px;
+    height: 23px;
+    margin-left: 13px; }
+  .p-footer-nav__address {
+    font-size: 1.4rem;
+    color: #fff; }
+    .p-footer-nav__address a {
+      color: #fff;
+      letter-spacing: 0.2rem; }
+
 .p-h__article {
   display: inline-block;
   background-image: url(/images/h_cloud.gif), url(/images/h_cloud.gif);
@@ -685,6 +745,99 @@ z-index util
 =========================*/
 .u-z10k {
   z-index: 10000; }
+
+/*=========================
+grid order
+=========================*/
+.u-order1 {
+  order: 1; }
+
+.u-order2 {
+  order: 2; }
+
+.u-order3 {
+  order: 3; }
+
+.u-order4 {
+  order: 4; }
+
+.u-order5 {
+  order: 5; }
+
+.u-order6 {
+  order: 6; }
+
+.u-order7 {
+  order: 7; }
+
+.u-order8 {
+  order: 8; }
+
+.u-order9 {
+  order: 9; }
+
+.u-order10 {
+  order: 10; }
+
+.u-order11 {
+  order: 11; }
+
+.u-order12 {
+  order: 12; }
+
+.u-order13 {
+  order: 13; }
+
+.u-order14 {
+  order: 14; }
+
+.u-order15 {
+  order: 15; }
+
+.u-order16 {
+  order: 16; }
+
+.u-order17 {
+  order: 17; }
+
+.u-order18 {
+  order: 18; }
+
+.u-order19 {
+  order: 19; }
+
+.u-order20 {
+  order: 20; }
+
+.u-order21 {
+  order: 21; }
+
+.u-order22 {
+  order: 22; }
+
+.u-order23 {
+  order: 23; }
+
+.u-order24 {
+  order: 24; }
+
+.u-order25 {
+  order: 25; }
+
+.u-order26 {
+  order: 26; }
+
+.u-order27 {
+  order: 27; }
+
+.u-order28 {
+  order: 28; }
+
+.u-order29 {
+  order: 29; }
+
+.u-order30 {
+  order: 30; }
 
 /*=========================
 margin padding generator

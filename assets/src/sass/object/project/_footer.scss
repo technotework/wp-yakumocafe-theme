@@ -1,0 +1,94 @@
+.p-footer {
+	background-color: $theme1;
+	padding-bottom: 25px;
+
+	&__container {
+		background-color: $theme5;
+		background-image: url(/images/footer-bg.png);
+		background-position-y: -61px;
+
+	}
+
+	&__content-group {
+		position: relative;
+		width: $base_width;
+	}
+
+	&__copy {
+		display: block;
+		width: 200px;
+		text-align: center;
+		font-size: 1.2rem;
+		color: $white;
+		padding-bottom: unit(2);
+	}
+
+	&__pagetop {
+		position: absolute;
+		top: -29px;
+		right: -40px;
+		width: 58px;
+		height: 29px;
+		overflow: hidden;
+		border-radius: $radius $radius 0 0;
+		cursor: pointer;
+	}
+}
+
+.p-footer-nav {
+
+	width: 440px;
+
+	&__list {
+		display: grid;
+		grid-template-columns: 126px 1fr;
+		grid-template-rows: 36px 36px 36px;
+		padding-top: 82px;
+
+		a {
+			color: #fff;
+			letter-spacing: 0.2rem;
+		}
+	}
+
+	&__place {
+
+		width: 440px;
+		padding: 82px 0 0 95px;
+	}
+
+	&__logo {
+		font-size: 1.1rem;
+		width: 144px;
+		padding: 41px 0 23px 0;
+	}
+
+	&__chofu {
+
+		margin-bottom: 26px;
+
+		a {
+			color: #fff;
+			letter-spacing: 0.2rem;
+		}
+	}
+
+	&__chofu-logo {
+
+		width: 24px;
+		height: 23px;
+		margin-left: 13px;
+	}
+
+	&__address {
+
+		font-size: 1.4rem;
+		color: #fff;
+
+		a {
+			color: #fff;
+			letter-spacing: 0.2rem;
+		}
+	}
+
+}
