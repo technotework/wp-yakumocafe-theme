@@ -45,7 +45,7 @@ module.exports = {
                         loader: 'postcss-loader',
                         options: {
                           plugins: [
-                            require( 'autoprefixer' )({grid: true})
+                            require( 'autoprefixer' )({grid: 'autoplace'})
                           ]
                         }
                     },

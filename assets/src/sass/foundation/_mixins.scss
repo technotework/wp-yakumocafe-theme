@@ -48,6 +48,7 @@ $radius: 5px;
 button
 =========================*/
 $button-padding: 5px 15px;
+$button-padding-ie:13px 15px 3px 15px;
 $button-side-margin: 4px;
 $button-radius: $radius;
 $button-fs:1.6rem;
@@ -117,6 +118,13 @@ font mixins
 		"メイリオ",
 		Meiryo,
 		sans-serif;
+}
+
+@mixin ffie {
+	font-family:
+		"メイリオ",
+		Meiryo,
+		serif;
 }
 
 @mixin heavy {

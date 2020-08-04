@@ -7,9 +7,16 @@ html {
 	font-size: $base-fsize;
 }
 
+
 body {
 
 	@include base;
+}
+
+_:-ms-input-placeholder,
+:root body {
+
+	@include ffie;
 }
 
 * {
