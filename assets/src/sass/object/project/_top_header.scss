@@ -90,8 +90,13 @@
 		text-align: center;
 
 		> li {
+
+			&:first-child {
+				padding-left: 57px;
+			}
+
 			position: relative;
-			margin: 30px 25px 0 25px;
+			margin: 30px 25px 0 19px;
 
 			> a {
 
