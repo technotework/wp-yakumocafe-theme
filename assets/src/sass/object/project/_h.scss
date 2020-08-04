@@ -21,14 +21,20 @@
 
 	&__content1 {
 
+
 	}
 
 	&__content2 {
 
+		@include respBG("/images/title-header-cloud.gif","left",100%,50px,28px);
+
+		letter-spacing: 0.4rem;
+		margin: unit(2) 0 unit(1) 0;
 	}
 
 	&__lv1 {
-
+		letter-spacing: 0.4rem;
+		padding: unit(1) 0 0 0;
 	}
 
 	&__timestamp {

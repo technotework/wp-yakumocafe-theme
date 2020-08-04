@@ -88,7 +88,7 @@ $alt1-ov:#2f898f;
 
 @mixin h-lv1 {
 
-	@include textFactory(1.6rem,$black,"bold",$space-unit);
+	@include textFactory(1.8rem,$black,"bold",$space-unit);
 }
 
 /*=====================================
@@ -175,6 +175,27 @@ Base Layout Vars
 @function headShift($num,$fs) {
 
 	@return ($space-unit - $fs)/2;
+}
+
+//アイコンワンポイント背景共通
+@mixin respBG($url,$direction,$per,$p,$h) {
+
+	height: $h;
+	background-image: url($url);
+	background-size: auto $per;
+	background-repeat: no-repeat;
+
+	@if $direction == "left" {
+
+		background-position: left center;
+		padding-left: $p;
+	}
+
+	@if $direction == "right" {
+
+		background-position: right center;
+		padding-right: $p;
+	}
 }
 
 /*=========================

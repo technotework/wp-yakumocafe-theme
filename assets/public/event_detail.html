@@ -2,6 +2,8 @@
 <html>
 
 <head>
+	<link rel="stylesheet" href="../../style.css">
+	<script src="../../js/index.bundle.js"></script>
 	<!--流用するため省略-->
 	<title>イベント&トピックス | 調布のまちの珈琲店 | YAKUMO CAFE</title>
 </head>
@@ -16,43 +18,49 @@
 		<article class="p-main__article">
 			<!--イベント&トピックスー-->
 			<section>
-				<h3 class="p-h__content-level">
-					タイトル
-				</h3>
 
-				<!--コンテンツ-->
-				<section class="p-content-event-detail">
-					<img src="" alt="" class="p-content-event-detail__mainimage">
+				<div class="u-i-center">
+					<h3 class="c-h__article p-h__article">タイトル</h3>
+				</div>
 
-					<h4 class="p-h__sub-level1--headmark">
-						中見出し
-					</h4>
-					<p>
-						コンテンツ
-					</p>
+				<div class="p-both-indent u-center">
+					<!--コンテンツ-->
+					<section class="p-content-event-detail">
+						<div class="p-content-event-detail__mainimage">
+							<img src="" alt="" class="c-res-img">
+						</div>
 
-					<section>
-						<h5 class="p-h__sub-level2">
-							小見出し
-						</h5>
-						<p>
-							コンテンツ
+						<h4 class="p-h__content2 c-h__content2 ">
+							じんじゃーずのライブ決定！
+						</h4>
+						<p class="p-para">
+							7/25 調布市で結成されたバンド「じんじゃーず」のライブイベントを「YAKUMO CAFE」で開催します。
 						</p>
+
+						<section>
+							<h5 class="p-h__lv1  c-h__lv1 ">
+								「じんじゃーず」
+							</h5>
+							<p class="p-para">
+								ポストロック+エレクトロニカのミクスチャーでマニアックな人気を誇るスリーピースバンド。<br />
+								近年はアンビエント色の強いドープな音響を追求している。<br />
+								Guiter・Vo: Hiroto<br />
+								Bass: Takashi<br />
+								Drums: Kei
+							</p>
+						</section>
 					</section>
 
-				</section>
+
+
+
+
+				</div>
 			</section>
 		</article>
 		<!--ページング-->
 		<nav class=" p-paging">
-			<ul>
-				<li class="p-paging__back">
-					<a href="">Back</a>
-				</li>
-				<li class="p-paging__next">
-					<a href="">Next</a>
-				</li>
-			</ul>
+			<!--流用するため省略-->
 		</nav>
 	</main>
 
@@ -63,7 +71,17 @@
 	<footer>
 		<!--流用するため省略-->
 	</footer>
-
+	<!--AdobeFont-->
+	<script>
+		(function (d) {
+			var config = {
+				kitId: 'qdv7kse',
+				scriptTimeout: 3000,
+				async: true
+			},
+				h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
 </body>
 
 </html>

@@ -421,7 +421,7 @@ Component
   font-style: normal; }
 
 .c-h__lv1 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #000;
   line-height: 2.8rem;
   font-weight: 700;
@@ -565,6 +565,20 @@ Project
   padding: 0 60px;
   letter-spacing: 0.2rem; }
 
+.p-h__content2 {
+  height: 28px;
+  background-image: url("/images/title-header-cloud.gif");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 50px;
+  letter-spacing: 0.4rem;
+  margin: 5.6rem 0 2.8rem 0; }
+
+.p-h__lv1 {
+  letter-spacing: 0.4rem;
+  padding: 2.8rem 0 0 0; }
+
 .p-h__timestamp {
   display: block;
   margin-bottom: 2.8rem;
@@ -647,10 +661,10 @@ Project
 .p-header-pan {
   width: 1024px;
   height: 28px;
-  background-image: url(/images/pankuzu-head.gif);
-  background-repeat: no-repeat;
+  background-image: url("/images/pankuzu-head.gif");
   background-size: auto 75%;
-  background-position-y: center;
+  background-repeat: no-repeat;
+  background-position: left center;
   padding-left: 53px;
   margin-top: 2.8rem;
   margin-bottom: 2.8rem; }
@@ -692,9 +706,6 @@ Project
     height: 29px; }
     .p-paging li a {
       display: block;
-      background-repeat: no-repeat;
-      background-size: auto 100%;
-      height: 100%;
       width: 100%;
       font-size: 1.6rem;
       color: #224a05;
@@ -702,11 +713,17 @@ Project
       font-weight: 700;
       font-style: normal; }
   .p-paging__back a {
-    background-image: url(/images/back.gif);
+    height: 100%;
+    background-image: url("/images/back.gif");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
     background-position: left center;
     padding-left: 40px; }
   .p-paging__next a {
-    background-image: url(/images/next.gif);
+    height: 100%;
+    background-image: url("/images/next.gif");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
     background-position: right center;
     padding-right: 40px;
     text-align: right; }
@@ -801,6 +818,13 @@ Project
         right: -25px; }
     .p-top-header-nav__list > li:last-child ::after {
       content: none; }
+
+.p-content-event-detail__mainimage {
+  width: 100%;
+  height: 336px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #000; }
 
 .p-content-access__info {
   width: 1024px;

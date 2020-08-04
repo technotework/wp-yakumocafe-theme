@@ -8,9 +8,6 @@
 
 		a {
 			display: block;
-			background-repeat: no-repeat;
-			background-size: auto 100%;
-			height: 100%;
 			width: 100%;
 
 			@include textFactory(1.6rem,$theme1,"bold",2.8rem);
@@ -19,15 +16,13 @@
 
 	&__back a {
 
-		background-image: url(/images/back.gif);
-		background-position: left center;
-		padding-left: 40px;
+		@include respBG("/images/back.gif","left",100%,40px,100%);
+
 	}
 
 	&__next a {
-		background-image: url(/images/next.gif);
-		background-position: right center;
-		padding-right: 40px;
+
+		@include respBG("/images/next.gif","right",100%,40px,100%);
 		text-align: right;
 	}
 }

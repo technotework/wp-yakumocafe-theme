@@ -111,12 +111,9 @@
 .p-header-pan {
 
 	width: $base-width;
-	height: 28px;
-	background-image: url(/images/pankuzu-head.gif);
-	background-repeat: no-repeat;
-	background-size: auto 75%;
-	background-position-y: center;
-	padding-left: 53px;
+
+	@include respBG("/images/pankuzu-head.gif","left",75%,53px,28px);
+
 	margin-top: unit(1);
 	margin-bottom: unit(1);
 
