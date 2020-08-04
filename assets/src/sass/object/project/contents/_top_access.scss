@@ -1,0 +1,32 @@
+.p-content-access {
+
+	&__info {
+
+		width: $base-width;
+		margin-bottom: unit(1);
+
+		a {
+			color: $black;
+		}
+	}
+
+	&__shopname {
+
+		display: inline-block;
+		padding: 0 15px 0 30px;
+	}
+
+	&__address {
+
+		address {
+			padding-right: 15px;
+		}
+	}
+
+	&__map {
+
+		width: 100%;
+		height: 473px;
+		background-color: $black;
+	}
+}

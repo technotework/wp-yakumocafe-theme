@@ -1,0 +1,40 @@
+.p-aside {
+
+	position: fixed;
+	bottom: 12vh;
+	left: 0;
+	width: 46px;
+	height: 397px;
+
+	overflow: hidden;
+	border-radius: 0 $radius $radius 0;
+
+	background-image: url(/images/aside-info.png);
+	background-position: 7px 163px;
+	background-repeat: no-repeat;
+	background-color: $theme1;
+	background-size: 67%;
+}
+
+.p-aside-nav {
+
+	ul > li:first-child {
+		margin-bottom: 62px;
+	}
+
+	&__info {
+		display: block;
+		width: 46px;
+		height: 166px;
+		background-color: $theme2;
+	}
+
+	&__sns {
+		display: block;
+		width: 28px;
+		height: 38px;
+		overflow: hidden;
+		margin-left: 8px;
+	}
+
+}

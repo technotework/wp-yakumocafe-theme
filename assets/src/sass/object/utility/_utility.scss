@@ -6,6 +6,10 @@ center
 	margin-right: auto;
 }
 
+.u-i-center {
+	text-align: center;
+}
+
 /*=========================
 opacity hover
 =========================*/
@@ -15,6 +19,13 @@ opacity hover
 	&:hover {
 		opacity: 0.8;
 	}
+}
+
+/*=========================
+relative
+=========================*/
+.u-rel {
+	position: relative;
 }
 
 /*=========================
@@ -36,6 +47,20 @@ z-index util
 =========================*/
 .u-z10k {
 	z-index: 10000;
+}
+
+/*=========================
+grid order
+=========================*/
+$grid-order-min: 1;
+$grid-order-max: 30;
+
+@for $i from $grid-order-min through $grid-order-max {
+
+	.u-order#{$i} {
+
+		order: #{$i};
+	}
 }
 
 /*=========================

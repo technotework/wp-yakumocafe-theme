@@ -8,27 +8,39 @@
 	font-weight: bold;
 	color: $button-text;
 	text-decoration: none;
-	font-size: $button-size;
+	font-size: $button-fs;
 	letter-spacing: $button-spacing;
 	margin: 0 $button-side-margin;
 }
 
+
 .c-button__primary {
 
 	@extend .c-button;
-	background-color: $button-primary;
+	background-color: $primary;
 
 	&:hover {
-		background-color: $button-hprimary;
+		background-color: $primary-ov;
 	}
 }
 
 .c-button__secondary {
 
 	@extend .c-button;
-	background-color: $button-secondary;
+	background-color: $secondary;
 
 	&:hover {
-		background-color: $button-hsecondary;
+		background-color: $secondary-ov;
 	}
 }
+
+.c-button__alt1 {
+
+	@extend .c-button;
+	background-color: $alt1;
+
+	&:hover {
+		background-color: $alt1-ov;
+	}
+}
+

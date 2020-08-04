@@ -15,13 +15,50 @@
 </head>
 
 <body>
+
 	<!--header-->
 	<header class="p-top-header">
-		<h1 class="p-top-header__logo"><img src="images/header/top_logo" alt="YAKUMO CAFE" class="c-resImg"></h1>
 
-		<img src="images/header/top_cloud" alt="雲" class="p-top-header__onepoint">
-		<nav class="p-top-header__nav c-nav">
-			<ul class="p-top-header__navlist">
+		<!--logo-->
+		<h1 class="p-top-header__logo">
+			<div class="p-top-header__logo-img">
+				<img src="/images/top_logo.gif" alt="YAKUMO CAFE" class="c-res-img">
+			</div>
+		</h1>
+		<!--badge-->
+		<div class="p-top-header__badge">
+			<img src="/images/chofu_badge.png" alt="CHOFU GUIDE" class="c-res-img">
+		</div>
+
+		<!--mainImage-->
+		<div class="p-top-header-main">
+
+			<svg class="p-top-header-main__mask" height="0" width="0">
+
+				<clipPath id="mask" clipPathUnits="objectBoundingBox">
+					<path transform="scale(0.00075975,0.001532)"
+						d=" M0,0V558.07S71,647,198.35,647c157.12,0,224.83-101.42,224.83-101.42S471.47,603,555.58,603C623.32,603,666,547.57,666,547.57S708.68,603,776.42,603c84.11,0,132.4-57.45,132.4-57.45S976.53,647,1133.65,647C1261,647,1332,558.07,1332,558.07V0Z" />
+				</clipPath>
+
+			</svg>
+
+			<svg class="p-top-header-main__image">
+				<image xlink:href="images/top_main.jpg" width="100%" height="100%" clip-path="url(#mask)" />
+			</svg>
+
+		</div>
+
+		<!--seo copy here-->
+		<div class="p-top-header__copyline">
+		</div>
+
+		<!--装飾要素-->
+		<div class="p-top-header__onepoint">
+			<img src="images/top_cloud_deco.gif" class="c-res-img">
+		</div>
+		<!--nav-->
+		<nav class="p-top-header-nav">
+			<ul class="p-top-header-nav__list l-flex-center">
 				<li>
 					<a href="">ABOUT</a>
 				</li>
@@ -37,90 +74,119 @@
 				<li>
 					<a href="">RESERVE</a>
 				</li>
-				<li class="p-top-header__badge">
-					<a href=""><img src="images/header/top_chofuguide.png" alt="CHOFU GUIDE" class="c-resImg"></a>
-				</li>
 			</ul>
 		</nav>
-
-		<img src="images/header/top_main.jpg" alt="YAKUMO CAFE" class="p-top-header__mainImage c-resImg">
 	</header>
 
 	<!--main-->
 	<main class="p-main">
 		<article class="p-main__article">
-
 			<!--今月のおすすめ-->
-			<section class="p-main__section">
-				<h2 class="p-main__h2 c-h2">今月のおすすめ</h2>
-
+			<section>
+				<div class="u-i-center">
+					<h2 class="c-h__article p-h__article">今月のおすすめ</h2>
+				</div>
 				<!--コンテンツ-->
-				<div class="p-monthly-recommend">
-
-					<!--装飾要素-->
-					<div class="p-monthly-recommend__badge">
-						July
-					</div>
-
-					<img src="images/top/rightCloud.png" alt="雲" class="p-monthly-recommend__right-cloud">
-					<img src="images/top/leftCloud.png" alt="雲" class="p-monthly-recommend__left-cloud">
+				<div class="p-content-monthly">
 
 					<!--コンテンツ-->
-					<ul class="js-monthly-recommend">
-						<li>
-							<figuar>
-								<img src="" alt="" class="c-resImg">
-								<figcaption></figcaption>
-							</figuar>
-						</li>
-						<li>
-							<figuar>
-								<img src="" alt="" class="c-resImg">
-								<figcaption></figcaption>
-							</figuar>
-						</li>
-						<li>
-							<figuar>
-								<img src="" alt="" class="c-resImg">
-								<figcaption></figcaption>
-							</figuar>
+					<ul class="js-content-monthly">
+						<li class="p-content-monthly__container u-center">
+							<figure class="p-content-monthly__image">
+								<img src="https://kinarino.k-img.com/system/press_images/001/518/826/46292da44cbdc27a0c937a9f63069efb5597ed5d.jpg?1572153103"
+									alt="" class="c-res-img">
+								<figcaption class="p-content-monthly__text c-caption u-center">
+									もじもじもじもじもじもじもじもじもじもじもじもじもじもじもじもじ
+								</figcaption>
+							</figure>
+
+							<div class="p-content-monthly__badge">
+								July
+							</div>
+
+
 						</li>
 					</ul>
+
+					<!--nav-->
+					<nav>
+						<div class="p-content-monthly__back">
+							<img src="images/top-menu-back.gif" class="c-res-img">
+						</div>
+						<div class="p-content-monthly__next">
+							<img src="images/top-menu-next.gif" class="c-res-img">
+						</div>
+					</nav>
+
+					<!--装飾要素-->
+					<div class="p-content-monthly__left-cloud">
+						<img src="images/top-menu-cloud-l.png" class="c-res-img">
+					</div>
+					<div class="p-content-monthly__right-cloud">
+						<img src="images/top-menu-cloud-r.png" class="c-res-img">
+					</div>
+
+
+					<!--リンク-->
+					<div class="p-content-monthly__button u-center">
+						<a class="c-button__alt1 p-button__alt1">
+							MENU
+						</a>
+					</div>
 				</div>
 
-				<!--リンク-->
-				<a class="c-button p-button__alt1">
-					MENU
-				</a>
 			</section>
 
 			<!--EVENT&TOPICS-->
-			<section class="p-main__section">
-				<h2 class="p-main__h2 c-h2"></h2>
+			<section>
+
+				<div class="u-i-center">
+					<h2 class="c-h__article p-h__article">EVENT&TOPICS</h2>
+				</div>
 
 				<!--コンテンツ-->
-				<div class="p-event-topics">
-					<ul>
-						<li>
+				<div class="p-content-event u-center">
+					<ul class="p-content-event__list l-flex">
+						<li class="p-content-event__listitem">
 							<a href="">
-								<figuar>
-									<img src="" alt="" class="c-resImg">
-									<figcaption></figcaption>
-								</figuar>
+								<figure>
+
+									<div class="p-content-event__image"
+										style="background-image:url(https://www.anicom-sompo.co.jp/nekonoshiori/wp-content/uploads/2020/05/3453_10-740x524.jpg)">
+									</div>
+
+									<figcaption class="p-content-event__text c-caption">
+										もじもじもじもじもじもじもじもじ<br />もじもじもじもじもじもじ
+									</figcaption>
+								</figure>
 							</a>
 						</li>
-						<li>
+						<li class="p-content-event__listitem">
 							<a href="">
-								<figuar>
-									<figcaption></figcaption>
-								</figuar>
+								<figure>
+
+									<div class="p-content-event__image"
+										style="background-image:url(https://www.anicom-sompo.co.jp/nekonoshiori/wp-content/uploads/2020/05/3453_10-740x524.jpg)">
+									</div>
+
+									<figcaption class="p-content-event__text c-caption">
+										もじもじもじもじもじもじもじもじ<br />もじもじもじもじもじもじ
+									</figcaption>
+								</figure>
 							</a>
 						</li>
-						<li>
+						<li class="p-content-event__listitem">
 							<a href="">
-								<figuar>
-									<figcaption></figcaption>
-								</figuar>
+								<figure>
+
+									<div class="p-content-event__image"
+										style="background-image:url(https://www.anicom-sompo.co.jp/nekonoshiori/wp-content/uploads/2020/05/3453_10-740x524.jpg)">
+									</div>
+
+									<figcaption class="p-content-event__text c-caption">
+										もじもじもじもじもじもじもじもじ<br />もじもじもじもじもじもじ
+									</figcaption>
+								</figure>
 							</a>
 						</li>
 					</ul>
@@ -128,29 +194,48 @@
 			</section>
 
 			<!--INFO-->
-			<section class="p-main__section">
-				<h2 class="p-main__h2 c-h2">INFO</h2>
+			<section class="p-content-info-wrapper">
+				<div class="u-i-center">
+					<h2 class="c-h__article p-h__article">INFO</h2>
+				</div>
 
 				<!--コンテンツ-->
-				<div class="p-info">
-					<ul>
-						<li>
-							<a href="">
-								<span class="p-info__date"></span>
-								<span class="p-info__content"></span>
-							</a>
+				<div class="p-content-info u-center">
+					<ul class="p-content-info__list">
+						<li class="p-content-info__listitem l-flex">
+
+							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
+							<span class="p-content-info__content l-flex-vcenter"><a
+									href="">今月の定休日は10、20、30日です</a></span>
+
 						</li>
-						<li>
-							<a href="">
-								<span class="p-info__date"></span>
-								<span class="p-info__content"></span>
-							</a>
+						<li class="p-content-info__listitem l-flex">
+
+							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
+							<span class="p-content-info__content l-flex-vcenter"><a
+									href="">今月の定休日は10、20、30日です</a></span>
+
 						</li>
-						<li>
-							<a href="">
-								<span class="p-info__date"></span>
-								<span class="p-info__content"></span>
-							</a>
+						<li class="p-content-info__listitem l-flex">
+
+							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
+							<span class="p-content-info__content l-flex-vcenter"><a
+									href="">今月の定休日は10、20、30日です</a></span>
+
+						</li>
+						<li class="p-content-info__listitem l-flex">
+
+							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
+							<span class="p-content-info__content l-flex-vcenter"><a
+									href="">今月の定休日は10、20、30日です</a></span>
+
+						</li>
+						<li class="p-content-info__listitem l-flex">
+
+							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
+							<span class="p-content-info__content l-flex-vcenter"><a
+									href="">今月の定休日は10、20、30日です</a></span>
+
 						</li>
 					</ul>
 				</div>
@@ -158,15 +243,18 @@
 			</section>
 
 			<!--ACCESS-->
-			<section class="p-main__section">
-				<div class="p-access">
-					<h2 class="p-main__h2--flat c-h2">ACCESS</h2>
-					<span class="p-access__shopname">YAKUMO CAFE</span>
-					<span class="p-access__address">
-						<address>東京都調布市八雲台1-2-3 京王線調布駅から徒歩3分</address><a href="tel:042-000-000">TEL:042-000-000</a>
-					</span>
+			<section>
+				<div class="p-content-access">
 
-					<div class="p-access__map">
+					<div class="p-content-access__info u-center l-flex">
+						<h2 class="c-h__article">ACCESS</h2>
+						<span class="p-content-access__shopname">YAKUMO CAFE</span>
+						<span class="p-content-access__address">
+							<address>東京都調布市八雲台1-2-3 京王線調布駅から徒歩3分</address>
+							<a href="tel:042-000-000">TEL:042-000-000</a>
+						</span>
+					</div>
+					<div class="p-content-access__map">
 
 					</div>
 				</div>
@@ -174,45 +262,97 @@
 		</article>
 	</main>
 
+	<!--aside-->
+	<aside class="p-aside">
+		<nav class="p-aside-nav">
+			<ul>
+				<li>
+					<a href="" class="p-aside-nav__info">
+						<img src="images/aside-reserve.png" alt="ご予約はこちら" class="c-res-img">
+					</a>
+				</li>
+
+				<li>
+					<a href="" target="_blank" class="p-aside-nav__sns">
+						<img src="images/aside-twitter.png" alt="Twitter" target="_blank" class="c-res-img">
+					</a>
+				</li>
+
+				<li>
+					<a href="" target="_blank" class="p-aside-nav__sns">
+						<img src="images/aside-facebook.png" alt="Facebook" class="c-res-img">
+					</a>
+				</li>
+				<li>
+					<a href="" target="_blank" class="p-aside-nav__sns">
+						<img src="images/aside-instagram.png" alt="Instagram" class="c-res-img">
+					</a>
+				</li>
+				<li>
+					<a href="" target="_blank" class="p-aside-nav__sns">
+						<img src="images/aside-line.png" alt="Line" class="c-res-img">
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+
 	<!--footer-->
 	<footer class="p-footer">
+		<div class="p-footer__container">
 
-		<div class="p-footer__content-group">
-			<nav class="p-footer__nav c-footer-nav">
-				<ul class="p-footer__navlist">
-					<li>
-						<a href="">HOME</a>
-					</li>
-					<li>
-						<a href="">ABOUT</a>
-					</li>
-					<li>
-						<a href="">MENU</a>
-					</li>
-					<li>
-						<a href="">EVENT&amp;TOPICS</a>
-					</li>
-					<li>
-						<a href="">ACCESS</a>
-					</li>
-					<li>
-						<a href="">RESERVE</a>
-					</li>
-				</ul>
-			</nav>
-			<div>
-				<img src="" alt="YAKUMO CAFE" class="p-footer__logo">
+
+			<div class="p-footer__content-group u-center l-flex-center">
+				<div class="js-pagetop p-footer__pagetop">
+					<img src="images/pagetop.gif" alt="pagetop" class="c-res-img">
+				</div>
+
+				<nav class="p-footer-nav c-footerNav">
+					<ul class="p-footer-nav__list">
+						<li class="u-order1">
+							<a href="">HOME</a>
+						</li>
+						<li class="u-order3">
+							<a href="">ABOUT</a>
+						</li>
+						<li class="u-order5">
+							<a href="">MENU</a>
+						</li>
+						<li class="u-order2">
+							<a href="">EVENT&amp;TOPICS</a>
+						</li>
+						<li class="u-order4">
+							<a href="">ACCESS</a>
+						</li>
+						<li class="u-order6">
+							<a href="">RESERVE</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="p-footer-nav__logo">
+					<img src="images/footer-logo.png" alt="YAKUMO CAFE" class="c-res-img">
+				</div>
+
+				<div class="p-footer-nav__place">
+					<div class="p-footer-nav__chofu l-flex-vcenter">
+						<a href="">
+							CHOFU GUIDE
+						</a>
+						<div class="p-footer-nav__chofu-logo">
+							<img src="images/footer-citylogo.png" alt="CHOFU GUIDE" class="c-res-img">
+						</div>
+					</div>
+					<div class="p-footer-nav__address">
+						182-0015<br />
+						東京都調布市八雲台1-2-3<br />
+						<a href="tel:042-000-000">TEL:042-000-000</a>
+					</div>
+				</div>
 			</div>
-			<div class="p-footer__chofu">
-				CHOFU CITY
-			</div>
-			<div class="footer__address">
-				182-0015<br />
-				東京都調布市八雲台1-2-3<br />
-				<a href="tel:042-000-000">TEL:042-000-000</a>
-			</div>
+
+			<small class="p-footer__copy u-center">&copy; 2020 YAKUMO CAFE</small>
 		</div>
-		<small class="p-footer__copy">&copy; 2020 YAKUMO CAFE</small>
 	</footer>
 
 	<!--AdobeFont-->

@@ -7,9 +7,16 @@ html {
 	font-size: $base-fsize;
 }
 
+
 body {
 
 	@include base;
+}
+
+_:-ms-input-placeholder,
+:root body {
+
+	@include ffie;
 }
 
 * {
@@ -24,12 +31,28 @@ button:focus {
 	outline: 0;
 }
 
+address {
+	display: inline;
+	text-decoration: none;
+	font-style: normal;
+}
+
 #grid {
-	width: 100vw;
+	width: 100%;
 	height: 6000px;
-	opacity: 0.3;
+	opacity: 0.1;
 	position: absolute;
-	top: 0;
+	top: 12px;
 	left: 0;
+	z-index: 1;
 	background-image: url(/images/grid.png);
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+
+	text-decoration: none;
+	cursor: pointer;
 }
