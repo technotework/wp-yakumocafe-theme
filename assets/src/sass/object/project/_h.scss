@@ -30,4 +30,12 @@
 	&__lv1 {
 
 	}
+
+	&__timestamp {
+		display: block;
+		margin-bottom: unit(1);
+		letter-spacing: 0.2rem;
+
+		@include textFactory(1.6rem,$theme3,"bold",2.8rem);
+	}
 }

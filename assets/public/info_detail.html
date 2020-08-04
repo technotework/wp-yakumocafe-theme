@@ -2,6 +2,8 @@
 <html>
 
 <head>
+	<link rel="stylesheet" href="../../style.css">
+	<script src="../../js/index.bundle.js"></script>
 	<!--流用するため省略-->
 	<title> | お知らせ | 調布のまちの珈琲店 | YAKUMO CAFE</title>
 </head>
@@ -16,28 +18,23 @@
 		<article class="p-main__article">
 			<!--お知らせー-->
 			<section>
-				<time datetime="2020-07-07">2020/07/07</time>
-				<h3 class="p-h__content-level">
-					タイトル
-				</h3>
 
+				<div class="u-i-center">
+					<time datetime="2020-07-07" class="p-h__timestamp ">2020/07/07</time>
+					<h3 class="c-h__article p-h__article">タイトル</h3>
+				</div>
 				<!--コンテンツ-->
-				<p>
-					お知らせ
-				</p>
-
+				<div class="p-both-indent u-center">
+					<p class="p-para">
+						7月の定休日は10、20、30日です。<br />
+						定休日にWebからご予約のご連絡をいただいた場合は、翌営業日以降ご登録のメールアドレスまたは電話番号にご返信いたします。お待たせして申し訳ありませんが、いましばらくお待ちください。
+					</p>
+				</div>
 			</section>
 
 			<!--ページング-->
 			<nav class="p-paging">
-				<ul>
-					<li class="p-paging__back">
-						<a href="">Back</a>
-					</li>
-					<li class="p-paging__next">
-						<a href="">Next</a>
-					</li>
-				</ul>
+				<!--流用するため省略-->
 			</nav>
 
 		</article>
@@ -50,7 +47,17 @@
 	<footer>
 		<!--流用するため省略-->
 	</footer>
-
+	<!--AdobeFont-->
+	<script>
+		(function (d) {
+			var config = {
+				kitId: 'qdv7kse',
+				scriptTimeout: 3000,
+				async: true
+			},
+				h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
 </body>
 
 </html>

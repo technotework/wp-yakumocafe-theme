@@ -565,6 +565,16 @@ Project
   padding: 0 60px;
   letter-spacing: 0.2rem; }
 
+.p-h__timestamp {
+  display: block;
+  margin-bottom: 2.8rem;
+  letter-spacing: 0.2rem;
+  font-size: 1.6rem;
+  color: #96e5e4;
+  line-height: 2.8rem;
+  font-weight: 700;
+  font-style: normal; }
+
 /*========================
 * 下階層ヘッダ
 ========================*/
@@ -658,6 +668,10 @@ Project
     font-weight: 700;
     font-style: normal;
     letter-spacing: 0.1rem; }
+
+.p-para {
+  text-align: justify;
+  letter-spacing: 0.2rem; }
 
 .p-side-indent {
   width: 1024px;
