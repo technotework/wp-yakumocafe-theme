@@ -17,6 +17,12 @@
 	align-items: center;
 }
 
+.l-flex-both {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
 .l-flex-both-vcenter {
 	display: flex;
 	flex-wrap: wrap;

@@ -1,0 +1,35 @@
+.p-content-menulist-item {
+
+	margin-bottom: unit(2);
+
+	&__fig {
+		width: 232px;
+		height: 168px;
+		overflow: hidden;
+		border-radius: $radius;
+		background-color: $black;
+		margin-right: 36px;
+	}
+
+	&__description {
+
+		max-width: 214px;
+	}
+
+}
+
+
+.p-content-menu {
+
+	width: $base-width;
+	margin: unit(2) 0;
+
+	&__caption {
+
+		display: block;
+		width: $base-width;
+		line-height: 2.8rem;
+		text-align: right;
+		margin-bottom: unit(3);
+	}
+}

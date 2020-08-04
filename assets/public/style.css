@@ -348,6 +348,11 @@ Layout
   flex-wrap: wrap;
   align-items: center; }
 
+.l-flex-both {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
 .l-flex-both-vcenter {
   display: flex;
   flex-wrap: wrap;
@@ -842,6 +847,28 @@ Project
     border-radius: 5px; }
   .p-content-eventlist-item__description {
     max-width: 734px; }
+
+.p-content-menulist-item {
+  margin-bottom: 5.6rem; }
+  .p-content-menulist-item__fig {
+    width: 232px;
+    height: 168px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #000;
+    margin-right: 36px; }
+  .p-content-menulist-item__description {
+    max-width: 214px; }
+
+.p-content-menu {
+  width: 1024px;
+  margin: 5.6rem 0; }
+  .p-content-menu__caption {
+    display: block;
+    width: 1024px;
+    line-height: 2.8rem;
+    text-align: right;
+    margin-bottom: 8.4rem; }
 
 .p-content-access__info {
   width: 1024px;
