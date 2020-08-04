@@ -24,6 +24,12 @@ button:focus {
 	outline: 0;
 }
 
+address {
+	display: inline;
+	text-decoration: none;
+	font-style: normal;
+}
+
 #grid {
 	width: 100%;
 	height: 6000px;

@@ -301,6 +301,11 @@ img {
 button:focus {
   outline: 0; }
 
+address {
+  display: inline;
+  text-decoration: none;
+  font-style: normal; }
+
 #grid {
   width: 100%;
   height: 6000px;
@@ -510,6 +515,24 @@ a:active {
     .p-top-header-nav__list > li:last-child ::after {
       content: none; }
 
+.p-content-access__info {
+  width: 1024px;
+  margin-bottom: 2.8rem; }
+  .p-content-access__info a {
+    color: #000; }
+
+.p-content-access__shopname {
+  display: inline-block;
+  padding: 0 15px 0 30px; }
+
+.p-content-access__address address {
+  padding-right: 15px; }
+
+.p-content-access__map {
+  width: 100%;
+  height: 473px;
+  background-color: #000; }
+
 .p-content-event {
   width: 1024px;
   margin-top: 8.4rem;
@@ -537,7 +560,7 @@ a:active {
 
 .p-content-info-wrapper {
   padding-top: 5.6rem;
-  margin-bottom: 8.4rem;
+  margin-bottom: 11.2rem;
   background-image: url(/images/top-info-bg1.gif);
   background-repeat: no-repeat;
   background-position: top 0 left calc(50% + 479px); }
