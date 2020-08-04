@@ -68,7 +68,7 @@ $alt1-ov:#2f898f;
 
 @mixin h-page {
 
-	@include textFactory(2.8rem,$white,"bold",$space-unit);
+	@include textFactory(2.9rem,$white,"bold",$space-unit);
 }
 
 @mixin h-article {
@@ -224,4 +224,8 @@ shadow
 
 @mixin shadow($length,$opacity) {
 	box-shadow: 0 0 $length rgba(0, 0, 0, $opacity);
+}
+
+@mixin text-shadow($length,$opacity) {
+	text-shadow: 0 0 $length rgba(0, 0, 0, $opacity);
 }

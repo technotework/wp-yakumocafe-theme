@@ -387,7 +387,7 @@ Component
   letter-spacing: 0.5rem; }
 
 .c-h__page {
-  font-size: 2.8rem;
+  font-size: 2.9rem;
   color: #fff;
   line-height: 2.8rem;
   font-weight: 700;
@@ -545,6 +545,12 @@ Project
       color: #fff;
       letter-spacing: 0.2rem; }
 
+.p-h__page {
+  width: 1024px;
+  padding: 51px 0 0 262px;
+  letter-spacing: 0.4rem;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
+
 .p-h__article {
   display: inline-block;
   background-image: url(/images/h_cloud.gif), url(/images/h_cloud.gif);
@@ -552,6 +558,70 @@ Project
   background-position: top left, bottom right;
   padding: 0 60px;
   letter-spacing: 0.2rem; }
+
+/*========================
+* 下階層ヘッダ
+========================*/
+.p-header__container {
+  width: 100%;
+  height: 56px;
+  background-color: #224a05; }
+
+.p-header__contents {
+  position: relative;
+  width: 1024px; }
+
+.p-header__logo {
+  position: absolute;
+  width: 146px;
+  height: 162px;
+  top: 0;
+  left: 46px;
+  z-index: 999999;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px; }
+
+.p-header__badge {
+  position: absolute;
+  width: 87px;
+  height: 87px;
+  top: 18px;
+  right: 31px; }
+
+.p-header-title {
+  width: 100%;
+  height: 139px;
+  background-image: url(/images/second-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+/*========================
+* ナビ
+========================*/
+.p-header-nav__list {
+  width: 100%;
+  height: 56px;
+  padding-left: 190px; }
+  .p-header-nav__list > li {
+    position: relative;
+    margin: 0 20px 0 21px; }
+    .p-header-nav__list > li > a {
+      font-size: 1.4rem;
+      color: #fff;
+      line-height: 2.8rem;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: 0.1rem; }
+    .p-header-nav__list > li > a:hover {
+      color: #96e5e4; }
+    .p-header-nav__list > li ::after {
+      position: absolute;
+      content: url(/images/second_nav_point.gif);
+      top: -2px;
+      right: -25px; }
+  .p-header-nav__list > li:last-child ::after {
+    content: none; }
 
 .p-list, .p-content-info__date, .p-content-info__content {
   padding: 0 10px 9px 0;

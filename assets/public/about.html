@@ -2,43 +2,57 @@
 <html>
 
 <head>
+	<link rel="stylesheet" href="../../style.css">
+	<script src="../../js/index.bundle.js"></script>
 	<!--流用するため省略-->
 	<title>ごあいさつ | 調布のまちの珈琲店 | YAKUMO CAFE</title>
 </head>
 
 <body>
 	<header class="p-header">
-		<!--ロゴ-->
-		<h1 class="p-header__logo">
-			<img src="images/header/top_logo.gif" alt="YAKUMO CAFE" class="c-resImg">
-		</h1>
 
-		<!--nav-->
-		<nav class="p-header-nav c-nav">
-			<ul class="p-header-nav__list">
-				<li>
-					<a href="" class="p-header-nav__list--current">ABOUT</a>
-				</li>
-				<li>
-					<a href="">MENU</a>
-				</li>
-				<li>
-					<a href="">EVENT&amp;TOPICS</a>
-				</li>
-				<li>
-					<a href="">ACCESS</a>
-				</li>
-				<li>
-					<a href="">RESERVE</a>
-				</li>
-				<li class="p-header-nav__badge">
-					<a href=""><img src="images/header/top_chofuguide.png" alt="CHOFU GUIDE" class="c-resImg"></a>
-				</li>
-			</ul>
-		</nav>
+		<div class="p-header__container">
+			<!--greenline-->
+			<div class="p-header__contents u-center">
+
+				<h1 class="p-header__logo">
+					<img src="/images/top_logo.gif" alt="YAKUMO CAFE" class="c-res-img">
+				</h1>
+
+				<div class="p-header__badge">
+					<a href=""><img src="/images/chofu_badge.png" alt="CHOFU GUIDE" class="c-res-img"></a>
+				</div>
+
+				<!--nav-->
+				<nav class="p-header-nav">
+					<ul class="p-header-nav__list l-flex-vcenter">
+						<li>
+							<a href="">HOME</a>
+						</li>
+						<li>
+							<a href="">ABOUT</a>
+						</li>
+						<li>
+							<a href="">MENU</a>
+						</li>
+						<li>
+							<a href="">EVENT&amp;TOPICS</a>
+						</li>
+						<li>
+							<a href="">ACCESS</a>
+						</li>
+						<li>
+							<a href="">RESERVE</a>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+
 		<!--タイトル-->
-		<div class="p-header-title">
-			<h2 class="p-h__page-level">ABOUT</h2>
+		<div class="p-header-title u-center">
+			<h2 class="p-h__page c-h__page u-center">ABOUT</h2>
 		</div>
 
 		<!--ぱんくず-->
@@ -144,7 +158,17 @@
 	<footer>
 		<!--流用するため省略-->
 	</footer>
-
+	<!--AdobeFont-->
+	<script>
+		(function (d) {
+			var config = {
+				kitId: 'qdv7kse',
+				scriptTimeout: 3000,
+				async: true
+			},
+				h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
 </body>
 
 </html>
