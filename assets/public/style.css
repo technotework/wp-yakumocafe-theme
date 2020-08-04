@@ -359,6 +359,11 @@ a:active {
   .c-button__alt1:hover {
     background-color: #2f898f; }
 
+.c-caption {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.5rem; }
+
 .c-h__page {
   font-size: 2.8rem;
   color: #fff;
@@ -408,7 +413,12 @@ a:active {
   background-image: url(/images/h_cloud.gif), url(/images/h_cloud.gif);
   background-repeat: no-repeat, no-repeat;
   background-position: top left, bottom right;
-  padding: 0 60px; }
+  padding: 0 60px;
+  letter-spacing: 0.2rem; }
+
+.p-list, .p-content-info__date, .p-content-info__content {
+  padding: 0 10px 9px 0;
+  border-bottom: solid 1px #d1d1d1; }
 
 /*========================
 * ヘッダ要素
@@ -500,6 +510,57 @@ a:active {
     .p-top-header-nav__list > li:last-child ::after {
       content: none; }
 
+.p-content-event {
+  width: 1024px;
+  margin-top: 8.4rem;
+  margin-bottom: 5.6rem; }
+  .p-content-event a {
+    color: #000; }
+  .p-content-event__list {
+    width: 1024px; }
+  .p-content-event__listitem {
+    width: 320px;
+    margin-right: 32px; }
+    .p-content-event__listitem:last-child {
+      margin-right: 0; }
+  .p-content-event__image {
+    width: 320px;
+    height: 280px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px; }
+  .p-content-event__text {
+    width: 320px;
+    padding-top: 2.8rem;
+    text-align: justify; }
+
+.p-content-info-wrapper {
+  padding-top: 5.6rem;
+  margin-bottom: 8.4rem;
+  background-image: url(/images/top-info-bg1.gif);
+  background-repeat: no-repeat;
+  background-position: top 0 left calc(50% + 479px); }
+
+.p-content-info {
+  width: 1024px;
+  margin-top: 5.6rem; }
+  .p-content-info__listitem {
+    width: 1024px; }
+    .p-content-info__listitem a {
+      line-height: 2.8rem; }
+    .p-content-info__listitem:nth-of-type(n+2) {
+      margin-top: 9px; }
+  .p-content-info__date {
+    margin-right: 18px; }
+    .p-content-info__date a {
+      font-weight: 700;
+      color: #224a05; }
+  .p-content-info__content {
+    flex-grow: 2; }
+    .p-content-info__content a {
+      color: #000; }
+
 .p-content-monthly {
   position: relative;
   background-image: url(/images/top-menu-bg1.gif), url(/images/top-menu-bg2.gif);
@@ -517,7 +578,6 @@ a:active {
       border-radius: 5px; }
   .p-content-monthly__text {
     display: block;
-    letter-spacing: 0.5rem;
     text-align: justify;
     width: 385px;
     margin-top: 1.54rem; }
@@ -580,6 +640,12 @@ opacity hover
   opacity: 1; }
   .u-hover:hover {
     opacity: 0.8; }
+
+/*=========================
+relative
+=========================*/
+.u-rel {
+  position: relative; }
 
 /*=========================
 mobile br

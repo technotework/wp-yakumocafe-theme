@@ -1,0 +1,39 @@
+.p-content-event {
+
+	width: 1024px;
+	margin-top: unit(3);
+	margin-bottom: unit(2);
+
+	a {
+		color: $black;
+	}
+
+	&__list {
+		width: 1024px;
+	}
+
+	&__listitem {
+		width: 320px;
+		margin-right: 32px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__image {
+		width: 320px;
+		height: 280px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: $radius;
+	}
+
+	&__text {
+
+		width: 320px;
+		padding-top: unit(1);
+		text-align: justify;
+	}
+}
