@@ -2,6 +2,8 @@
 <html lang="ja">
 
 <head>
+	<link rel="stylesheet" href="../../style.css">
+	<script src="../../js/index.bundle.js"></script>
 	<!--流用するため省略-->
 	<title>お知らせ | 調布のまちの珈琲店 | YAKUMO CAFE</title>
 </head>
@@ -16,49 +18,77 @@
 		<article class="p-main__article">
 			<!--イベント&トピックスー-->
 			<section>
-				<h3 class="p-h__content-level">
-					INFO
-				</h3>
+				<div class="u-i-center">
+					<h3 class="c-h__article p-h__article">INFO</h3>
+				</div>
 
 				<!--コンテンツ-->
-				<div class="p-content-info">
-					<ul>
-						<li>
-							<a href="">
-								<span class="p-info__date"></span>
-								<span class="p-content-info__content"></span>
-							</a>
+				<div class="p-side-indent u-center">
+					<ul class="p-content-info__list">
+						<li class="p-content-info__listitem l-flex">
+
+							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
+							<span class="p-content-info__content l-flex-vcenter"><a
+									href="">今月の定休日は10、20、30日です</a></span>
+
 						</li>
-						<li>
-							<a href="">
-								<span class="p-content-info__date"></span>
-								<span class="p-content-info__content"></span>
-							</a>
+						<li class="p-content-info__listitem l-flex">
+
+							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
+							<span class="p-content-info__content l-flex-vcenter"><a
+									href="">今月の定休日は10、20、30日です</a></span>
+
 						</li>
-						<li>
-							<a href="">
-								<span class="p-content-info__date"></span>
-								<span class="p-content-info__content"></span>
-							</a>
+						<li class="p-content-info__listitem l-flex">
+
+							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
+							<span class="p-content-info__content l-flex-vcenter"><a
+									href="">今月の定休日は10、20、30日です</a></span>
+
+						</li>
+						<li class="p-content-info__listitem l-flex">
+
+							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
+							<span class="p-content-info__content l-flex-vcenter"><a
+									href="">今月の定休日は10、20、30日です</a></span>
+
+						</li>
+						<li class="p-content-info__listitem l-flex">
+
+							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
+							<span class="p-content-info__content l-flex-vcenter"><a
+									href="">今月の定休日は10、20、30日です</a></span>
+
 						</li>
 					</ul>
+
 				</div>
 			</section>
 		</article>
 
 		<!--ページング-->
-		<nav class="p-paging">
-			<ul>
-				<li class="p-paging__back">
+		<nav>
+			<ul class="p-paging u-center l-flex-both-vcenter">
+				<li class="p-paging__back  l-flex-vcenter">
 					<a href="">Back</a>
 				</li>
-				<li class="p-paging__next">
+				<li class="p-paging__next l-flex-vcenter">
 					<a href="">Next</a>
 				</li>
 			</ul>
 		</nav>
 	</main>
-
+	<!--AdobeFont-->
+	<script>
+		(function (d) {
+			var config = {
+				kitId: 'qdv7kse',
+				scriptTimeout: 3000,
+				async: true
+			},
+				h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
 </body>
 
 </html>

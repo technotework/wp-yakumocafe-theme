@@ -1,0 +1,33 @@
+.p-paging {
+	width: $base-width;
+	padding: unit(2) 0;
+
+	li {
+		width: 110px;
+		height: 29px;
+
+		a {
+			display: block;
+			background-repeat: no-repeat;
+			background-size: auto 100%;
+			height: 100%;
+			width: 100%;
+
+			@include textFactory(1.6rem,$theme1,"bold",2.8rem);
+		}
+	}
+
+	&__back a {
+
+		background-image: url(/images/back.gif);
+		background-position: left center;
+		padding-left: 40px;
+	}
+
+	&__next a {
+		background-image: url(/images/next.gif);
+		background-position: right center;
+		padding-right: 40px;
+		text-align: right;
+	}
+}

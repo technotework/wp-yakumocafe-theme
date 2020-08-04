@@ -8,11 +8,12 @@
 }
 
 .p-content-info {
-	width: 1024px;
+
+	width: $base-width;
 	margin-top: unit(2);
 
 	&__listitem {
-		width: 1024px;
+		width: 100%;
 
 		a {
 			line-height: unit(1);
@@ -25,7 +26,8 @@
 
 	&__date {
 
-		@extend .p-list;
+		padding: 0 10px 9px 0;
+		border-bottom: solid 1px $gray1;
 		margin-right: 18px;
 
 		a {
@@ -38,7 +40,8 @@
 
 		flex-grow: 2;
 
-		@extend .p-list;
+		padding: 0 10px 9px 0;
+		border-bottom: solid 1px $gray1;
 
 		a {
 			color: $black;

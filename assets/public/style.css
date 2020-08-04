@@ -348,6 +348,12 @@ Layout
   flex-wrap: wrap;
   align-items: center; }
 
+.l-flex-both-vcenter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; }
+
 /*===============================================================
 Object
 ===============================================================*/
@@ -653,9 +659,43 @@ Project
     font-style: normal;
     letter-spacing: 0.1rem; }
 
-.p-list, .p-content-info__date, .p-content-info__content {
-  padding: 0 10px 9px 0;
-  border-bottom: solid 1px #d1d1d1; }
+.p-side-indent {
+  width: 1024px;
+  padding: 5.6rem 0 0 26px; }
+
+.p-both-indent {
+  width: 1024px;
+  padding: 5.6rem 90px 0 90px; }
+
+.p-full {
+  width: 1024px; }
+
+.p-paging {
+  width: 1024px;
+  padding: 5.6rem 0; }
+  .p-paging li {
+    width: 110px;
+    height: 29px; }
+    .p-paging li a {
+      display: block;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      height: 100%;
+      width: 100%;
+      font-size: 1.6rem;
+      color: #224a05;
+      line-height: 2.8rem;
+      font-weight: 700;
+      font-style: normal; }
+  .p-paging__back a {
+    background-image: url(/images/back.gif);
+    background-position: left center;
+    padding-left: 40px; }
+  .p-paging__next a {
+    background-image: url(/images/next.gif);
+    background-position: right center;
+    padding-right: 40px;
+    text-align: right; }
 
 /*========================
 * ヘッダ要素
@@ -802,18 +842,22 @@ Project
   width: 1024px;
   margin-top: 5.6rem; }
   .p-content-info__listitem {
-    width: 1024px; }
+    width: 100%; }
     .p-content-info__listitem a {
       line-height: 2.8rem; }
     .p-content-info__listitem:nth-of-type(n+2) {
       margin-top: 9px; }
   .p-content-info__date {
+    padding: 0 10px 9px 0;
+    border-bottom: solid 1px #d1d1d1;
     margin-right: 18px; }
     .p-content-info__date a {
       font-weight: 700;
       color: #224a05; }
   .p-content-info__content {
-    flex-grow: 2; }
+    flex-grow: 2;
+    padding: 0 10px 9px 0;
+    border-bottom: solid 1px #d1d1d1; }
     .p-content-info__content a {
       color: #000; }
 
