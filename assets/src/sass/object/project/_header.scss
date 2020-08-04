@@ -73,7 +73,7 @@
 			}
 
 			> a:hover {
-				color: $theme3;
+				color: #7d8d71;
 			}
 
 			::after {
@@ -91,6 +91,59 @@
 				content: none;
 			}
 		}
+
+		> li.--current {
+
+			a {
+				color: #7d8d71;
+			}
+		}
+
 	}
+
+
+}
+
+/*========================
+* パンクズ
+========================*/
+
+.p-header-pan {
+
+	width: $base-width;
+	height: 28px;
+	background-image: url(/images/pankuzu-head.gif);
+	background-repeat: no-repeat;
+	background-size: auto 75%;
+	background-position-y: center;
+	padding-left: 53px;
+	margin-top: unit(1);
+	margin-bottom: unit(1);
+
+	li {
+
+		::after {
+			content: ">";
+			margin: 0 10px;
+		}
+
+		&:last-child {
+
+			a {
+				color: $theme3;
+			}
+
+			::after {
+				content: "";
+			}
+		}
+	}
+
+	a {
+
+		@include textFactory(1.4rem,$black,"bold",2.8rem);
+		letter-spacing: 0.1rem;
+	}
+
 
 }

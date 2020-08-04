@@ -614,7 +614,7 @@ Project
       font-style: normal;
       letter-spacing: 0.1rem; }
     .p-header-nav__list > li > a:hover {
-      color: #96e5e4; }
+      color: #7d8d71; }
     .p-header-nav__list > li ::after {
       position: absolute;
       content: url(/images/second_nav_point.gif);
@@ -622,6 +622,36 @@ Project
       right: -25px; }
   .p-header-nav__list > li:last-child ::after {
     content: none; }
+  .p-header-nav__list > li.--current a {
+    color: #7d8d71; }
+
+/*========================
+* パンクズ
+========================*/
+.p-header-pan {
+  width: 1024px;
+  height: 28px;
+  background-image: url(/images/pankuzu-head.gif);
+  background-repeat: no-repeat;
+  background-size: auto 75%;
+  background-position-y: center;
+  padding-left: 53px;
+  margin-top: 2.8rem;
+  margin-bottom: 2.8rem; }
+  .p-header-pan li ::after {
+    content: ">";
+    margin: 0 10px; }
+  .p-header-pan li:last-child a {
+    color: #96e5e4; }
+  .p-header-pan li:last-child ::after {
+    content: ""; }
+  .p-header-pan a {
+    font-size: 1.4rem;
+    color: #000;
+    line-height: 2.8rem;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.1rem; }
 
 .p-list, .p-content-info__date, .p-content-info__content {
   padding: 0 10px 9px 0;
