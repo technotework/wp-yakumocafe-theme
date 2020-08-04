@@ -41,6 +41,14 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                          plugins: [
+                            require( 'autoprefixer' )({grid: true})
+                          ]
+                        }
+                    },
                     'sass-loader',
                     'import-glob-loader'
                 ]

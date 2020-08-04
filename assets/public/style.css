@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*===============================================================
+Vender
+===============================================================*/
 /* Slider */
 .slick-slider {
   position: relative;
@@ -6,11 +9,9 @@
   box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent; }
 
@@ -43,10 +44,6 @@
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
 .slick-slide {
@@ -74,6 +71,9 @@
 .slick-arrow.slick-hidden {
   display: none; }
 
+/*===============================================================
+Theme
+===============================================================*/
 /*=====================================
 CONST
 =====================================*/
@@ -110,6 +110,9 @@ factory関数
 /*=========================
 shadow
 =========================*/
+/*===============================================================
+Foundation
+===============================================================*/
 /*
 * foundation/_reset.scss
 */
@@ -296,7 +299,8 @@ body {
   box-sizing: border-box; }
 
 img {
-  backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
 
 button:focus {
   outline: 0; }
@@ -323,6 +327,9 @@ a:active {
   text-decoration: none;
   cursor: pointer; }
 
+/*===============================================================
+Layout
+===============================================================*/
 .l-flex {
   display: flex;
   flex-wrap: wrap; }
@@ -337,6 +344,12 @@ a:active {
   flex-wrap: wrap;
   align-items: center; }
 
+/*===============================================================
+Object
+===============================================================*/
+/*=========================================
+Component
+=========================================*/
 .c-button, .c-button__primary, .c-button__secondary, .c-button__alt1 {
   display: inline-block;
   padding: 5px 15px;
@@ -408,6 +421,9 @@ a:active {
   width: 100%;
   height: auto; }
 
+/*=========================================
+Project
+=========================================*/
 .p-aside {
   position: fixed;
   bottom: 12vh;
@@ -473,8 +489,11 @@ a:active {
 .p-footer-nav {
   width: 440px; }
   .p-footer-nav__list {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 126px 1fr;
     grid-template-columns: 126px 1fr;
+    -ms-grid-rows: 36px 36px 36px;
     grid-template-rows: 36px 36px 36px;
     padding-top: 82px; }
     .p-footer-nav__list a {
@@ -736,6 +755,9 @@ a:active {
     top: 442px;
     left: calc(50% + 270px); }
 
+/*=========================================
+Utility
+=========================================*/
 /*=========================
 center
 =========================*/
