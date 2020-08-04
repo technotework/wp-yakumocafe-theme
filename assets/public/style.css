@@ -521,7 +521,7 @@ Project
     .p-footer-nav__list a {
       display: block;
       color: #fff;
-      letter-spacing: 0.2rem; }
+      letter-spacing: 0.15rem; }
   .p-footer-nav__place {
     width: 440px;
     padding: 82px 0 0 95px; }
@@ -533,7 +533,7 @@ Project
     margin-bottom: 26px; }
     .p-footer-nav__chofu a {
       color: #fff;
-      letter-spacing: 0.2rem; }
+      letter-spacing: 0.15rem; }
   .p-footer-nav__chofu-logo {
     width: 24px;
     height: 23px;
