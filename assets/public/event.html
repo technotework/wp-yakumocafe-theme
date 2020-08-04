@@ -2,6 +2,8 @@
 <html>
 
 <head>
+	<link rel="stylesheet" href="../../style.css">
+	<script src="../../js/index.bundle.js"></script>
 	<!--流用するため省略-->
 	<title>イベント&トピックス | 調布のまちの珈琲店 | YAKUMO CAFE</title>
 </head>
@@ -16,42 +18,68 @@
 		<article class="p-main__article">
 			<!--イベント&トピックスー-->
 			<section>
-				<h3 class="p-h__content-level">
-					EVENT&amp;TOPICS
-				</h3>
+				<div class="u-i-center">
+					<h3 class="c-h__article p-h__article">EVENT&amp;TOPICS</h3>
+				</div>
 
 				<!--コンテンツ-->
-				<ul class="p-content-eventlist">
-					<li class="p-content-eventlist-item">
+				<div class="p-side-indent u-center">
+					<ul class="p-content-eventlist">
+						<li class="p-content-eventlist-item">
+							<section class="l-flex">
+								<figure class="p-content-eventlist-item__fig">
+									<img src="" alt="" class="c-res-img">
+								</figure>
 
-						<section>
-							<figure class="p-content-eventlist-item__fig">
-								<img src="c-res-img" alt="">
-							</figure>
-							<div class="p-content-eventlist-item__description">
-								<h4 class="p-h__sub-level1">
-									7/25 ライブイベント 「じんじゃーず」出演
-								</h4>
-								<p class="p-content-eventlist-item__text">
-									7/25 調布市で結成されたバンド「じんじゃーず」のライブイベントを「YAKUMO CAFE」で開催します。
-								</p>
-							</div>
-						</section>
+								<div class="p-content-eventlist-item__description">
+									<h4 class="p-h__content1 c-h__content1">
+										7/25 ライブイベント 「じんじゃーず」出演
+									</h4>
+									<p class="p-para">
+										7/25 調布市で結成されたバンド「じんじゃーず」のライブイベントを「YAKUMO CAFE」で開催します。
+									</p>
+								</div>
+							</section>
+						</li>
+						<li class="p-content-eventlist-item">
+							<section class="l-flex">
+								<figure class="p-content-eventlist-item__fig">
+									<img src="" alt="" class="c-res-img">
+								</figure>
 
-					</li>
-				</ul>
+								<div class="p-content-eventlist-item__description">
+									<h4 class="p-h__content1 c-h__content1">
+										7/25 ライブイベント 「じんじゃーず」出演
+									</h4>
+									<p class="p-para">
+										7/25 調布市で結成されたバンド「じんじゃーず」のライブイベントを「YAKUMO CAFE」で開催します。
+									</p>
+								</div>
+							</section>
+						</li>
+						<li class="p-content-eventlist-item">
+							<section class="l-flex">
+								<figure class="p-content-eventlist-item__fig">
+									<img src="" alt="" class="c-res-img">
+								</figure>
+
+								<div class="p-content-eventlist-item__description">
+									<h4 class="p-h__content1 c-h__content1">
+										7/25 ライブイベント 「じんじゃーず」出演
+									</h4>
+									<p class="p-para">
+										7/25 調布市で結成されたバンド「じんじゃーず」のライブイベントを「YAKUMO CAFE」で開催します。
+									</p>
+								</div>
+							</section>
+						</li>
+					</ul>
+				</div>
 			</section>
 		</article>
 		<!--ページング-->
 		<nav class="p-paging">
-			<ul>
-				<li class="p-paging__back">
-					<a href="">Back</a>
-				</li>
-				<li class="p-paging__next">
-					<a href="">Next</a>
-				</li>
-			</ul>
+			<!--流用するため省略-->
 		</nav>
 	</main>
 
@@ -62,7 +90,17 @@
 	<footer>
 		<!--流用するため省略-->
 	</footer>
-
+	<!--AdobeFont-->
+	<script>
+		(function (d) {
+			var config = {
+				kitId: 'qdv7kse',
+				scriptTimeout: 3000,
+				async: true
+			},
+				h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
 </body>
 
 </html>

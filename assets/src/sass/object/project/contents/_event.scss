@@ -1,0 +1,19 @@
+.p-content-eventlist-item {
+
+	padding-bottom: unit(1);
+	margin-bottom: unit(1);
+	border-bottom: solid 1px $gray1;
+
+	&__fig {
+		width: 232px;
+		height: 168px;
+		background-color: $black;
+		margin-right: 32px;
+		border-radius: $radius;
+	}
+
+	&__description {
+
+		max-width: 734px;
+	}
+}

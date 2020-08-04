@@ -565,6 +565,10 @@ Project
   padding: 0 60px;
   letter-spacing: 0.2rem; }
 
+.p-h__content1 {
+  letter-spacing: 0.4rem;
+  margin-bottom: 2.8rem; }
+
 .p-h__content2 {
   height: 28px;
   background-image: url("/images/title-header-cloud.gif");
@@ -825,6 +829,19 @@ Project
   overflow: hidden;
   border-radius: 5px;
   background-color: #000; }
+
+.p-content-eventlist-item {
+  padding-bottom: 2.8rem;
+  margin-bottom: 2.8rem;
+  border-bottom: solid 1px #d1d1d1; }
+  .p-content-eventlist-item__fig {
+    width: 232px;
+    height: 168px;
+    background-color: #000;
+    margin-right: 32px;
+    border-radius: 5px; }
+  .p-content-eventlist-item__description {
+    max-width: 734px; }
 
 .p-content-access__info {
   width: 1024px;
