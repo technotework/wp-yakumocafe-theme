@@ -90,6 +90,9 @@ color
 radius
 =========================*/
 /*=========================
+p
+=========================*/
+/*=========================
 button
 =========================*/
 /*=========================
@@ -319,7 +322,7 @@ address {
   height: 6000px;
   opacity: 0.1;
   position: absolute;
-  top: 12px;
+  top: 0;
   left: 0;
   z-index: 1;
   background-image: url(/images/grid.png); }
@@ -435,6 +438,10 @@ Component
 .c-res-img {
   width: 100%;
   height: auto; }
+
+.c-para {
+  text-align: justify;
+  letter-spacing: 0.2rem; }
 
 /*=========================================
 Project
@@ -692,10 +699,6 @@ Project
     font-style: normal;
     letter-spacing: 0.1rem; }
 
-.p-para {
-  text-align: justify;
-  letter-spacing: 0.2rem; }
-
 .p-side-indent {
   width: 1024px;
   padding: 5.6rem 0 0 26px; }
@@ -851,6 +854,56 @@ Project
         right: -25px; }
     .p-top-header-nav__list > li:last-child ::after {
       content: none; }
+
+.p-content-about {
+  background-image: url(/images/about-cloud-bg.gif);
+  background-repeat: no-repeat;
+  background-position: top 425px right calc(50% + -536px); }
+
+/*ご挨拶*/
+.p-content-greet {
+  width: 1024px;
+  padding: 5.6rem 0 11.2rem 0; }
+  .p-content-greet__profile {
+    position: relative;
+    width: 320px;
+    margin-right: 60px;
+    padding-top: 0.6rem; }
+  .p-content-greet__image {
+    height: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    line-height: 0; }
+  .p-content-greet__text {
+    max-width: 644px; }
+  .p-content-greet__signature {
+    font-weight: 700; }
+  .p-content-greet__name {
+    padding-left: 0.5rem;
+    font-size: 1.8rem; }
+  .p-content-greet__left-cloud {
+    position: absolute;
+    width: 218px;
+    height: 100px;
+    top: -45px;
+    left: -23px; }
+  .p-content-greet__right-cloud {
+    position: absolute;
+    width: 235px;
+    height: 111px;
+    bottom: -55px;
+    right: -45px; }
+
+/*こだわり*/
+.p-content-commit {
+  width: 1024px;
+  padding: 5.6rem 0 8.4rem 0; }
+  .p-content-commit__text {
+    width: 627px; }
+  .p-content-commit__image {
+    width: 320px;
+    height: 127px;
+    margin-right: 32px; }
 
 .p-content-event-detail__mainimage {
   width: 100%;

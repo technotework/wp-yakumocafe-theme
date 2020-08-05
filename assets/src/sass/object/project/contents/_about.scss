@@ -1,0 +1,81 @@
+.p-content-about {
+
+	background-image: url(/images/about-cloud-bg.gif);
+	background-repeat: no-repeat;
+	background-position: top 425px right calc(50% + -536px);
+}
+
+/*ご挨拶*/
+.p-content-greet {
+
+	width: $base-width;
+	padding: unit(2) 0 unit(4) 0;
+
+	&__profile {
+
+		position: relative;
+		width: 320px;
+		margin-right: 60px;
+		padding-top: headshift(1.6rem);
+
+	}
+
+	&__image {
+
+		height: auto;
+		overflow: hidden;
+		border-radius: $radius;
+		line-height: 0;
+	}
+
+	&__text {
+
+		max-width: 644px;
+	}
+
+	&__signature {
+		font-weight: 700;
+	}
+
+	&__name {
+		padding-left: 0.5rem;
+		font-size: 1.8rem;
+	}
+
+	&__left-cloud {
+
+		position: absolute;
+		width: 218px;
+		height: 100px;
+		top: -45px;
+		left: -23px;
+	}
+
+	&__right-cloud {
+		position: absolute;
+		width: 235px;
+		height: 111px;
+		bottom: -55px;
+		right: -45px;
+	}
+}
+
+/*こだわり*/
+
+.p-content-commit {
+
+	width: $base-width;
+	padding: unit(2) 0 unit(3) 0;
+
+	&__text {
+
+		width: 627px;
+	}
+
+	&__image {
+		width: 320px;
+		height: 127px;
+		margin-right: 32px;
+	}
+
+}

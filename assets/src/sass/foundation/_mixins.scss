@@ -45,6 +45,13 @@ radius
 $radius: 5px;
 
 /*=========================
+p
+=========================*/
+$p-base-text-align:justify;
+$p-spacing:0.2rem;
+
+
+/*=========================
 button
 =========================*/
 $button-padding: 5px 15px;
@@ -172,7 +179,7 @@ Base Layout Vars
 }
 
 //行の頭と合わせたい時に文字上部のline-height分だけずらず
-@function headShift($num,$fs) {
+@function headshift($fs) {
 
 	@return ($space-unit - $fs)/2;
 }
