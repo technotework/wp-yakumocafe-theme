@@ -289,7 +289,7 @@ html {
 body {
   font-family: fot-tsukubrdgothic-std, "HiraginoSans-W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "游ゴシック Medium", YuGothic, YuGothicM, "メイリオ", Meiryo, sans-serif;
   font-size: 1.6rem;
-  color: #000;
+  color: #252525;
   line-height: 2.8rem;
   font-weight: 400;
   font-style: normal;
@@ -325,7 +325,8 @@ address {
   top: 0;
   left: 0;
   z-index: 1;
-  background-image: url(/images/grid.png); }
+  background-image: url(/images/grid.png);
+  pointer-events: none; }
 
 a,
 a:hover,
@@ -409,7 +410,7 @@ Component
 
 .c-h__article {
   font-size: 2.2rem;
-  color: #000;
+  color: #252525;
   line-height: 2.8rem;
   font-weight: 700;
   font-style: normal; }
@@ -423,14 +424,14 @@ Component
 
 .c-h__content2 {
   font-size: 1.8rem;
-  color: #000;
+  color: #252525;
   line-height: 2.8rem;
   font-weight: 700;
   font-style: normal; }
 
 .c-h__lv1 {
   font-size: 1.8rem;
-  color: #000;
+  color: #252525;
   line-height: 2.8rem;
   font-weight: 700;
   font-style: normal; }
@@ -575,19 +576,19 @@ Project
   background-repeat: no-repeat, no-repeat;
   background-position: top left, bottom right;
   padding: 0 60px;
-  letter-spacing: 0.2rem; }
+  letter-spacing: 0.2rem;
+  line-height: 2.5rem; }
 
 .p-h__content1 {
   letter-spacing: 0.4rem;
   margin-bottom: 2.8rem; }
 
 .p-h__content2 {
-  height: 28px;
   background-image: url("/images/title-header-cloud.gif");
-  background-size: auto 100%;
+  background-size: auto 28px;
   background-repeat: no-repeat;
   background-position: left center;
-  padding-left: 50px;
+  padding-left: 53px;
   letter-spacing: 0.4rem;
   margin: 5.6rem 0 2.8rem 0; }
 
@@ -676,9 +677,8 @@ Project
 ========================*/
 .p-header-pan {
   width: 1024px;
-  height: 28px;
   background-image: url("/images/pankuzu-head.gif");
-  background-size: auto 75%;
+  background-size: auto 21px;
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 53px;
@@ -693,7 +693,7 @@ Project
     content: ""; }
   .p-header-pan a {
     font-size: 1.4rem;
-    color: #000;
+    color: #252525;
     line-height: 2.8rem;
     font-weight: 700;
     font-style: normal;
@@ -725,16 +725,14 @@ Project
       font-weight: 700;
       font-style: normal; }
   .p-paging__back a {
-    height: 100%;
     background-image: url("/images/back.gif");
-    background-size: auto 100%;
+    background-size: auto 28px;
     background-repeat: no-repeat;
     background-position: left center;
     padding-left: 40px; }
   .p-paging__next a {
-    height: 100%;
     background-image: url("/images/next.gif");
-    background-size: auto 100%;
+    background-size: auto 28px;
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 40px;
@@ -749,7 +747,7 @@ Project
     margin: 0 16px; }
     .p-tab__item a, .p-tab__item--current a {
       font-size: 1.6rem;
-      color: #000;
+      color: #252525;
       line-height: 2.8rem;
       font-weight: 700;
       font-style: normal;
@@ -899,18 +897,32 @@ Project
   width: 1024px;
   padding: 5.6rem 0 8.4rem 0; }
   .p-content-commit__text {
-    width: 627px; }
+    width: 672px; }
   .p-content-commit__image {
     width: 320px;
-    height: 127px;
-    margin-right: 32px; }
+    margin-left: 32px;
+    line-height: 0; }
+
+/*調布*/
+.p-content-with-chofu {
+  margin-top: 5.6rem; }
+  .p-content-with-chofu__text {
+    width: 1024px; }
+  .p-content-with-chofu__img {
+    width: 100%;
+    height: 39.2rem;
+    margin-top: 5.6rem;
+    background-image: url(/images/about-chofu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom; }
 
 .p-content-event-detail__mainimage {
   width: 100%;
   height: 336px;
   overflow: hidden;
   border-radius: 5px;
-  background-color: #000; }
+  background-color: #252525; }
 
 .p-content-eventlist-item {
   padding-bottom: 2.8rem;
@@ -919,7 +931,7 @@ Project
   .p-content-eventlist-item__fig {
     width: 232px;
     height: 168px;
-    background-color: #000;
+    background-color: #252525;
     margin-right: 32px;
     border-radius: 5px; }
   .p-content-eventlist-item__description {
@@ -932,7 +944,7 @@ Project
     height: 168px;
     overflow: hidden;
     border-radius: 5px;
-    background-color: #000;
+    background-color: #252525;
     margin-right: 36px; }
   .p-content-menulist-item__description {
     max-width: 214px; }
@@ -951,7 +963,7 @@ Project
   width: 1024px;
   margin-bottom: 2.8rem; }
   .p-content-access__info a {
-    color: #000; }
+    color: #252525; }
 
 .p-content-access__shopname {
   display: inline-block;
@@ -963,14 +975,14 @@ Project
 .p-content-access__map {
   width: 100%;
   height: 473px;
-  background-color: #000; }
+  background-color: #252525; }
 
 .p-content-event {
   width: 1024px;
   margin-top: 8.4rem;
   margin-bottom: 5.6rem; }
   .p-content-event a {
-    color: #000; }
+    color: #252525; }
   .p-content-event__list {
     width: 1024px; }
   .p-content-event__listitem {
@@ -1018,7 +1030,7 @@ Project
     padding: 0 10px 9px 0;
     border-bottom: solid 1px #d1d1d1; }
     .p-content-info__content a {
-      color: #000; }
+      color: #252525; }
 
 .p-content-monthly {
   position: relative;

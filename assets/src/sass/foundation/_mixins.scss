@@ -24,7 +24,7 @@ $line-height: 1.75;
 /*=========================
 color
 =========================*/
-$black: #000;
+$black: #252525;
 $white: #fff;
 $trans: transparent;
 
@@ -185,20 +185,25 @@ Base Layout Vars
 }
 
 //アイコンワンポイント背景共通
-@mixin respBG($url,$direction,$per,$p,$h) {
+@mixin respBG($url,$direction,$size,$p) {
 
-	height: $h;
 	background-image: url($url);
-	background-size: auto $per;
+	background-size: auto $size;
 	background-repeat: no-repeat;
 
-	@if $direction == "left" {
+	@if $direction == "l" {
 
 		background-position: left center;
 		padding-left: $p;
 	}
 
-	@if $direction == "right" {
+	@if $direction == "lt" {
+
+		background-position: left top;
+		padding-left: $p;
+	}
+
+	@if $direction == "r" {
 
 		background-position: right center;
 		padding-right: $p;

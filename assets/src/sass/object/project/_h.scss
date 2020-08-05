@@ -17,6 +17,7 @@
 		background-position: top left, bottom right;
 		padding: 0 60px;
 		letter-spacing: 0.2rem;
+		line-height: 2.5rem;
 	}
 
 	&__content1 {
@@ -27,7 +28,7 @@
 
 	&__content2 {
 
-		@include respBG("/images/title-header-cloud.gif","left",100%,50px,28px);
+		@include respBG("/images/title-header-cloud.gif","l",28px,53px);
 
 		letter-spacing: 0.4rem;
 		margin: unit(2) 0 unit(1) 0;

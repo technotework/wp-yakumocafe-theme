@@ -16,13 +16,13 @@
 
 	&__back a {
 
-		@include respBG("/images/back.gif","left",100%,40px,100%);
+		@include respBG("/images/back.gif","l",28px,40px);
 
 	}
 
 	&__next a {
 
-		@include respBG("/images/next.gif","right",100%,40px,100%);
+		@include respBG("/images/next.gif","r",28px,40px);
 		text-align: right;
 	}
 }

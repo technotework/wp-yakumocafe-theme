@@ -112,7 +112,7 @@
 
 	width: $base-width;
 
-	@include respBG("/images/pankuzu-head.gif","left",75%,53px,28px);
+	@include respBG("/images/pankuzu-head.gif","l",21px,53px);
 
 	margin-top: unit(1);
 	margin-bottom: unit(1);
