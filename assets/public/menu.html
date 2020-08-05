@@ -25,23 +25,20 @@
 				<!--コンテンツ-->
 				<div class="p-full u-center ">
 					<!--tab-->
-					<nav class="p-content-menu u-center">
+					<nav class="p-tab u-center">
 
-						<ul class="js-content-menu__tab">
+						<ul class="js-tab l-flex-center">
 
-							<li class="js-content-menu__drink
-										p-content-menu__navitem--current">
-								DRINK
+							<li class="js-tabitem p-tab__item--current" data-tab-group="drink">
+								<a href="">DRINK</a>
 							</li>
 
-							<li class="js-content-menu__food 
-										p-content-menu__navitem">
-								FOOD
+							<li class="js-tabitem p-tab__item" data-tab-group="food">
+								<a href="">FOOD</a>
 							</li>
 
-							<li class="js-content-menu__sweets 
-										p-content-menu__navitem">
-								SWEETS
+							<li class="js-tabitem p-tab__item" data-tab-group="sweets">
+								<a href="">SWEETS</a>
 							</li>
 
 						</ul>
@@ -51,7 +48,7 @@
 					<!--tabcontent-->
 					<div>
 						<!--drink-->
-						<div class="js-content-menu__drink-item">
+						<div class="js-tab-content" data-tab-group="drink">
 							<ul class="l-flex-both">
 								<li class="p-content-menulist-item">
 									<section class="l-flex">
@@ -128,12 +125,12 @@
 						</div>
 
 						<!--food-->
-						<div class="js-content-menu__food-item">
+						<div class="js-tab-content" data-tab-group="food">
 
 						</div>
 
 						<!--sweets-->
-						<div class="js-content-menu__sweets-item">
+						<div class="js-tab-content" data-tab-group="sweets">
 
 						</div>
 					</div>

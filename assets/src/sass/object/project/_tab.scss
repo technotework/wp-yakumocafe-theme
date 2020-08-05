@@ -1,0 +1,36 @@
+.p-tab {
+
+	margin: unit(2) 0;
+
+	&__item {
+
+		width: 144px;
+		height: unit(2);
+		text-align: center;
+		margin: 0 16px;
+
+		a {
+
+			@include textFactory(1.6rem,$black,"bold",2.8rem);
+			letter-spacing: 0.3rem;
+
+			&:hover {
+				color: $theme1;
+			}
+		}
+	}
+
+	&__item--current {
+
+		@extend .p-tab__item;
+
+		background-image: url(/images/tab.gif);
+		background-position: center unit(1);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+
+		a {
+			color: $theme1;
+		}
+	}
+}
