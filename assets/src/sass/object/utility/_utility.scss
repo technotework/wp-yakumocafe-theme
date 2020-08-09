@@ -53,7 +53,7 @@ z-index util
 grid order
 =========================*/
 $grid-order-min: 1;
-$grid-order-max: 30;
+$grid-order-max: 20;
 
 @for $i from $grid-order-min through $grid-order-max {
 
@@ -63,49 +63,3 @@ $grid-order-max: 30;
 	}
 }
 
-/*=========================
-margin padding generator
-=========================*/
-$margin-min: 1;
-$margin-max: 200;
-
-@for $i from $margin-min through $margin-max {
-
-	.u-mt#{$i} {
-		margin-top: #{$i}px;
-	}
-
-	.u-mr#{$i} {
-		margin-right: #{$i}px;
-	}
-
-	.u-mb#{$i} {
-		margin-bottom: #{$i}px;
-	}
-
-	.u-ml#{$i} {
-		margin-left: #{$i}px;
-	}
-}
-
-$padding-min: 1;
-$padding-max: 200;
-
-@for $i from $padding-min through $padding-max {
-
-	.u-pt#{$i} {
-		padding-top: #{$i}px;
-	}
-
-	.u-pr#{$i} {
-		padding-right: #{$i}px;
-	}
-
-	.u-pb#{$i} {
-		padding-bottom: #{$i}px;
-	}
-
-	.u-pl#{$i} {
-		padding-left: #{$i}px;
-	}
-}
