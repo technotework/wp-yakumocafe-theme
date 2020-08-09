@@ -61,14 +61,26 @@
 
 		<!--タイトル-->
 		<div class="p-header-title u-center">
-			<h2 class="p-h__page c-h__page u-center">ABOUT</h2>
+			<h2 class="p-h__page c-h__page u-center">
+				<?php
+					$page_name = get_post( get_the_ID() );
+					$slug      = mb_strtoupper( $page_name->post_name );
+					echo esc_html( $slug );
+				?>
+			</h2>
 		</div>
 
 		<!--ぱんくず-->
 		<div class="p-header-pan u-center">
 			<ul class="l-flex-vcenter">
 				<li><a href="">HOME</a></li>
-				<li><a href="">ABOUT</a></li>
+				<li><a href="">
+					<?php
+						$page_name = get_post( get_the_ID() );
+						$slug      = mb_strtoupper( $page_name->post_name );
+						echo esc_html( $slug );
+					?>
+				</a></li>
 			</ul>
 		</div>
 	</header>

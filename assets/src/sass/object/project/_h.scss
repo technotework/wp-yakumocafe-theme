@@ -28,7 +28,7 @@
 
 	&__content2 {
 
-		@include respBG("/images/title-header-cloud.gif","l",28px,53px);
+		@include respBG("images/title-header-cloud.gif","l",28px,53px);
 
 		letter-spacing: 0.4rem;
 		margin: unit(2) 0 unit(1) 0;
