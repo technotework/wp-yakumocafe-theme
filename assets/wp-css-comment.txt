@@ -1,0 +1,6 @@
+/*
+Theme Name: YAKUMO CAFE
+Description: YAKUMO CAFE テーマ
+version: 1
+Author: Technotework
+*/
