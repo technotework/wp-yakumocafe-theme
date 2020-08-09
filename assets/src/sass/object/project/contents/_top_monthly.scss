@@ -2,7 +2,7 @@
 .p-content-monthly {
 	position: relative;
 
-	background-image: url(/images/top-menu-bg1.gif), url(/images/top-menu-bg2.gif);
+	background-image: url(images/top-menu-bg1.gif), url(images/top-menu-bg2.gif);
 	background-repeat: no-repeat, no-repeat;
 	background-position: top 6px left calc(50% + 684px), bottom 1px left calc(50% - 492px);
 
@@ -40,7 +40,7 @@
 		right: 30px;
 
 		display: inline-block;
-		background-image: url(/images/top-menu-monthbg.png);
+		background-image: url(images/top-menu-monthbg.png);
 		background-color: $theme4;
 		background-size: 80%;
 
