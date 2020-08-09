@@ -40,7 +40,12 @@ module.exports = {
                 include: path.resolve( __dirname, 'src/sass' ),
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: false
+                        }
+                    },
                     {
                         loader: 'postcss-loader',
                         options: {
