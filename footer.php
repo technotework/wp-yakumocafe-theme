@@ -2,33 +2,81 @@
 /**
  * The template for displaying the footer
  *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
  * @package yakumocafe
  */
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'yakumocafe' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'yakumocafe' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'yakumocafe' ), 'yakumocafe', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	<!--footer-->
+	<footer class="p-footer">
+		<div class="p-footer__container">
 
-<?php wp_footer(); ?>
 
+			<div class="p-footer__content-group u-center l-flex-center">
+				<div class="js-pagetop p-footer__pagetop">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/images/pagetop.gif' ); ?>" alt="pagetop" class="c-res-img">
+				</div>
+
+				<nav class="p-footer-nav c-footerNav">
+					<ul class="p-footer-nav__list">
+						<li class="u-order1">
+							<a href="<?php echo esc_url( home_url() ); ?>">HOME</a>
+						</li>
+						<li class="u-order3">
+							<a href="">ABOUT</a>
+						</li>
+						<li class="u-order5">
+							<a href="">MENU</a>
+						</li>
+						<li class="u-order2">
+							<a href="">EVENT&amp;TOPICS</a>
+						</li>
+						<li class="u-order4">
+							<a href="">ACCESS</a>
+						</li>
+						<li class="u-order6">
+							<a href="">RESERVE</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="p-footer-nav__logo">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/images/footer-logo.png' ); ?>" alt="YAKUMO CAFE" class="c-res-img">
+				</div>
+
+				<div class="p-footer-nav__place">
+					<div class="p-footer-nav__chofu l-flex-vcenter">
+						<a href="">
+							CHOFU GUIDE
+						</a>
+						<div class="p-footer-nav__chofu-logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/images/footer-citylogo.png' ); ?>" alt="CHOFU GUIDE" class="c-res-img">
+						</div>
+					</div>
+					<div class="p-footer-nav__address">
+						182-0015<br />
+						東京都調布市八雲台1-2-3<br />
+						<a href="tel:042-000-000">TEL:042-000-000</a>
+					</div>
+				</div>
+			</div>
+
+			<small class="p-footer__copy u-center">&copy; 2020 YAKUMO CAFE</small>
+		</div>
+	</footer>
+
+	<!--AdobeFont-->
+	<script>
+		(function (d) {
+			var config = {
+				kitId: 'qdv7kse',
+				scriptTimeout: 3000,
+				async: true
+			},
+				h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+	<?php wp_footer(); ?>
 </body>
+
 </html>

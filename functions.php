@@ -1,6 +1,6 @@
 <?php
 /**
- * yakumocafe functions and definitions
+ * Yakumocafe functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -39,6 +39,17 @@ if ( ! function_exists( 'yakumocafe_setup' ) ) :
 		 * provide it for us.
 		 */
 		add_theme_support( 'title-tag' );
+		add_filter( 'document_title_separator', 'my_document_title_separator' );
+		/**
+		 * Title separator filter
+		 *
+		 *  @param string $separator input string.
+		 *  @return string $separator
+		 */
+		function my_document_title_separator( $separator ) {
+			$separator = '|';
+			return $separator;
+		}
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
@@ -144,8 +155,6 @@ add_action( 'widgets_init', 'yakumocafe_widgets_init' );
  */
 function yakumocafe_scripts() {
 	wp_enqueue_style( 'yakumocafe-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'yakumocafe-style', 'rtl', 'replace' );
-
 	wp_enqueue_script( 'yakumocafe-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
