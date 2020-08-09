@@ -57,7 +57,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-          filename: '../assets/public/style.css',
+          filename: '../style.css',
           ignoreOrder: true
         })
       ]

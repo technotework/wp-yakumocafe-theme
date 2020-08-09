@@ -8,7 +8,10 @@ module.exports = merge(baseConfig, {
         minimizer: [
             new TerserPlugin({
                 terserOptions: {
-                    compress: { drop_console: true },
+                    parallel: true,
+                    sourceMap: true
+
+                    
                 },
             }),
         ],
@@ -17,8 +20,8 @@ module.exports = merge(baseConfig, {
         new CopyWebpackPlugin({
             patterns: [
               {
-                from: './public',
-                to: '../'
+                from: './public/images',
+                to: '../images'
               },
             ]
         }),
