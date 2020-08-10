@@ -8,7 +8,6 @@
 	get_header( 'home' );
 ?>
 	<!--main-->
-	<div id="grid" class="top"></div>
 	<main class="p-main">
 		<article class="p-main__article">
 			<!--今月のおすすめ-->
