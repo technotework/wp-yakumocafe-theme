@@ -43,6 +43,7 @@
 		display: block;
 		margin-bottom: unit(1);
 		letter-spacing: 0.2rem;
+		height: 2.8rem;
 
 		@include textFactory(1.6rem,$theme3,"bold",2.8rem);
 	}

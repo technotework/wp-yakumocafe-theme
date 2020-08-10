@@ -10,7 +10,7 @@
 	<a href="<?php the_permalink(); ?>">
 		<figure>
 
-			<div class="p-content-event__image"
+			<div class="p-content-event__image u-ishadow"
 				style="background-image:url(
 					<?php
 					echo esc_url( get_field( 'event_thumb' ) );

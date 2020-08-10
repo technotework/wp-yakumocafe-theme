@@ -62,25 +62,20 @@
 		<!--タイトル-->
 		<div class="p-header-title u-center">
 			<h2 class="p-h__page c-h__page u-center">
-				<?php
-					$page_name = get_post( get_the_ID() );
-					$slug      = mb_strtoupper( $page_name->post_name );
-					echo esc_html( $slug );
-				?>
+			<?php echo esc_html( get_post_type_object( get_post_type() )->label ); ?>
 			</h2>
 		</div>
 
 		<!--ぱんくず-->
 		<div class="p-header-pan u-center">
 			<ul class="l-flex-vcenter">
-				<li><a href="">HOME</a></li>
-				<li><a href="">
-					<?php
-						$page_name = get_post( get_the_ID() );
-						$slug      = mb_strtoupper( $page_name->post_name );
-						echo esc_html( $slug );
-					?>
+				<li><a href="/">HOME</a></li>
+				<li><a href="<?php echo esc_html( '/' . get_post_type_object( get_post_type() )->name ); ?>">
+				<?php echo esc_html( get_post_type_object( get_post_type() )->label ); ?>
 				</a></li>
+				<?php if ( is_single() ) : ?>
+					<li><a href="<?php echo esc_url( get_permalink() ); ?>">Article</a></li>
+				<?php endif; ?>
 			</ul>
 		</div>
 	</header>

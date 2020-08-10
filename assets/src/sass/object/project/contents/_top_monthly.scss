@@ -20,14 +20,16 @@
 		padding-top: unit(1);
 	}
 
-	&__image {
+	&__fig {
 
 		width: 677px;
 
-		> img {
+	}
 
-			border-radius: $radius;
-		}
+	&__image {
+
+		overflow: hidden;
+		border-radius: $radius;
 	}
 
 	&__text {

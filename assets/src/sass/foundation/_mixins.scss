@@ -11,6 +11,7 @@ $space-unit:2.8rem;
 $break_tablet: 768px;
 $break_mobile: 559px;
 $break_br:768px;
+$footer_height:353px;
 
 /*=========================
 font
@@ -111,6 +112,7 @@ font mixins
 	@include textFactory($f-main, $text, "regular", 2.8rem);
 	@include containerFactory($base1, 0, 0 0 0 0);
 	font-feature-settings: "palt" 1;
+	margin-bottom: $footer_height;
 }
 
 @mixin ff {
@@ -261,4 +263,10 @@ shadow
 
 @mixin text-shadow($length,$opacity) {
 	text-shadow: 0 0 $length rgba(0, 0, 0, $opacity);
+}
+
+
+@mixin inner-shadow($blur,$opacity) {
+
+	box-shadow: 0 0 $blur 0 rgba(0, 0, 0, $opacity) inset;
 }
