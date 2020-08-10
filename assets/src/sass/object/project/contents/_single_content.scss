@@ -1,0 +1,21 @@
+body.single-event,
+body.single-info {
+
+	h4 {
+
+		@extend .c-h__content2;
+		@extend .p-h__content2;
+	}
+
+	h5 {
+
+		@extend .c-h__lv1;
+		@extend .p-h__lv1;
+	}
+
+	p {
+
+		@extend .c-para;
+	}
+
+}
