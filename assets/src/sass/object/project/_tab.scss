@@ -9,28 +9,19 @@
 		text-align: center;
 		margin: 0 16px;
 
-		a {
-
-			@include textFactory(1.6rem,$black,"bold",2.8rem);
-			letter-spacing: 0.3rem;
-
-			&:hover {
-				color: $theme1;
-			}
-		}
+		@include textFactory(1.6rem,$black,"bold",2.8rem);
+		letter-spacing: 0.3rem;
+		cursor: pointer;
+		user-select: none;
 	}
 
-	&__item--current {
+}
 
-		@extend .p-tab__item;
+.is-tab-current {
 
-		background-image: url(images/tab.gif);
-		background-position: center unit(1);
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-
-		a {
-			color: $theme1;
-		}
-	}
+	background-image: url(images/tab.gif);
+	background-position: center unit(1);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	color: $theme1;
 }

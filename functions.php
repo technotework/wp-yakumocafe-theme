@@ -214,6 +214,8 @@ function change_posts_per_page( $query ) {
 			$query->set( 'posts_per_page', '10' );
 		} elseif ( is_post_type_archive( 'event' ) ) {
 			$query->set( 'posts_per_page', '4' );
+		} elseif ( is_post_type_archive( 'menu' ) ) {
+			$query->set( 'posts_per_page', '-1' );
 		}
 	}
 	return $query;

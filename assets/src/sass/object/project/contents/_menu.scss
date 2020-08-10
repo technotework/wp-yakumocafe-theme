@@ -4,11 +4,11 @@
 
 	&__fig {
 		width: 232px;
-		height: 168px;
+		height: 166px;
 		overflow: hidden;
 		border-radius: $radius;
-		background-color: $black;
 		margin-right: 36px;
+		line-height: 0;
 	}
 
 	&__description {
@@ -30,6 +30,6 @@
 		width: $base-width;
 		line-height: 2.8rem;
 		text-align: right;
-		margin-bottom: unit(3);
+		padding-bottom: unit(3);
 	}
 }

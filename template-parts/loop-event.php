@@ -32,6 +32,5 @@
 				?>
 				</p>
 			</div>
-		
 	</section>
 </li>
