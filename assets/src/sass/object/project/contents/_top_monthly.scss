@@ -9,6 +9,10 @@
 	padding-top: unit(2);
 	padding-bottom: unit(3);
 
+	&__lists {
+		width: 677px;
+	}
+
 	&__container {
 
 		position: relative;
@@ -31,7 +35,7 @@
 		display: block;
 		text-align: justify;
 		width: 385px;
-		margin-top: unit(0.55);
+		margin-top: unit(1);
 	}
 
 	&__badge {
@@ -49,6 +53,7 @@
 		border-radius: $radius;
 		padding: 1.4rem 1.6rem 1.8rem 1.6rem;
 		letter-spacing: 0.3rem;
+		z-index: 888;
 	}
 
 	&__nav {
@@ -56,7 +61,9 @@
 		position: absolute;
 		width: 61px;
 		height: 61px;
-		top: 288px;
+		top: 234px;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
 	}
 
 	&__button {
@@ -69,12 +76,14 @@
 
 		@extend .p-content-monthly__nav;
 		left: calc(50% - 454px);
+		background-image: url(images/top-menu-back.gif);
 	}
 
 	&__next {
 
 		@extend .p-content-monthly__nav;
 		left: calc(50% + 390px);
+		background-image: url(images/top-menu-next.gif);
 	}
 
 
@@ -85,6 +94,7 @@
 		left: calc(50% - 480px);
 		width: 251px;
 		height: 121px;
+		z-index: 999;
 	}
 
 	&__right-cloud {
@@ -92,8 +102,9 @@
 		position: absolute;
 		width: 233px;
 		height: 120px;
-		top: 442px;
+		top: 468px;
 		left: calc(50% + 270px);
+		z-index: 999;
 	}
 
 }

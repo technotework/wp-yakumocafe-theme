@@ -155,7 +155,7 @@ add_action( 'widgets_init', 'yakumocafe_widgets_init' );
  */
 function yakumocafe_scripts() {
 	wp_enqueue_style( 'yakumocafe-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_script( 'yakumocafe-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'yakumocafe-navigation', get_template_directory_uri() . '/js/index.bundle.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -190,3 +190,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+/**
+ * Pre_get_posts
+ *
+ * @param string $query query.
+ */
+function add_my_post_types_to_query( $query ) {
+	if ( is_home() && $query->is_main_query() ) {
+		$query->set( 'post_type', array( 'post', 'page', 'movie' ) );
+	}
+	return $query;
+}

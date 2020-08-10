@@ -8,6 +8,7 @@
 	get_header( 'home' );
 ?>
 	<!--main-->
+	<div id="grid" class="top"></div>
 	<main class="p-main">
 		<article class="p-main__article">
 			<!--今月のおすすめ-->
@@ -19,33 +20,20 @@
 				<div class="p-content-monthly">
 
 					<!--コンテンツ-->
-					<ul class="js-content-monthly">
-						<li class="p-content-monthly__container u-center">
-							<figure class="p-content-monthly__image">
-								<img src="https://kinarino.k-img.com/system/press_images/001/518/826/46292da44cbdc27a0c937a9f63069efb5597ed5d.jpg?1572153103"
-									alt="" class="c-res-img">
-								<figcaption class="p-content-monthly__text c-caption u-center">
-									もじもじもじもじもじもじもじもじもじもじもじもじもじもじもじもじ
-								</figcaption>
-							</figure>
-
-							<div class="p-content-monthly__badge">
-								July
-							</div>
-
-
-						</li>
+					<ul id="js-content-monthly" class="p-content-monthly__lists u-center">
+					<?php
+						$args = array(
+							'post_type'      => 'recommend',
+							'posts_per_page' => 3,
+						);
+						$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) :
+							$loop->the_post();
+							get_template_part( 'template-parts/loop', 'top-recommend' );
+						endwhile;
+						?>
 					</ul>
 
-					<!--nav-->
-					<nav>
-						<div class="p-content-monthly__back">
-							<img src="<?php echo esc_url( get_template_directory_uri() . '/images/top-menu-back.gif' ); ?>" class="c-res-img">
-						</div>
-						<div class="p-content-monthly__next">
-							<img src="<?php echo esc_url( get_template_directory_uri() . '/images/top-menu-next.gif' ); ?>" class="c-res-img">
-						</div>
-					</nav>
 
 					<!--装飾要素-->
 					<div class="p-content-monthly__left-cloud">
@@ -57,7 +45,7 @@
 
 
 					<!--リンク-->
-					<div class="p-content-monthly__button u-center">
+					<div class="p-content-monthly__button u-center u-mb5">
 						<a class="c-button__alt1 p-button__alt1">
 							MENU
 						</a>
@@ -75,49 +63,19 @@
 
 				<!--コンテンツ-->
 				<div class="p-content-event u-center">
-					<ul class="p-content-event__list l-flex">
-						<li class="p-content-event__listitem">
-							<a href="">
-								<figure>
+					<ul class="p-content-event__list l-flex-r">
 
-									<div class="p-content-event__image"
-										style="background-image:url(https://www.anicom-sompo.co.jp/nekonoshiori/wp-content/uploads/2020/05/3453_10-740x524.jpg)">
-									</div>
-
-									<figcaption class="p-content-event__text c-caption">
-										もじもじもじもじもじもじもじもじ<br />もじもじもじもじもじもじ
-									</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li class="p-content-event__listitem">
-							<a href="">
-								<figure>
-
-									<div class="p-content-event__image"
-										style="background-image:url(https://www.anicom-sompo.co.jp/nekonoshiori/wp-content/uploads/2020/05/3453_10-740x524.jpg)">
-									</div>
-
-									<figcaption class="p-content-event__text c-caption">
-										もじもじもじもじもじもじもじもじ<br />もじもじもじもじもじもじ
-									</figcaption>
-								</figure>
-							</a>
-						</li>
-						<li class="p-content-event__listitem">
-							<a href="">
-								<figure>
-
-									<div class="p-content-event__image"
-										style="background-image:url(https://www.anicom-sompo.co.jp/nekonoshiori/wp-content/uploads/2020/05/3453_10-740x524.jpg)">
-									</div>
-
-									<figcaption class="p-content-event__text c-caption">
-										もじもじもじもじもじもじもじもじ<br />もじもじもじもじもじもじ
-									</figcaption>
-								</figure>
-							</a>
-						</li>
+						<?php
+						$args = array(
+							'post_type'      => 'event',
+							'posts_per_page' => 3,
+						);
+						$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) :
+							$loop->the_post();
+							get_template_part( 'template-parts/loop', 'top-event' );
+						endwhile;
+						?>
 					</ul>
 				</div>
 			</section>
@@ -131,41 +89,18 @@
 				<!--コンテンツ-->
 				<div class="p-content-info u-center">
 					<ul class="p-content-info__list">
-						<li class="p-content-info__listitem l-flex">
 
-							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
-							<span class="p-content-info__content l-flex-vcenter"><a
-									href="">今月の定休日は10、20、30日です</a></span>
-
-						</li>
-						<li class="p-content-info__listitem l-flex">
-
-							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
-							<span class="p-content-info__content l-flex-vcenter"><a
-									href="">今月の定休日は10、20、30日です</a></span>
-
-						</li>
-						<li class="p-content-info__listitem l-flex">
-
-							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
-							<span class="p-content-info__content l-flex-vcenter"><a
-									href="">今月の定休日は10、20、30日です</a></span>
-
-						</li>
-						<li class="p-content-info__listitem l-flex">
-
-							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
-							<span class="p-content-info__content l-flex-vcenter"><a
-									href="">今月の定休日は10、20、30日です</a></span>
-
-						</li>
-						<li class="p-content-info__listitem l-flex">
-
-							<span class="p-content-info__date l-flex-vcenter"><a href="">2020/07/07</a></span>
-							<span class="p-content-info__content l-flex-vcenter"><a
-									href="">今月の定休日は10、20、30日です</a></span>
-
-						</li>
+					<?php
+						$args = array(
+							'post_type'      => 'info',
+							'posts_per_page' => 5,
+						);
+						$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) :
+							$loop->the_post();
+							get_template_part( 'template-parts/loop', 'top-info' );
+						endwhile;
+						?>
 					</ul>
 				</div>
 

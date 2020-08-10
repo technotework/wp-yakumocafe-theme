@@ -47,6 +47,10 @@ address {
 	z-index: 1;
 	background-image: url(images/grid.png);
 	pointer-events: none;
+
+	&.top {
+		top: 12px;
+	}
 }
 
 a,

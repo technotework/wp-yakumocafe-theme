@@ -63,3 +63,27 @@ $grid-order-max: 20;
 	}
 }
 
+/*=========================
+margin generator
+=========================*/
+$margin-min: 1;
+$margin-max: 10;
+
+@for $i from $margin-min through $margin-max {
+
+	.u-mt#{$i} {
+		margin-top: #{$i}px;
+	}
+
+	.u-mr#{$i} {
+		margin-right: #{$i}px;
+	}
+
+	.u-mb#{$i} {
+		margin-bottom: #{$i}px;
+	}
+
+	.u-ml#{$i} {
+		margin-left: #{$i}px;
+	}
+}
