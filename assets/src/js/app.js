@@ -4,3 +4,4 @@ import 'regenerator-runtime/runtime';
 import './smoothScroll';
 import './slick';
 import './tab';
+import './darkbox'

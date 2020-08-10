@@ -6,18 +6,14 @@
  */
 
 ?>
-<li class="p-content-menulist-item" id="<?php echo esc_html( $kind->name ); ?>">
+<li class="p-content-menulist-item">
 	<section class="l-flex">
 		<figure class="p-content-menulist-item__fig u-ishadow">
-			<img src="
-			<?php
-					echo esc_html( get_field( 'menu_img' ) );
-			?>
-				" alt="
-				<?php
-				echo esc_html( get_field( 'menu_title' ) );
-				?>
-			" class="c-res-img">
+			<img src="<?php echo esc_url( get_field( 'menu_img' ) ); ?>" alt="<?php echo esc_html( get_field( 'menu_title' ) ); ?>" 
+			class="c-res-img"
+			data-darkbox="<?php echo esc_url( get_field( 'menu_img' ) ); ?>"
+			data-darkbox-group="menu"
+			data-darkbox-description="<?php echo esc_html( get_field( 'menu_text' ) );?>">
 		</figure>
 		<div class="p-content-menulist-item__description">
 			<h4 class="p-h__content1 c-h__content1">

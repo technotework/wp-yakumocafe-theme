@@ -44,6 +44,7 @@ inner shadow
 		left: 0;
 		bottom: 0;
 		right: 0;
+		pointer-events: none;
 
 		@include inner-shadow(12px,0.12);
 	}

@@ -10,7 +10,7 @@
         "serve": "webpack-dev-server --config webpack.dev.config.js",
         "dev": "webpack --config webpack.dev.config.js --watch",
         "build": "webpack --config webpack.prod.config.js && npm run wptheme",
-        "wptheme":"cat wp-css-comment.txt public/style.css > ../style.css"
+        "wptheme": "cat wp-css-comment.txt public/style.css > ../style.css"
     },
     "repository": {
         "type": "git",
