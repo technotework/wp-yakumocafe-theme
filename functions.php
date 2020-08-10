@@ -220,3 +220,38 @@ function change_posts_per_page( $query ) {
 }
 
 add_action( 'pre_get_posts', 'change_posts_per_page' );
+
+/**
+ * Single page nextback url
+ *
+ * @param boolean $previous true:prev false:next.
+ */
+function twpp_get_adjacent_post_url( $previous = true ) {
+	$post = get_adjacent_post( false, '', $previous );
+	$url  = '';
+	if ( ! empty( $post ) ) {
+		$url = get_permalink( $post->ID );
+	}
+	return $url;
+}
+
+/**
+ * Allow Block
+ *
+ * @param boolean $allowed_block_types block types.
+ */
+function wpqw_allowed_block_types( $allowed_block_types ) {
+
+	$allowed_block_types = array(
+		'core/paragraph',
+		'core/heading',
+		'core/image',
+		'core-embed/twitter',
+		'core-embed/youtube',
+		'core-embed/facebook',
+		'core-embed/instagram',
+	);
+	return $allowed_block_types;
+
+}
+add_filter( 'allowed_block_types', 'wpqw_allowed_block_types' );
