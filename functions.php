@@ -202,3 +202,21 @@ function add_my_post_types_to_query( $query ) {
 	}
 	return $query;
 }
+
+/**
+ * Pre_get_posts
+ *
+ * @param string $query query.
+ */
+function change_posts_per_page( $query ) {
+	if ( ! is_admin() && $query->is_main_query() ) {
+		if ( is_post_type_archive( 'info' ) ) {
+			$query->set( 'posts_per_page', '10' );
+		} elseif ( is_post_type_archive( 'event' ) ) {
+			$query->set( 'posts_per_page', '4' );
+		}
+	}
+	return $query;
+}
+
+add_action( 'pre_get_posts', 'change_posts_per_page' );

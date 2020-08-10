@@ -16,24 +16,23 @@ get_header();
 			<!--イベント&トピックスー-->
 			<section>
 				<div class="u-i-center">
-					<h3 class="c-h__article p-h__article">INFO</h3>
+					<h3 class="c-h__article p-h__article">EVENT&amp;TOPICS</h3>
 				</div>
 
 				<!--コンテンツ-->
 				<div class="p-side-indent u-center">
-					<ul class="p-content-info__list">
+					<ul class="p-content-eventlist">
 						<?php
 						if ( have_posts() ) :
 							while ( have_posts() ) :
 
 								the_post();
-								get_template_part( 'template-parts/loop', 'info' );
+								get_template_part( 'template-parts/loop', 'event' );
 							endwhile;
 							endif;
 						?>
 
 					</ul>
-
 				</div>
 			</section>
 		</article>
