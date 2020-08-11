@@ -14,7 +14,8 @@
 
 			<div class="p-footer__content-group u-center l-flex-center">
 				<div class="js-pagetop p-footer__pagetop">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/images/pagetop.gif' ); ?>" alt="pagetop" class="c-res-img">
+					<a href="#pagetop">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/images/pagetop.gif' ); ?>" alt="pagetop" class="c-res-img"></a>
 				</div>
 
 				<nav class="p-footer-nav c-footerNav">
