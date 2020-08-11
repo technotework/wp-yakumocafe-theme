@@ -1,11 +1,26 @@
+.p-aside-wrapper {
+
+	position: absolute;
+	top: 280px;
+	left: 0;
+	width: 46px;
+	opacity: 0;
+
+	&__top {
+
+		@extend .p-aside-wrapper;
+		top: 880px;
+	}
+
+}
+
 .p-aside {
 
-	position: fixed;
-	bottom: 12vh;
+	position: sticky;
+	top: 50px;
 	left: 0;
 	width: 46px;
 	height: 397px;
-
 	overflow: hidden;
 	border-radius: 0 $radius $radius 0;
 

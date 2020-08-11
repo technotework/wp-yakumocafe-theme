@@ -112,7 +112,6 @@ font mixins
 	@include textFactory($f-main, $text, "regular", 2.8rem);
 	@include containerFactory($base1, 0, 0 0 0 0);
 	font-feature-settings: "palt" 1;
-	margin-bottom: $footer_height;
 }
 
 @mixin ff {

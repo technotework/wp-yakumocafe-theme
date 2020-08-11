@@ -20,7 +20,7 @@
 <body <?php body_class(); ?> id="pagetop">
 <?php wp_body_open(); ?>
 	<!--header-->
-	<header class="p-top-header">
+	<header class="p-top-header js-top-header">
 
 		<!--logo-->
 		<h1 class="p-top-header__logo">

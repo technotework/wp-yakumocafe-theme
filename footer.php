@@ -8,7 +8,7 @@
 ?>
 
 	<!--footer-->
-	<footer class="p-footer">
+	<footer class="p-footer js-footer">
 		<div class="p-footer__container">
 
 

@@ -107,7 +107,7 @@
 
 			<!--ACCESS-->
 			<section>
-				<div id="access" class="p-content-access">
+				<div id="access" class="p-content-access js-access">
 
 					<div class="p-content-access__info u-center l-flex">
 						<h2 class="c-h__article">ACCESS</h2>

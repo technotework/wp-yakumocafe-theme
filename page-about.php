@@ -88,7 +88,7 @@ get_header();
 						CAFEも、あなたの心の安らぎの一部になりたいと思っています。
 					</p>
 
-					<div class="p-content-with-chofu__img">
+					<div class="p-content-with-chofu__img js-about-chofu">
 						<!--bg-->
 					</div>
 				</div>

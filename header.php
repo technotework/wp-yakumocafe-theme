@@ -18,7 +18,7 @@
 
 <body <?php body_class(); ?> id="pagetop">
 <?php wp_body_open(); ?>
-	<header class="p-header">
+	<header class="p-header js-header">
 
 		<div class="p-header__container">
 			<!--greenline-->

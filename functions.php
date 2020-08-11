@@ -155,11 +155,18 @@ add_action( 'widgets_init', 'yakumocafe_widgets_init' );
  */
 function yakumocafe_scripts() {
 	wp_enqueue_style( 'yakumocafe-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_script( 'yakumocafe-navigation', get_template_directory_uri() . '/js/index.bundle.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'yakumocafe-common', get_template_directory_uri() . '/js/common.bundle.js', array(), _S_VERSION, true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	if ( is_front_page() ) {
+		wp_enqueue_script( 'yakumocafe-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDmeVsERg3mZUu_zxqBpZjGV__IUU6RAVg', array(), _S_VERSION, true );
+		wp_enqueue_script( 'yakumocafe-top', get_template_directory_uri() . '/js/top.bundle.js', array(), _S_VERSION, true );
+
+	} elseif ( is_page( 'guide' ) ) {
+		wp_enqueue_script( 'yakumocafe-guide', get_template_directory_uri() . '/js/guide.bundle.js', array(), _S_VERSION, true );
+	} elseif ( is_post_type_archive( 'menu' ) ) {
+		wp_enqueue_script( 'yakumocafe-menu', get_template_directory_uri() . '/js/menu.bundle.js', array(), _S_VERSION, true );
 	}
+
 }
 add_action( 'wp_enqueue_scripts', 'yakumocafe_scripts' );
 
