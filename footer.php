@@ -37,7 +37,7 @@
 
 				<div class="p-footer-nav__place">
 					<div class="p-footer-nav__chofu l-flex-vcenter">
-						<a href="">
+						<a href="/guide">
 							CHOFU GUIDE
 						</a>
 						<div class="p-footer-nav__chofu-logo">

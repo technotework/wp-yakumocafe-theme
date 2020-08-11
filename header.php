@@ -29,7 +29,7 @@
 				</h1>
 
 				<div class="p-header__badge">
-					<a href=""><img src="<?php echo esc_url( get_template_directory_uri() . '/images/chofu_badge.png' ); ?>" alt="CHOFU GUIDE" class="c-res-img"></a>
+					<a href="/guide"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/chofu_badge.png' ); ?>" alt="CHOFU GUIDE" class="c-res-img"></a>
 				</div>
 
 				<!--nav-->

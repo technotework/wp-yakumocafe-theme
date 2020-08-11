@@ -30,7 +30,7 @@
 		</h1>
 		<!--badge-->
 		<div class="p-top-header__badge">
-			<img src="<?php echo esc_url( get_template_directory_uri() . '/images/chofu_badge.png' ); ?>" alt="CHOFU GUIDE" class="c-res-img">
+			<a href="/guide"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/chofu_badge.png' ); ?>" alt="CHOFU GUIDE" class="c-res-img"></a>
 		</div>
 
 		<!--mainImage-->
