@@ -45,7 +45,7 @@
 
 					<!--リンク-->
 					<div class="p-content-monthly__button u-center u-mb5">
-						<a class="c-button__alt1 p-button__alt1">
+						<a href="/menu" class="c-button__alt1 p-button__alt1">
 							MENU
 						</a>
 					</div>
