@@ -23,10 +23,11 @@
 		<div class="p-header__container">
 			<!--greenline-->
 			<div class="p-header__contents u-center">
-
-				<h1 class="p-header__logo">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/images/top_logo.gif' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="c-res-img">
-				</h1>
+				<a href="/">
+					<h1 class="p-header__logo">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/images/top_logo.gif' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="c-res-img">
+					</h1>
+				</a>
 
 				<div class="p-header__badge">
 					<a href="/guide"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/chofu_badge.png' ); ?>" alt="CHOFU GUIDE" class="c-res-img"></a>

@@ -32,7 +32,9 @@
 				</nav>
 
 				<div class="p-footer-nav__logo">
+					<a href="/">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/images/footer-logo.png' ); ?>" alt="YAKUMO CAFE" class="c-res-img">
+					</a>
 				</div>
 
 				<div class="p-footer-nav__place">
