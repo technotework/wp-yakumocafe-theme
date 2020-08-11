@@ -61,22 +61,14 @@
 		</div>
 		<!--nav-->
 		<nav class="p-top-header-nav">
-			<ul class="p-top-header-nav__list l-flex-center">
-				<li>
-					<a href="">ABOUT</a>
-				</li>
-				<li>
-					<a href="">MENU</a>
-				</li>
-				<li>
-					<a href="">EVENT&amp;TOPICS</a>
-				</li>
-				<li>
-					<a href="">ACCESS</a>
-				</li>
-				<li>
-					<a href="">RESERVE</a>
-				</li>
-			</ul>
+			<?php
+				$args = array(
+
+					'menu'       => 'top',
+					'menu_class' => 'p-top-header-nav__list l-flex-center',
+					'container'  => false,
+				);
+				wp_nav_menu( $args );
+				?>
 		</nav>
 	</header>

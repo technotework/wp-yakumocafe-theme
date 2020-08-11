@@ -18,26 +18,17 @@
 				</div>
 
 				<nav class="p-footer-nav c-footerNav">
-					<ul class="p-footer-nav__list">
-						<li class="u-order1">
-							<a href="<?php echo esc_url( home_url() ); ?>">HOME</a>
-						</li>
-						<li class="u-order3">
-							<a href="">ABOUT</a>
-						</li>
-						<li class="u-order5">
-							<a href="">MENU</a>
-						</li>
-						<li class="u-order2">
-							<a href="">EVENT&amp;TOPICS</a>
-						</li>
-						<li class="u-order4">
-							<a href="">ACCESS</a>
-						</li>
-						<li class="u-order6">
-							<a href="">RESERVE</a>
-						</li>
-					</ul>
+
+					<?php
+					$args = array(
+
+						'menu'       => 'footer',
+						'menu_class' => 'p-footer-nav__list',
+						'container'  => false,
+					);
+					wp_nav_menu( $args );
+					?>
+
 				</nav>
 
 				<div class="p-footer-nav__logo">

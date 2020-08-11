@@ -34,26 +34,15 @@
 
 				<!--nav-->
 				<nav class="p-header-nav">
-					<ul class="p-header-nav__list l-flex-vcenter">
-						<li>
-							<a href="">HOME</a>
-						</li>
-						<li class="--current">
-							<a href="">ABOUT</a>
-						</li>
-						<li>
-							<a href="">MENU</a>
-						</li>
-						<li>
-							<a href="">EVENT&amp;TOPICS</a>
-						</li>
-						<li>
-							<a href="">ACCESS</a>
-						</li>
-						<li>
-							<a href="">RESERVE</a>
-						</li>
-					</ul>
+					<?php
+					$args = array(
+
+						'menu'       => 'second',
+						'menu_class' => 'p-header-nav__list l-flex-vcenter',
+						'container'  => false,
+					);
+					wp_nav_menu( $args );
+					?>
 				</nav>
 
 			</div>
@@ -62,7 +51,13 @@
 		<!--タイトル-->
 		<div class="p-header-title u-center">
 			<h2 class="p-h__page c-h__page u-center">
-			<?php echo esc_html( get_post_type_object( get_post_type() )->label ); ?>
+			<?php
+			if ( is_page() ) {
+				echo esc_html( strtoupper( get_post_field( 'post_name', get_post() ) ) );
+			} else {
+				echo esc_html( get_post_type_object( get_post_type() )->label );
+			}
+			?>
 			</h2>
 		</div>
 
@@ -70,8 +65,20 @@
 		<div class="p-header-pan u-center">
 			<ul class="l-flex-vcenter">
 				<li><a href="/">HOME</a></li>
-				<li><a href="<?php echo esc_html( '/' . get_post_type_object( get_post_type() )->name ); ?>">
-				<?php echo esc_html( get_post_type_object( get_post_type() )->label ); ?>
+				<li><a href="<?php
+				if ( is_page() ) {
+					echo esc_html( '/' . get_post_field( 'post_name', get_post() ) );
+				} else {
+					echo esc_html( '/' . get_post_type_object( get_post_type() )->name );
+				}
+				?>">
+				<?php
+				if ( is_page() ) {
+					echo esc_html( strtoupper( get_post_field( 'post_name', get_post() ) ) );
+				} else {
+					echo esc_html( get_post_type_object( get_post_type() )->label );
+				}
+				?>
 				</a></li>
 				<?php if ( is_single() ) : ?>
 					<li><a href="<?php echo esc_url( get_permalink() ); ?>">Article</a></li>
