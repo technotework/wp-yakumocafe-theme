@@ -11,6 +11,7 @@ get_header( 'guide' );
 <main class="p-main">
 	<article class="p-content-about">
 		<div id="app">
+
 			<!--ナビ-->
 			<nav>
 				<ul class="p-guide-nav">
@@ -34,7 +35,7 @@ get_header( 'guide' );
 					</li>
 					<li class="p-guide-nav__item">
 						<label for="shrine">
-							<input type="checkbox" id="shrine" v-model="cb.nature" />
+							<input type="checkbox" id="shrine" v-model="cb.shrine" />
 							神社仏閣
 						</label>
 					</li>
@@ -45,22 +46,22 @@ get_header( 'guide' );
 			<template v-if="isPanelShow">
 				<div id="p-guide-panel" class="l-flex">
 					<figure>
-						<img :src="place.img" :alt="place.title" class="c-res-img" />
+						<img :src="getPanelInfo.img" :alt="getPanelInfo.title" class="c-res-img" />
 					</figure>
 					<div>
 						<section>
-							<h3>{{place.title}}</h3>
+							<h3>{{getPanelInfo.title}}</h3>
 						</section>
 						<p>
-							{{place.text}}
+							{{getPanelInfo.text}}
 						</p>
 					</div>
 					<div class="p-guide_panel__close"></div>
 				</div>
 			</template>
 
-
-
+			<div id="guide-map"></div>
+			
 		</div>
 	</article>
 </main>

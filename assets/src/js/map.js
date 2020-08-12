@@ -1,4 +1,4 @@
-google.maps.event.addDomListener( window, 'load', initMap );
+google.maps.event.addDomListener(window, 'load', initMap);
 
 let map;
 function initMap() {
@@ -6,7 +6,7 @@ function initMap() {
 	/**
 	 * map初期化
 	 */
-	map = new google.maps.Map( document.getElementById( 'map' ), {
+	map = new google.maps.Map(document.getElementById('map'), {
 		center: { lat: 35.6542928, lng: 139.5534647 },
 		zoom: 13,
 		mapTypeControl: false,
