@@ -1,4 +1,9 @@
 .p-main {
 
 	margin-bottom: $footer_height;
+
+	&__top {
+
+		margin-bottom: $footer_height_top;
+	}
 }

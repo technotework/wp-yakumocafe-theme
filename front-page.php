@@ -8,7 +8,7 @@
 	get_header( 'home' );
 ?>
 	<!--main-->
-	<main class="p-main">
+	<main class="p-main__top">
 		<article class="p-main__article">
 			<!--今月のおすすめ-->
 			<section>
@@ -117,7 +117,7 @@
 							<a href="tel:042-000-000">TEL:042-000-000</a>
 						</span>
 					</div>
-					<div class="p-content-access__map">
+					<div id="map" class="p-content-access__map u-ishadow">
 
 					</div>
 				</div>
