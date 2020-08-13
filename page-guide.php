@@ -50,8 +50,8 @@ get_header( 'guide' );
 					</figure>
 					<div class="p-guide-panel__content">
 						<section>
-							<h3 class="js-panel-title p-h__content1"></h3>
-							<p class="js-panel-p"></p>
+							<h3 class="js-panel-title p-h__content1 c-h__content1"></h3>
+							<p class="js-panel-p c-para"></p>
 						</section>
 					</div>
 					<div class="p-guide-panel__close js-panel-close">

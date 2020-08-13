@@ -12,7 +12,7 @@
 
 	position: absolute;
 	top: 71px;
-	left: calc(50% - 300px);
+	left: calc(50% - 263px);
 	width: 600px;
 	overflow: hidden;
 	border-radius: 50px;
@@ -89,7 +89,7 @@
 
 	display: none;
 	position: absolute;
-	top: calc(100vh - 318px);
+	top: calc(100vh - 262px);
 	left: 0;
 	width: 100%;
 	z-index: 99999999;
@@ -101,7 +101,7 @@
 		margin: 0 30px;
 		background-color: $white;
 		border-radius: $radius;
-		padding: 20px;
+		padding: 23px 20px;
 
 		@include shadow(7px,0.3);
 	}
@@ -117,7 +117,7 @@
 
 	&__content {
 
-		max-width: 669px;
+		max-width: 663px;
 
 		h3 {
 			margin-bottom: unit(1);
