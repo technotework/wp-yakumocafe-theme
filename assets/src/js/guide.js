@@ -1,13 +1,6 @@
+
 import axios from 'axios';
 
-const MarkerWithLabel = require('markerwithlabel')(google.maps);
-
-const mapdata = [
-
-	{ label: "神代植物公園", lat: 35.6712569, lng: 139.54836580000006, pos: "t" },
-	{ label: "武蔵野の森公園", lat: 35.67669, lng: 139.52324720000001, pos: "b" },
-	{ label: "野川公園", lat: 35.6832223, lng: 139.52475329999993, pos: "t" }
-];
 Vue.config.devtools = true;
 
 //Vue
@@ -18,14 +11,13 @@ let app = new Vue({
 		tag: { 6: "shop", 14: "amuse", 5: "nature", 13: "shrine" },
 		isPanelShow: true,
 		guides: [],
-		ck: [],
 		map: null,
-		pos: null,
+		markers: []
 	},
 	/**===========================
 	 * created
 	===========================*/
-	created: function () {
+	mounted: function () {
 		//WP APIからデータ取得
 		axios.get('/wp-json/wp/v2/guide-api')
 			.then(response => {
@@ -56,7 +48,6 @@ let app = new Vue({
 					json.push(result);
 				}
 				this.guides = json;
-
 				//地図初期化
 				this.initMap();
 			});
@@ -78,17 +69,18 @@ let app = new Vue({
 
 			//
 			console.log(result);
-			this.pos = result;
+			this.createMakers(result);
+
 			return result;
 		},
 		getPanelInfo: function () {
-			
-			let result;
-			if(this.mark.length == 0){
 
-				result = {img:"",title:"",label:"",lat:0,lng:0};
+			let result;
+			if (this.mark.length == 0) {
+
+				result = { img: "", title: "", label: "", lat: 0, lng: 0 };
 			}
-			else{
+			else {
 
 				result = this.mark[0];
 			}
@@ -101,7 +93,9 @@ let app = new Vue({
 	 * methods
 	===========================*/
 	methods: {
-
+		/*----------------------------------------
+		 * JSONフィルタ関連
+		----------------------------------------*/
 		/**
 		 * オンになっているチェックの配列
 		 */
@@ -161,10 +155,52 @@ let app = new Vue({
 
 			return result;
 		},
-		//init map
-		initMap: function () {
+		/*----------------------------------------
+		 * Map関連
+		----------------------------------------*/
+		/**
+		 * マーカー生成
+		 * @param {*} json 
+		 */
+		createMakers:function(json){
 
-			this.map = new google.maps.Map(document.getElementById('guide-map'), {
+			//一度消す
+			if(this.markers.length > 0){
+
+				for (let i = 0; i < this.markers.length; i++) {
+					this.markers[i].setMap(null);
+				}
+
+				this.markers = [];
+			}
+
+			//マーカー追加
+			for (let i = 0; i < json.length; i++) {
+			
+				let marker = new google.maps.Marker({
+					map: this.map,
+					position: new google.maps.LatLng({
+						lat: parseFloat(json[i].lat),
+						lng: parseFloat(json[i].lng)
+					})
+				});
+
+				let infoWindow =  new google.maps.InfoWindow({
+					content: `<div class="guide__info">${json[i].label}</div>`
+			 	});
+				infoWindow.open(this.map, marker);
+
+				this.markers.push(marker);
+			}
+
+
+		},
+		/**
+		 * 初期化
+		 */
+		initMap: function () {
+			const mapElement = document.getElementById('guide-map');
+			this.map = new google.maps.Map(mapElement, {
 				center: { lat: 35.6542928, lng: 139.5534647 },
 				zoom: 13,
 				mapTypeControl: false,

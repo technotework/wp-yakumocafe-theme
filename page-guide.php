@@ -41,7 +41,7 @@ get_header( 'guide' );
 					</li>
 				</ul>
 			</nav>
-
+			
 			<!--パネル-->
 			<template v-if="isPanelShow">
 				<div id="p-guide-panel" class="l-flex">
@@ -59,8 +59,8 @@ get_header( 'guide' );
 					<div class="p-guide_panel__close"></div>
 				</div>
 			</template>
-
-			<div id="guide-map"></div>
+			<div id="guide-map" ref="guide_map"></div>
+			
 			
 		</div>
 	</article>
