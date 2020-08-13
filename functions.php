@@ -163,6 +163,7 @@ function yakumocafe_scripts() {
 
 	} elseif ( is_page( 'guide' ) ) {
 		wp_enqueue_script( 'yakumocafe-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDmeVsERg3mZUu_zxqBpZjGV__IUU6RAVg', array(), _S_VERSION, true );
+		wp_enqueue_script( 'yakumocafe-infobox', 'https://82mou.github.io/infobox/lib/infobox.js', array(), _S_VERSION, true );
 		wp_enqueue_script( 'yakumocafe-guide', get_template_directory_uri() . '/js/guide.bundle.js', array(), _S_VERSION, true );
 	} elseif ( is_post_type_archive( 'menu' ) ) {
 		wp_enqueue_script( 'yakumocafe-menu', get_template_directory_uri() . '/js/menu.bundle.js', array(), _S_VERSION, true );

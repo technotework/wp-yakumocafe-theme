@@ -17,31 +17,32 @@ get_header( 'guide' );
 				<ul class="p-guide-nav">
 					<li class="p-guide-nav__item">
 						<label for="shop">
-							<input type="checkbox" id="shop" v-model="cb.shop" />
+							<input type="checkbox" id="shop" value="shop" />
 							ショップ
 						</label>
 					</li>
 					<li class="p-guide-nav__item">
 						<label for="amuse">
-							<input type="checkbox" id="amuse" v-model="cb.amuse" />
+							<input type="checkbox" id="amuse" value="amuse" />
 							アミューズメント
 						</label>
 					</li>
 					<li class="p-guide-nav__item">
 						<label for="nature">
-							<input type="checkbox" id="nature" v-model="cb.nature" />
+							<input type="checkbox" id="nature" value="nature" />
 							公園と自然
 						</label>
 					</li>
 					<li class="p-guide-nav__item">
 						<label for="shrine">
-							<input type="checkbox" id="shrine" v-model="cb.shrine" />
+							<input type="checkbox" id="shrine" value="shrine" />
 							神社仏閣
 						</label>
 					</li>
 				</ul>
 			</nav>
-			
+			<div id="guide-map"></div>
+		
 			<!--パネル-->
 			<template v-if="isPanelShow">
 				<div id="p-guide-panel" class="l-flex">
@@ -59,7 +60,6 @@ get_header( 'guide' );
 					<div class="p-guide_panel__close"></div>
 				</div>
 			</template>
-			<div id="guide-map" ref="guide_map"></div>
 			
 			
 		</div>
