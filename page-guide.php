@@ -42,26 +42,19 @@ get_header( 'guide' );
 				</ul>
 			</nav>
 			<div id="guide-map"></div>
-		
 			<!--パネル-->
-			<template v-if="isPanelShow">
-				<div id="p-guide-panel" class="l-flex">
-					<figure>
-						<img :src="getPanelInfo.img" :alt="getPanelInfo.title" class="c-res-img" />
-					</figure>
-					<div>
-						<section>
-							<h3>{{getPanelInfo.title}}</h3>
-						</section>
-						<p>
-							{{getPanelInfo.text}}
-						</p>
-					</div>
-					<div class="p-guide_panel__close"></div>
+			<div class="js-guide-panel p-guide-panel l-flex">
+				<figure class="p-guide-panel__img">
+					<img alt="getPanelInfo.title" class="js-panel-img c-res-img" />
+				</figure>
+				<div class="p-guide-panel__content">
+					<section>
+						<h3 class="js-panel-title"></h3>
+						<p class="js-panel-p"></p>
+					</section>
 				</div>
-			</template>
-			
-			
+				<div class="p-guide_panel__close js-panel-close">x</div>
+			</div>
 		</div>
 	</article>
 </main>

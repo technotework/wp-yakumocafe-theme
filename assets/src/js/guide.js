@@ -2,6 +2,7 @@
 
 import axios from 'axios';
 import $ from "jquery";
+let MarkerWithLabel = require('markerwithlabel')(google.maps);
 
 //jsondata
 let guides;
@@ -13,7 +14,7 @@ const tag = { 6: "shop", 14: "amuse", 5: "nature", 13: "shrine" };
 let markers = [];
 let infos = [];
 
-$(function() {
+$(function () {
 
 	init();
 });
@@ -21,57 +22,69 @@ $(function() {
 /**
  * 初期化
  */
-function init(){
+function init() {
 
+	hidePanel();
+	setupPanel();
 	loadJson(afterLoad);
 }
 
 /**
  * Jsonをロード
  */
-function loadJson(callback){
+function loadJson(callback) {
 
 	//WP APIからデータ取得
 	axios.get('/wp-json/wp/v2/guide-api')
-	.then(response => {
+		.then(response => {
 
-		const res = response.data;
-		//新しいJSONの構築
-		let json = [];
-		for (let i = 0; i < res.length; i++) {
+			const res = response.data;
+			//新しいJSONの構築
+			let json = [];
+			for (let i = 0; i < res.length; i++) {
 
-			const result = {
-				img: res[i].acf.guide_img,
-				title: res[i].acf.guide_title,
-				text: res[i].acf.guide_text,
-				label: res[i].acf.guide_label,
-				lat: res[i].acf.guide_lat,
-				lng: res[i].acf.guide_long
+				const result = {
+					img: res[i].acf.guide_img,
+					title: res[i].acf.guide_title,
+					text: res[i].acf.guide_text,
+					label: res[i].acf.guide_label,
+					lat: res[i].acf.guide_lat,
+					lng: res[i].acf.guide_long
+				}
+
+				//tagを数字から文字に直す
+				const tags = res[i].tags;
+				let newTagArray = [];
+				for (let j = 0; j < tags.length; j++) {
+
+					newTagArray.push(tag[tags[j]]);
+				}
+				result.types = newTagArray;
+
+				json.push(result);
 			}
 
-			//tagを数字から文字に直す
-			const tags = res[i].tags;
-			let newTagArray = [];
-			for (let j = 0; j < tags.length; j++) {
+			guides = json;
+			//完了
+			callback();
+		});
 
-				newTagArray.push(tag[tags[j]]);
-			}
-			result.types = newTagArray;
+}
 
-			json.push(result);
-		}
+/**
+ * パネル設定
+ */
+function setupPanel(){
 
-		guides = json;
-		//完了
-		callback();
+	$(".js-panel-close").on("click",function(){
+		hidePanel();
 	});
-
 }
 
 /**
  * ロード後
  */
-function afterLoad(){
+function afterLoad() {
 
 	initMap();
 	setupCBHandler();
@@ -81,66 +94,85 @@ function afterLoad(){
  * マーカー生成
  * @param {*} json 
  */
-function createMakers(json){
+function createMakers(json) {
 
-	if(markers.length > 0){
-	
+	//一度消す
+	if (markers.length > 0) {
+
 		for (let i = 0; i < markers.length; i++) {
 			markers[i].setMap(null);
 		}
-		
-		for (let i = 0; i < infos.length; i++) {
-			infos[i].setMap(null);
-		}
-		
 		markers = [];
-		infos = [];
 	}
 
+	let bounds = new google.maps.LatLngBounds();
 
-	for (let i = 0; i < json.length; i++) {
+	//マーカー追加
+	json.map(d => {
 
-		let infoboxMarkerEle = `<div class="js-info-marker"></div>`;
-		let infoboxElem  = `<div class="js-info-box l-flex-wcenter">${json[i].label}</div>`;
-
-		let pos = new google.maps.LatLng({
-			lat: Number(json[i].lat),
-			lng: Number(json[i].lng)
+		let marker = new MarkerWithLabel({
+			position: new google.maps.LatLng(d.lat, d.lng),
+			draggable: false,
+			raiseOnDrag: false,
+			map: map,
+			title: d.label,
+			labelContent: d.label,
+			labelAnchor: new google.maps.Point(77, 48),
+			labelClass: "js-info-box",
+			icon: '/wp-content/themes/yakumocafe/images/place-marker.png'
 		});
 
-		//マーカー
-		let infoMarkerOptions = {
-			content: infoboxMarkerEle,
-			pixelOffset: new google.maps.Size(0, 0),
-			alignBottom: true,
-			position: pos,
-			boxClass: "js-info-marker",
-			closeBoxURL: ''
-		};
-
-		let marker = new InfoBox(infoMarkerOptions);
-
+		google.maps.event.addListener(marker, "click", function(e){ 
+			let label = $(e.ub.target).parent()[0].title;
+			setPanel(label);
+		 });
+		bounds.extend(marker.position);
 		markers.push(marker);
+	});
 
-		//インフォボックス
-		let infoboxOptions = {
-			content: infoboxElem,
-			pixelOffset: new google.maps.Size(0,0),
-			alignBottom: true,
-			position: pos,
-			boxClass: "js-info-box",
-			closeBoxMargin: "-15px -20px 0px 0px",
-			closeBoxURL: ''
-		};
+	if (markers.length > 0) {
+		map.fitBounds(bounds);
+	}
+}
 
-		let infoBox = new InfoBox(infoboxOptions);
+/*----------------------------------------
+* パネル
+----------------------------------------*/
+function setPanel(label){
+	
+	let targetObject;
+	for (let i = 0; i < guides.length; i++) {
+		
+		if(guides[i].label == label){
 
-		infos.push(infoBox);
-
-		marker.open(map);
-		infoBox.open(map);
+			targetObject = guides[i];
+		}
 	}
 
+	deletePanelContent();
+
+	$(".js-panel-img").attr("src",targetObject.img);
+	$(".js-panel-title").html(targetObject.title);
+	$(".js-panel-p").html(targetObject.text);
+	showPanel();
+}
+
+function deletePanelContent(){
+
+	$(".js-panel-img").attr("src","");
+	$(".js-panel-title").html("");
+	$(".js-panel-p").html("");
+}
+
+function showPanel(){
+
+	$(".js-guide-panel").show();
+}
+
+function hidePanel(){
+
+	$(".js-guide-panel").hide();
+	deletePanelContent();
 }
 
 /*----------------------------------------
@@ -149,9 +181,9 @@ function createMakers(json){
 /**
  * checkboxのハンドラ
  */
-function setupCBHandler(){
+function setupCBHandler() {
 
-	$(".p-guide-nav li input").on("change",function(e){
+	$(".p-guide-nav li input").on("change", function (e) {
 
 		checked();
 	});
@@ -161,7 +193,7 @@ function setupCBHandler(){
 /**
  * チェックボックスオン
  */
-function checked(){
+function checked() {
 
 	//オンになっているチェックのタグカテゴリで絞り込みます
 	//オンになっているチェックの配列
@@ -182,15 +214,15 @@ function checked(){
 /**
  * オンになっているチェックの配列
  */
-function getCheckedArray(){
+function getCheckedArray() {
 
 	let result = [];
-	$(".p-guide-nav li input").each(function(){
+	$(".p-guide-nav li input").each(function () {
 
 		let isCheck = $(this).prop('checked');
-		let target  = $(this).val();
-		
-		if(isCheck){
+		let target = $(this).val();
+
+		if (isCheck) {
 			result.push(target);
 		}
 	});
@@ -201,7 +233,7 @@ function getCheckedArray(){
 * オンになっているチェックのタグに該当する場所だけをフィルタして返す
 * @param targetCbArray チェックされているタグのkey名の配列
 */
-function getFilterResult(targetCbArray){
+function getFilterResult(targetCbArray) {
 
 	let filterResult = [];
 	for (let i = 0; i < targetCbArray.length; i++) {
@@ -221,7 +253,7 @@ function getFilterResult(targetCbArray){
 * 配列の重複を解決
 * @param filterResult オンになっているチェックのタグに該当する場所が入っている配列
 */
-function resolveDuplication(filterResult){
+function resolveDuplication(filterResult) {
 
 	let allArray = [];
 	for (let j = 0; j < filterResult.length; j++) {
@@ -247,227 +279,228 @@ function resolveDuplication(filterResult){
 /**
  * マップ初期化
  */
-function initMap(){
+function initMap() {
 
 	const mapElement = document.getElementById('guide-map');
 	map = new google.maps.Map(mapElement, {
 		center: { lat: 35.6542928, lng: 139.5534647 },
-		zoom: 13,
+		zoom: 16,
 		mapTypeControl: false,
 		fullscreenControl: false,
 		rotateControl: false,
 		scaleControl: false,
+		clickableIcons: false,
 		styles: [
 			{
-			  "elementType": "geometry",
-			  "stylers": [
-				{
-				  "color": "#f5f5f5"
-				}
-			  ]
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#f5f5f5"
+					}
+				]
 			},
 			{
-			  "elementType": "labels.icon",
-			  "stylers": [
-				{
-				  "visibility": "off"
-				}
-			  ]
+				"elementType": "labels.icon",
+				"stylers": [
+					{
+						"visibility": "off"
+					}
+				]
 			},
 			{
-			  "elementType": "labels.text.fill",
-			  "stylers": [
-				{
-				  "color": "#616161"
-				}
-			  ]
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#616161"
+					}
+				]
 			},
 			{
-			  "elementType": "labels.text.stroke",
-			  "stylers": [
-				{
-				  "color": "#f5f5f5"
-				}
-			  ]
+				"elementType": "labels.text.stroke",
+				"stylers": [
+					{
+						"color": "#f5f5f5"
+					}
+				]
 			},
 			{
-			  "featureType": "administrative.land_parcel",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
-				{
-				  "color": "#bdbdbd"
-				}
-			  ]
+				"featureType": "administrative.land_parcel",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#bdbdbd"
+					}
+				]
 			},
 			{
-			  "featureType": "landscape",
-			  "stylers": [
-				{
-				  "visibility": "simplified"
-				}
-			  ]
+				"featureType": "landscape",
+				"stylers": [
+					{
+						"visibility": "simplified"
+					}
+				]
 			},
 			{
-			  "featureType": "poi",
-			  "stylers": [
-				{
-				  "color": "#bdbdbd"
-				},
-				{
-				  "visibility": "simplified"
-				}
-			  ]
+				"featureType": "poi",
+				"stylers": [
+					{
+						"color": "#bdbdbd"
+					},
+					{
+						"visibility": "simplified"
+					}
+				]
 			},
 			{
-			  "featureType": "poi",
-			  "elementType": "geometry",
-			  "stylers": [
-				{
-				  "color": "#eeeeee"
-				},
-				{
-				  "visibility": "on"
-				}
-			  ]
+				"featureType": "poi",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#eeeeee"
+					},
+					{
+						"visibility": "on"
+					}
+				]
 			},
 			{
-			  "featureType": "poi",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
-				{
-				  "color": "#757575"
-				}
-			  ]
+				"featureType": "poi",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#757575"
+					}
+				]
 			},
 			{
-			  "featureType": "poi.park",
-			  "elementType": "geometry",
-			  "stylers": [
-				{
-				  "color": "#e5e5e5"
-				}
-			  ]
+				"featureType": "poi.park",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#e5e5e5"
+					}
+				]
 			},
 			{
-			  "featureType": "poi.park",
-			  "elementType": "geometry.fill",
-			  "stylers": [
-				{
-				  "color": "#a4eb7b"
-				},
-				{
-				  "lightness": 45
-				}
-			  ]
+				"featureType": "poi.park",
+				"elementType": "geometry.fill",
+				"stylers": [
+					{
+						"color": "#a4eb7b"
+					},
+					{
+						"lightness": 45
+					}
+				]
 			},
 			{
-			  "featureType": "poi.park",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
-				{
-				  "color": "#9e9e9e"
-				}
-			  ]
+				"featureType": "poi.park",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#9e9e9e"
+					}
+				]
 			},
 			{
-			  "featureType": "road",
-			  "elementType": "geometry",
-			  "stylers": [
-				{
-				  "color": "#ffffff"
-				}
-			  ]
+				"featureType": "road",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#ffffff"
+					}
+				]
 			},
 			{
-			  "featureType": "road.arterial",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
-				{
-				  "color": "#757575"
-				}
-			  ]
+				"featureType": "road.arterial",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#757575"
+					}
+				]
 			},
 			{
-			  "featureType": "road.highway",
-			  "elementType": "geometry",
-			  "stylers": [
-				{
-				  "color": "#dadada"
-				}
-			  ]
+				"featureType": "road.highway",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#dadada"
+					}
+				]
 			},
 			{
-			  "featureType": "road.highway",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
-				{
-				  "color": "#616161"
-				}
-			  ]
+				"featureType": "road.highway",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#616161"
+					}
+				]
 			},
 			{
-			  "featureType": "road.local",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
-				{
-				  "color": "#9e9e9e"
-				}
-			  ]
+				"featureType": "road.local",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#9e9e9e"
+					}
+				]
 			},
 			{
-			  "featureType": "transit.line",
-			  "elementType": "geometry",
-			  "stylers": [
-				{
-				  "color": "#e5e5e5"
-				}
-			  ]
+				"featureType": "transit.line",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#e5e5e5"
+					}
+				]
 			},
 			{
-			  "featureType": "transit.line",
-			  "elementType": "geometry.fill",
-			  "stylers": [
-				{
-				  "color": "#d9d9d9"
-				}
-			  ]
+				"featureType": "transit.line",
+				"elementType": "geometry.fill",
+				"stylers": [
+					{
+						"color": "#d9d9d9"
+					}
+				]
 			},
 			{
-			  "featureType": "transit.station",
-			  "elementType": "geometry",
-			  "stylers": [
-				{
-				  "color": "#eeeeee"
-				}
-			  ]
+				"featureType": "transit.station",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#eeeeee"
+					}
+				]
 			},
 			{
-			  "featureType": "water",
-			  "elementType": "geometry",
-			  "stylers": [
-				{
-				  "color": "#c9c9c9"
-				}
-			  ]
+				"featureType": "water",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#c9c9c9"
+					}
+				]
 			},
 			{
-			  "featureType": "water",
-			  "elementType": "geometry.fill",
-			  "stylers": [
-				{
-				  "color": "#8de3e1"
-				}
-			  ]
+				"featureType": "water",
+				"elementType": "geometry.fill",
+				"stylers": [
+					{
+						"color": "#8de3e1"
+					}
+				]
 			},
 			{
-			  "featureType": "water",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
-				{
-				  "color": "#9e9e9e"
-				}
-			  ]
+				"featureType": "water",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#9e9e9e"
+					}
+				]
 			}
-		  ]
+		]
 	});
 }

@@ -53,6 +53,7 @@
         "axios": "^0.19.2",
         "core-js": "^3.6.5",
         "jquery": "^3.5.0",
+        "markerwithlabel": "^2.0.2",
         "regenerator-runtime": "^0.13.5",
         "slick-carousel": "^1.8.1"
     }
