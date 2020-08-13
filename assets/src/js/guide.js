@@ -79,6 +79,10 @@ function setupPanel(){
 	$(".js-panel-close").on("click",function(){
 		hidePanel();
 	});
+
+	$(".js-fullscreen").on("click",function(){
+		hidePanel();
+	});
 }
 
 /**
@@ -117,7 +121,7 @@ function createMakers(json) {
 			map: map,
 			title: d.label,
 			labelContent: d.label,
-			labelAnchor: new google.maps.Point(77, 48),
+			labelAnchor: new google.maps.Point(77, 51),
 			labelClass: "js-info-box",
 			icon: '/wp-content/themes/yakumocafe/images/place-marker.png'
 		});
@@ -167,11 +171,13 @@ function deletePanelContent(){
 function showPanel(){
 
 	$(".js-guide-panel").show();
+	$(".js-fullscreen").show();
 }
 
 function hidePanel(){
 
 	$(".js-guide-panel").hide();
+	$(".js-fullscreen").hide();
 	deletePanelContent();
 }
 
@@ -183,11 +189,28 @@ function hidePanel(){
  */
 function setupCBHandler() {
 
+	$(".p-guide-nav li input#shop").prop("checked",true);
+	setCheckStyle($(".p-guide-nav li input#shop"));
+
 	$(".p-guide-nav li input").on("change", function (e) {
+
+		setCheckStyle($(this));
 
 		checked();
 	});
 
+	checked();
+}
+
+function setCheckStyle($target){
+
+	let ck = $target.prop('checked');
+	if(ck){
+		$target.parent().addClass("checked");
+	}else{
+
+		$target.parent().removeClass("checked");
+	}
 }
 
 /**
@@ -324,6 +347,14 @@ function initMap() {
 				]
 			},
 			{
+				"featureType": "administrative",
+				"stylers": [
+					{
+						"visibility": "off"
+					}
+				]
+			},
+			{
 				"featureType": "administrative.land_parcel",
 				"elementType": "labels.text.fill",
 				"stylers": [
@@ -333,7 +364,26 @@ function initMap() {
 				]
 			},
 			{
-				"featureType": "landscape",
+				"featureType": "landscape.man_made",
+				"elementType": "geometry.fill",
+				"stylers": [
+					{
+						"visibility": "simplified"
+					}
+				]
+			},
+			{
+				"featureType": "landscape.man_made",
+				"elementType": "geometry.stroke",
+				"stylers": [
+					{
+						"visibility": "on"
+					}
+				]
+			},
+			{
+				"featureType": "landscape.man_made",
+				"elementType": "labels.icon",
 				"stylers": [
 					{
 						"visibility": "simplified"
@@ -344,7 +394,7 @@ function initMap() {
 				"featureType": "poi",
 				"stylers": [
 					{
-						"color": "#bdbdbd"
+						"color": "#e0e3de"
 					},
 					{
 						"visibility": "simplified"
@@ -357,18 +407,39 @@ function initMap() {
 				"stylers": [
 					{
 						"color": "#eeeeee"
-					},
-					{
-						"visibility": "on"
 					}
 				]
 			},
 			{
 				"featureType": "poi",
-				"elementType": "labels.text.fill",
+				"elementType": "geometry.fill",
 				"stylers": [
 					{
-						"color": "#757575"
+						"color": "#e8e8e8"
+					},
+					{
+						"visibility": "simplified"
+					}
+				]
+			},
+			{
+				"featureType": "poi",
+				"elementType": "labels.text",
+				"stylers": [
+					{
+						"visibility": "off"
+					}
+				]
+			},
+			{
+				"featureType": "poi.attraction",
+				"elementType": "geometry.fill",
+				"stylers": [
+					{
+						"color": "#404040"
+					},
+					{
+						"visibility": "on"
 					}
 				]
 			},
@@ -387,9 +458,6 @@ function initMap() {
 				"stylers": [
 					{
 						"color": "#a4eb7b"
-					},
-					{
-						"lightness": 45
 					}
 				]
 			},
@@ -457,20 +525,29 @@ function initMap() {
 				]
 			},
 			{
-				"featureType": "transit.line",
-				"elementType": "geometry.fill",
-				"stylers": [
-					{
-						"color": "#d9d9d9"
-					}
-				]
-			},
-			{
 				"featureType": "transit.station",
 				"elementType": "geometry",
 				"stylers": [
 					{
 						"color": "#eeeeee"
+					}
+				]
+			},
+			{
+				"featureType": "transit.station.rail",
+				"elementType": "geometry.fill",
+				"stylers": [
+					{
+						"visibility": "simplified"
+					}
+				]
+			},
+			{
+				"featureType": "transit.station.rail",
+				"elementType": "labels.icon",
+				"stylers": [
+					{
+						"visibility": "simplified"
 					}
 				]
 			},

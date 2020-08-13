@@ -1,18 +1,151 @@
 #guide-map {
 
 	width: 100%;
-	height: calc(100vh - 190px);
+	height: calc(100vh - 48px);
 }
 
+/*========================
+* nav
+========================*/
 
-.js-info-marker {
+.p-guide-nav {
 
-	width: 1px;
-	height: 1px;
-	background-color: #f00;
+	position: absolute;
+	top: 71px;
+	left: calc(50% - 300px);
+	width: 600px;
+	overflow: hidden;
+	border-radius: 50px;
+	padding: 2px;
+	background-color: $white;
+	z-index: 999999;
+
+	@include shadow(5px,0.5);
+
+	&__item {
+
+		width: 149px;
+
+		label.checked {
+
+			color: $white;
+			background-color: $theme1;
+			border-right: solid 1px $white;
+		}
+
+		label {
+
+			display: block;
+
+			@include ff2;
+			font-size: 1.4rem;
+			letter-spacing: 0.3rem;
+			color: $theme1;
+			background-color: $white;
+			padding-top: 2px;
+			width: 149px;
+			height: 32px;
+			text-align: center;
+			user-select: none;
+			border-right: solid 1px $theme1;
+		}
+
+		&:last-child {
+
+			border: none;
+
+			label {
+
+				border-radius: 0 50px 50px 0;
+				border: none;
+			}
+
+			label.checked {
+				border: none;
+			}
+		}
+
+
+		&:first-child {
+
+			label {
+
+				border-radius: 50px 0 0 50px;
+			}
+		}
+
+		input {
+			display: none;
+		}
+
+	}
+
 }
 
+/*========================
+* panel
+========================*/
+.p-guide-panel {
 
+	display: none;
+	position: absolute;
+	top: calc(100vh - 318px);
+	left: 0;
+	width: 100%;
+	z-index: 99999999;
+
+	&__container {
+		position: relative;
+		max-width: 932px;
+		min-height: 190px;
+		margin: 0 30px;
+		background-color: $white;
+		border-radius: $radius;
+		padding: 20px;
+
+		@include shadow(7px,0.3);
+	}
+
+	&__img {
+
+		width: 200px;
+		border-radius: $radius;
+		line-height: 0;
+		overflow: hidden;
+		margin-right: 23px;
+	}
+
+	&__content {
+
+		max-width: 669px;
+
+		h3 {
+			margin-bottom: unit(1);
+		}
+	}
+
+	&__close {
+
+		position: absolute;
+		width: 45px;
+		height: 45px;
+		top: -23px;
+		right: -24px;
+	}
+
+	&__cloud {
+
+		position: absolute;
+		width: 198px;
+		height: auto;
+		bottom: -41px;
+		left: -28px;
+	}
+}
+
+/*========================
+* GoogleMap
+========================*/
 .js-info-box {
 
 	font-family:
