@@ -1,0 +1,172 @@
+.reserve-tel {
+
+	&__info {
+		width: 330px;
+		font-weight: 700;
+		border-bottom: solid 1px $gray1;
+		margin: unit(2) 0 unit(3) 0;
+	}
+
+	&__info-label {
+		display: inline-block;
+		margin-right: 20px;
+		font-size: 1.6rem;
+		line-height: 5.6rem;
+	}
+
+	&__info-number {
+
+		a {
+			font-size: 2.1rem;
+			color: $black;
+			line-height: 5.6rem;
+		}
+	}
+
+}
+
+.reserve-web {
+
+	&__system {
+		margin-top: unit(3);
+	}
+
+	&__calendar {
+
+		position: relative;
+		padding-bottom: unit(2);
+		font-weight: 700;
+
+		table {
+			width: 100%;
+		}
+
+		td {
+			text-align: center;
+			padding: 16px 0 11px 0;
+			overflow: hidden;
+			border-radius: $radius;
+		}
+
+		th {
+			padding: 2px 0;
+			background-color: #f3f3f3;
+			border-right: solid 2px $white;
+			border-left: solid 2px $white;
+		}
+
+		caption {
+
+			font-weight: 700;
+			line-height: 5.6rem;
+			padding-bottom: unit(2);
+			letter-spacing: 0.3rem;
+		}
+
+		.calendar-daylink {
+			color: $theme3;
+		}
+
+		.monthly-next {
+
+			position: absolute;
+			top: 15px;
+			right: 0;
+			color: $gray1;
+
+			@include respBG("images/next.gif","r",28px,40px);
+			text-align: right;
+			letter-spacing: 0.2rem;
+
+			a {
+				color: $theme1;
+				font-weight: 700;
+			}
+		}
+
+		.monthly-prev {
+
+			position: absolute;
+			top: 15px;
+			left: 0;
+			color: $gray1;
+			letter-spacing: 0.2rem;
+
+			@include respBG("images/back.gif","l",28px,40px);
+
+			a {
+				color: $theme1;
+				font-weight: 700;
+			}
+		}
+
+		.day-box.no-day {
+			background-color: transparent;
+		}
+
+		.day-box.today {
+			background-color: #f1f9f2;
+		}
+	}
+
+	&__day-calendar {
+
+		padding-bottom: unit(2);
+
+		h5 {
+
+			@extend .c-h__lv1;
+			@extend .p-h__lv1;
+			padding-top: 0;
+			padding-bottom: unit(1);
+		}
+
+		p.day {
+			text-align: center;
+			font-weight: 700;
+		}
+	}
+
+	&__day-calendar-table {
+
+		@extend .u-center;
+		width: 80%;
+		margin-top: unit(1);
+
+		tr {
+
+			&:first-child {
+
+				th,
+				td {
+					background-color: #f3f3f3;
+					border-right: solid 2px $white;
+					border-left: solid 2px $white;
+					padding: 0;
+				}
+			}
+		}
+
+		th.day-right,
+		td.day-right,
+		th.day-left,
+		td.day-left {
+			width: 50%;
+			border: none;
+			border-radius: 0;
+			padding: 12px 0;
+			text-align: center;
+			border-bottom: solid 1px #f3f3f3;
+			border-right: solid 2px $white;
+			border-left: solid 2px $white;
+
+			a {
+				color: $theme3;
+				font-weight: 700;
+			}
+		}
+
+
+	}
+
+}
