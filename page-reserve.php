@@ -8,9 +8,9 @@
 get_header();
 ?>
 <!--main-->
-<main class="p-main">
+<main class="p-main"> 
 	<article>
-		<!--ごあいさつ-->
+		<!--ご予約-->
 		<section>
 			<div class="u-i-center">
 				<h3 class="c-h__article p-h__article">ご予約</h3>
@@ -22,18 +22,18 @@ get_header();
 				<?php
 				if ( ! isset( $_GET['ymd'] ) ) :
 					?>
-				<!--tel reserve-->	
+				<!--tel p-reserve-->	
 				<!--パラメータつきの時は出さない-->
-				<div class="reserve-tel">
+				<div class="p-reserve-tel">
 					<section>
 						<h4 class="c-h__content2 p-h__content2">お電話でのご予約</h4>
 						<p class="c-para">
 							お電話でのご予約をご希望の場合は下記電話番号までおかけください。
 						</p>
 
-						<div class="reserve-tel__info l-flex-vcenter u-center">
-							<span class="reserve-tel__info-label">お電話でのご予約</span>
-							<span class="reserve-tel__info-number"><a href="tel:042000000">042 - 000 - 000</a></span>
+						<div class="p-reserve-tel__info l-flex-vcenter u-center">
+							<span class="p-reserve-tel__info-label">お電話でのご予約</span>
+							<span class="p-reserve-tel__info-number"><a href="tel:042000000">042 - 000 - 000</a></span>
 						</div>
 					</section>
 				</div>
@@ -41,8 +41,8 @@ get_header();
 						endif;
 				?>
 
-				<!--web reserve-->
-				<div class="reserve-web">
+				<!--web p-reserve-->
+				<div class="p-reserve-web">
 					<section>
 						<h4 class="c-h__content2 p-h__content2">Webからのご予約</h4>
 						<p class="c-para">
@@ -50,8 +50,8 @@ get_header();
 							都合によりご予約が承れない場合、お電話でご連絡いたします。
 						</p>
 
-						<div class="reserve-web__system">
-							<?php echo do_shortcode( '[monthly_calendar id="211" class="reserve-web__calendar" type="dev"]' ); ?>
+						<div class="p-reserve-web__system">
+							<?php echo do_shortcode( '[monthly_calendar id="211" class="p-reserve-web__calendar" type="dev"]' ); ?>
 						</div>
 					</section>
 				</div>
@@ -64,5 +64,4 @@ get_header();
 </main>
 
 <?php
-get_sidebar();
 get_footer();

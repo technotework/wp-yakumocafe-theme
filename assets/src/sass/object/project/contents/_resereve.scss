@@ -1,4 +1,4 @@
-.reserve-tel {
+.p-reserve-tel {
 
 	&__info {
 		width: 330px;
@@ -25,7 +25,7 @@
 
 }
 
-.reserve-web {
+.p-reserve-web {
 
 	&__system {
 		margin-top: unit(3);
@@ -64,7 +64,7 @@
 		}
 
 		.calendar-daylink {
-			color: $theme3;
+			color: $theme1;
 		}
 
 		.monthly-next {
@@ -161,7 +161,7 @@
 			border-left: solid 2px $white;
 
 			a {
-				color: $theme3;
+				color: $theme1;
 				font-weight: 700;
 			}
 		}
@@ -248,6 +248,16 @@
 	}
 
 	.required {
+		padding-bottom: unit(1);
+	}
+}
+
+.p-reserve-thanks {
+
+	text-align: center;
+	padding: unit(2) 0 unit(3) 0;
+
+	p {
 		padding-bottom: unit(1);
 	}
 }

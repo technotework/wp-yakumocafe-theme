@@ -20,7 +20,7 @@
 			<nav class="p-aside-nav">
 				<ul>
 					<li>
-						<a href="" class="p-aside-nav__info">
+						<a href="/reserve" class="p-aside-nav__info">
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/images/aside-reserve.png' ); ?>" alt="ご予約はこちら" class="c-res-img">
 						</a>
 					</li>
