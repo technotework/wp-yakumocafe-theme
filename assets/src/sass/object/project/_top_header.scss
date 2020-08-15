@@ -60,6 +60,11 @@
 		height: 2.4vw;
 		top: 46.3vw;
 		left: calc(50% - 1.69vw);
+
+		@include responsive($res3) {
+
+			display: none;
+		}
 	}
 
 }
@@ -102,10 +107,26 @@
 		width: 100%;
 		text-align: center;
 
+		@include responsive($res3) {
+
+			display: block;
+		}
+
 		> li {
+
+			@include responsive($res3) {
+
+				padding: 0 0 10px 0;
+				border-bottom: solid 1px $gray1;
+			}
 
 			&:first-child {
 				padding-left: 48px;
+
+				@include responsive($res3) {
+
+					padding: 0 0 10px 0;
+				}
 			}
 
 			position: relative;
@@ -127,6 +148,13 @@
 				content: url(images/top_nav_point.gif);
 				top: -2px;
 				right: -25px;
+
+				@include responsive($res3) {
+
+					content: "";
+					top: 0;
+					right: 0;
+				}
 			}
 
 		}

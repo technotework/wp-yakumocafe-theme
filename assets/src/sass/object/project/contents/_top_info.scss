@@ -10,7 +10,7 @@
 		background-position: top 79px left calc(50% + 414px);
 	}
 
-	@include responsive($res3) {
+	@include responsive($res2) {
 		background-image: none;
 
 		@include resMiniContainer;
