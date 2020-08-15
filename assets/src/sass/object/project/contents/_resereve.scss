@@ -50,7 +50,7 @@
 
 		th {
 			padding: 2px 0;
-			background-color: #f3f3f3;
+			background-color: #ebebeb;
 			border-right: solid 2px $white;
 			border-left: solid 2px $white;
 		}
@@ -139,7 +139,7 @@
 
 				th,
 				td {
-					background-color: #f3f3f3;
+					background-color: #ebebeb;
 					border-right: solid 2px $white;
 					border-left: solid 2px $white;
 					padding: 0;
@@ -156,7 +156,7 @@
 			border-radius: 0;
 			padding: 12px 0;
 			text-align: center;
-			border-bottom: solid 1px #f3f3f3;
+			border-bottom: solid 1px #ebebeb;
 			border-right: solid 2px $white;
 			border-left: solid 2px $white;
 
@@ -169,4 +169,85 @@
 
 	}
 
+}
+
+
+.reserve-form {
+
+	margin-top: unit(2);
+
+	&__forms {
+
+		table {
+			width: 100%;
+			margin-bottom: 41px;
+
+
+			tr {
+
+				&:last-child {
+
+					th,
+					td {
+						border-bottom: none;
+					}
+				}
+
+				&:first-child {
+
+					th,
+					td {
+						padding-top: 0;
+					}
+				}
+			}
+
+			th {
+				width: 15%;
+			}
+
+			td {
+				width: 85%;
+			}
+
+			th,
+			td {
+
+				padding: 13px 0;
+				text-align: left;
+				vertical-align: top;
+				border-bottom: solid 1px #ebebeb;
+				border-right: solid 2px $white;
+				border-left: solid 2px $white;
+			}
+
+			input {
+
+				border: solid 1px $gray1;
+				padding: 4px;
+				height: 28px;
+			}
+
+			textarea {
+				border: solid 1px $gray1;
+				padding: 4px;
+			}
+
+			.error-message {
+				color: $error;
+				padding-top: 5px;
+				font-weight: normal;
+			}
+		}
+	}
+
+	.error-box {
+
+		text-align: center;
+		padding-bottom: unit(2);
+	}
+
+	.required {
+		padding-bottom: unit(1);
+	}
 }

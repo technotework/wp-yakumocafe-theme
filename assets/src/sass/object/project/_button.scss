@@ -1,9 +1,18 @@
 .p-button {
 
+	&__primary {
+
+		font-size: 1.8rem;
+		font-weight: 400;
+		letter-spacing: 0.1rem;
+		border: none;
+	}
+
 	&__alt1 {
 
 		font-size: 2.2rem;
 		font-weight: 400;
 		letter-spacing: 0.1rem;
+		border: none;
 	}
 }

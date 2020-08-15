@@ -54,8 +54,16 @@
 			<h2 class="p-h__page c-h__page u-center">
 			<?php
 			if ( is_page() ) {
-				echo esc_html( strtoupper( get_post_field( 'post_name', get_post() ) ) );
+
+				$h2_page_title = get_post_field( 'post_name', get_post() );
+
+				if ( 'booking-form' === $h2_page_title || 'booking-thanks' === $h2_page_title ) {
+
+					$h2_page_title = 'reserve';
+				}
+				echo esc_html( strtoupper( $h2_page_title ) );
 			} else {
+
 				echo esc_html( get_post_type_object( get_post_type() )->label );
 			}
 			?>
@@ -66,16 +74,30 @@
 		<div class="p-header-pan u-center">
 			<ul class="l-flex-vcenter">
 				<li><a href="/">HOME</a></li>
-				<li><a href="<?php
+				<li><a href="
+				<?php
 				if ( is_page() ) {
-					echo esc_html( '/' . get_post_field( 'post_name', get_post() ) );
+					$pan_directory = get_post_field( 'post_name', get_post() );
+
+					if ( 'booking-form' === $pan_directory ) {
+						$pan_directory = 'reserve';
+					}
+
+					echo esc_html( '/' . $pan_directory );
 				} else {
 					echo esc_html( '/' . get_post_type_object( get_post_type() )->name );
 				}
-				?>">
+				?>
+				">	
 				<?php
 				if ( is_page() ) {
-					echo esc_html( strtoupper( get_post_field( 'post_name', get_post() ) ) );
+					$h2_page_title = get_post_field( 'post_name', get_post() );
+
+					if ( 'booking-form' === $h2_page_title || 'booking-thanks' === $h2_page_title ) {
+
+						$h2_page_title = 'reserve';
+					}
+					echo esc_html( strtoupper( $h2_page_title ) );
 				} else {
 					echo esc_html( get_post_type_object( get_post_type() )->label );
 				}

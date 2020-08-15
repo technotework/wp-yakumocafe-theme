@@ -7,28 +7,29 @@
 
 get_header();
 ?>
-	
 	<!--main-->
 	<main class="p-main">
-		<article class="p-content-about">
+		<article>
 			<!--ごあいさつ-->
 			<section>
 				<div class="u-i-center">
-					<h3 class="c-h__article p-h__article">ごあいさつ</h3>
+					<h3 class="c-h__article p-h__article">ご予約</h3>
 				</div>
-				
-				<?php
-					while ( have_posts() ) :
-						the_post();
 
-						
-						the_content();
-				
-						
+				<!--コンテンツ-->
+				<div class="p-full u-center ">
 
-					endwhile; // End of the loop.
-					?>
+					<div class="reserve-form">
+						<?php
+						while ( have_posts() ) :
+							the_post();
 
+							the_content();
+
+							endwhile; // End of the loop.
+						?>
+					</div>
+				</div>
 
 			</section>
 
