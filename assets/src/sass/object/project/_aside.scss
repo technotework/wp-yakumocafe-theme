@@ -5,6 +5,7 @@
 	left: 0;
 	width: 46px;
 	opacity: 0;
+	pointer-events: none;
 
 	&__top {
 
@@ -15,6 +16,13 @@
 }
 
 .p-aside {
+
+
+	@include responsive($res1) {
+
+		display: none;
+	}
+
 
 	position: sticky;
 	top: 50px;

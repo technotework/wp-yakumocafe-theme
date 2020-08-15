@@ -30,6 +30,15 @@
 					wp_nav_menu( $args );
 					?>
 
+					<div class="p-footer-nav__chofu-alt l-flex-vcenter">
+						<a href="/guide">
+							CHOFU GUIDE
+						</a>
+						<div class="p-footer-nav__chofu-logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/images/footer-citylogo.png' ); ?>" alt="CHOFU GUIDE" class="c-res-img">
+						</div>
+					</div>
+
 				</nav>
 
 				<div class="p-footer-nav__logo">

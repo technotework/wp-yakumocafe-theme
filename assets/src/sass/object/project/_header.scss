@@ -13,7 +13,7 @@
 	&__contents {
 
 		position: relative;
-		width: $base-width;
+		max-width: $base-width;
 	}
 
 	&__logo {
@@ -110,7 +110,7 @@
 
 .p-header-pan {
 
-	width: $base-width;
+	max-width: $base-width;
 
 	@include respBG("images/pankuzu-head.gif","l",21px,53px);
 

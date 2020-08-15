@@ -8,10 +8,10 @@
 	get_header( 'home' );
 ?>
 	<!--main-->
-	<main class="p-main__top">
+	<main class="p-main">
 		<article class="p-main__article">
 			<!--今月のおすすめ-->
-			<section>
+			<section class="p-section">
 				<div class="u-i-center">
 					<h2 class="c-h__article p-h__article">今月のおすすめ</h2>
 				</div>
@@ -54,7 +54,7 @@
 			</section>
 
 			<!--EVENT&TOPICS-->
-			<section>
+			<section class="p-section">
 
 				<div class="u-i-center">
 					<h2 class="c-h__article p-h__article">EVENT&TOPICS</h2>

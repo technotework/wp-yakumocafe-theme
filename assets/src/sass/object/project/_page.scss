@@ -1,16 +1,16 @@
 .p-side-indent {
 
-	width: $base-width;
+	max-width: $base-width;
 	padding: unit(2) 0 0 26px;
 }
 
 .p-both-indent {
 
-	width: $base-width;
+	max-width: $base-width;
 	padding: unit(2) 90px 0 90px;
 }
 
 .p-full {
 
-	width: $base-width;
+	max-width: $base-width;
 }

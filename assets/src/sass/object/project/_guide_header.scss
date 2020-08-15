@@ -22,7 +22,7 @@
 	&__contents {
 
 		position: relative;
-		width: $base-width;
+		max-width: $base-width;
 	}
 
 	&__logo {

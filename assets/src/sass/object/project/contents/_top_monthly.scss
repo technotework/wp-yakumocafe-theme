@@ -9,20 +9,34 @@
 	padding-top: unit(2);
 	padding-bottom: unit(3);
 
+	@include responsive($res1) {
+		background-position: top 6px left calc(50% + 524px), bottom 1px left calc(50% - 425px);
+	}
+
+	@include responsive($res3) {
+		background-image: none;
+	}
+
+	@include responsive($res4) {
+
+		padding-top: 3.2rem;
+		padding-bottom: 7rem;
+	}
+
 	&__lists {
-		width: 677px;
+		max-width: 677px;
 	}
 
 	&__container {
 
 		position: relative;
-		width: 677px;
+		max-width: 677px;
 		padding-top: unit(1);
 	}
 
 	&__fig {
 
-		width: 677px;
+		max-width: 677px;
 
 	}
 
@@ -36,15 +50,20 @@
 
 		display: block;
 		text-align: justify;
-		width: 385px;
+		max-width: 385px;
 		margin-top: unit(1);
+
+		@include responsive($res4) {
+			letter-spacing: 0.23rem;
+			margin-top: unit(0.5);
+		}
+
 	}
 
 	&__badge {
 		position: absolute;
 		top: 0;
 		right: 30px;
-
 		display: inline-block;
 		background-image: url(images/top-menu-monthbg.png);
 		background-color: $theme4;
@@ -56,6 +75,12 @@
 		padding: 1.4rem 1.6rem 1.8rem 1.6rem;
 		letter-spacing: 0.3rem;
 		z-index: 888;
+
+		@include responsive($res4) {
+			font-size: 3rem;
+			padding-bottom: 1rem 1rem 1.4rem 1rem;
+			right: 14px;
+		}
 	}
 
 	&__nav {
@@ -66,12 +91,28 @@
 		top: 234px;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
+		z-index: 999;
+
+		@include responsive($res2) {
+			top: calc(50% - 50px);
+		}
+
+		@include responsive($res4) {
+			top: calc(50% - 50px);
+			width: 57px;
+			height: 57px;
+		}
 	}
 
 	&__button {
-		width: 685px;
+		max-width: 685px;
 		text-align: right;
 		margin-top: unit(0.5);
+
+		@include responsive($res4) {
+
+			margin-top: 1.8rem;
+		}
 	}
 
 	&__back {
@@ -79,6 +120,14 @@
 		@extend .p-content-monthly__nav;
 		left: calc(50% - 454px);
 		background-image: url(images/top-menu-back.gif);
+
+		@include responsive($res2) {
+			left: 16px;
+		}
+
+		@include responsive($res4) {
+			left: -9px;
+		}
 	}
 
 	&__next {
@@ -86,6 +135,15 @@
 		@extend .p-content-monthly__nav;
 		left: calc(50% + 390px);
 		background-image: url(images/top-menu-next.gif);
+
+		@include responsive($res2) {
+			left: auto;
+			right: 16px;
+		}
+
+		@include responsive($res4) {
+			right: -9px;
+		}
 	}
 
 
@@ -97,6 +155,14 @@
 		width: 251px;
 		height: 121px;
 		z-index: 999;
+
+		@include responsive($res1) {
+			left: calc(50% - 462px);
+		}
+
+		@include responsive($res2) {
+			display: none;
+		}
 	}
 
 	&__right-cloud {
@@ -107,6 +173,14 @@
 		top: 468px;
 		left: calc(50% + 270px);
 		z-index: 999;
+
+		@include responsive($res1) {
+			left: calc(50% + 238px);
+		}
+
+		@include responsive($res2) {
+			display: none;
+		}
 	}
 
 }

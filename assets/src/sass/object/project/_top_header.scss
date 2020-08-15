@@ -28,6 +28,12 @@
 		z-index: 999999;
 		overflow: hidden;
 		border-radius: 0 0 10px 10px;
+
+		@include responsive($res3) {
+			width: 25.8vw;
+			height: 28.5vw;
+			left: calc(50% - 30.8%);
+		}
 	}
 
 	&__badge {
@@ -38,6 +44,13 @@
 		left: calc(50% + 31vw);
 		transform: translateX(-50%);
 		z-index: 999999;
+
+		@include responsive($res3) {
+			width: 17vw;
+			height: 17vw;
+			top: 21vw;
+			left: calc(50% + 30vw);
+		}
 	}
 
 	&__onepoint {

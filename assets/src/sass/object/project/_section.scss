@@ -1,0 +1,8 @@
+
+.p-section {
+
+	@include responsive($res3) {
+
+		@include resMiniContainer;
+	}
+}

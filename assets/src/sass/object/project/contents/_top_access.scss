@@ -1,12 +1,30 @@
+
 .p-content-access {
 
 	&__info {
 
-		width: $base-width;
+		max-width: $base-width;
 		margin-bottom: unit(1);
 
 		a {
 			color: $black;
+		}
+
+		@include responsive($res1) {
+			padding: 0 32px;
+		}
+
+		@include responsive($res3) {
+
+			@include resMiniContainer;
+			padding-bottom: unit(1);
+		}
+
+		@include responsive($res4) {
+
+			display: block;
+			margin: 0;
+			padding: 0 16px unit(1) 16px;
 		}
 	}
 
@@ -14,6 +32,11 @@
 
 		display: inline-block;
 		padding: 0 15px 0 30px;
+
+		@include responsive($res4) {
+			display: block;
+			padding: unit(1) 0 0 0;
+		}
 	}
 
 	&__address {
@@ -21,6 +44,7 @@
 		address {
 			padding-right: 15px;
 		}
+
 	}
 
 	&__map {
@@ -28,5 +52,9 @@
 		width: 100%;
 		height: 486px;
 		background-color: $black;
+
+		@include responsive($res4) {
+			height: 223px;
+		}
 	}
 }

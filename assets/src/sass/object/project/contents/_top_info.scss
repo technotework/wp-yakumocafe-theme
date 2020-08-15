@@ -5,12 +5,43 @@
 	background-image: url(images/top-info-bg1.gif);
 	background-repeat: no-repeat;
 	background-position: top 0 left calc(50% + 479px);
+
+	@include responsive($res1) {
+		background-position: top 79px left calc(50% + 414px);
+	}
+
+	@include responsive($res3) {
+		background-image: none;
+
+		@include resMiniContainer;
+		margin-bottom: unit(4);
+	}
+
+	@include responsive($res4) {
+		padding-top: 0;
+		margin-bottom: 7rem;
+	}
 }
 
 .p-content-info {
 
-	width: $base-width;
+	max-width: $base-width;
 	margin-top: unit(2);
+
+	@include responsive($res1) {
+		padding: 0 32px;
+	}
+
+	@include responsive($res3) {
+		padding: 0 16px;
+	}
+
+	@include responsive($res4) {
+
+		padding: 0;
+		margin-top: unit(2);
+	}
+
 
 	&__listitem {
 		width: 100%;
@@ -21,6 +52,14 @@
 
 		&:nth-of-type(n+2) {
 			margin-top: 9px;
+		}
+
+
+		@include responsive($res4) {
+
+			display: block;
+			margin-bottom: 14px;
+			border-bottom: solid 1px $gray1;
 		}
 	}
 
@@ -34,6 +73,12 @@
 			font-weight: 700;
 			color: $theme1;
 		}
+
+		@include responsive($res4) {
+
+			padding: 0;
+			border: none;
+		}
 	}
 
 	&__content {
@@ -46,6 +91,11 @@
 		a {
 			color: $black;
 			letter-spacing: 0.23rem;
+		}
+
+		@include responsive($res4) {
+
+			border: none;
 		}
 	}
 

@@ -1,40 +1,72 @@
 .p-content-event {
 
-	width: 1024px;
+	max-width: $base-width;
 	margin-top: unit(3);
 	margin-bottom: unit(2);
+
+	@include responsive($res4) {
+		margin-top: unit(2);
+		margin-bottom: 4.2rem;
+	}
 
 	a {
 		color: $black;
 	}
 
 	&__list {
-		width: 1024px;
+		max-width: $base-width;
 	}
 
 	&__listitem {
 		width: 320px;
 		margin-left: 32px;
 
+		@include responsive($res1) {
+
+			width: 667px;
+			margin: 0 auto;
+		}
+
+
 		&:last-child {
 			margin-left: 0;
+
+			@include responsive($res1) {
+
+				margin: 0 auto;
+			}
 		}
 	}
 
 	&__image {
-		width: 320px;
 		height: 280px;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		border-radius: $radius;
+
+		@include responsive($res1) {
+
+			height: auto;
+			padding-top: 60%;
+		}
 	}
 
 	&__text {
 
-		width: 320px;
 		padding-top: unit(1);
 		text-align: justify;
 		letter-spacing: 0.23rem;
+
+		@include responsive($res1) {
+
+			padding-bottom: unit(2);
+		}
+
+		@include responsive($res4) {
+
+			padding-top: 1.6rem;
+			padding-bottom: unit(2);
+		}
 	}
 }

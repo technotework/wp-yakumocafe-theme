@@ -8,7 +8,7 @@
 /*ご挨拶*/
 .p-content-greet {
 
-	width: $base-width;
+	max-width: $base-width;
 	padding: unit(2) 0 unit(4) 0;
 
 	&__profile {
@@ -64,7 +64,7 @@
 
 .p-content-commit {
 
-	width: $base-width;
+	max-width: $base-width;
 	padding: unit(2) 0 unit(3) 0;
 
 	&__text {
@@ -88,7 +88,7 @@
 
 	&__text {
 
-		width: $base-width;
+		max-width: $base-width;
 	}
 
 	&__img {

@@ -21,13 +21,13 @@
 
 .p-content-menu {
 
-	width: $base-width;
+	max-width: $base-width;
 	margin: unit(2) 0;
 
 	&__caption {
 
 		display: block;
-		width: $base-width;
+		max-width: $base-width;
 		line-height: 2.8rem;
 		text-align: right;
 		padding-bottom: unit(3);
