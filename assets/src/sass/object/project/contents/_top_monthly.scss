@@ -175,7 +175,7 @@
 		z-index: 999;
 
 		@include responsive($res1040) {
-			left: calc(50% + 238px);
+			left: calc(50% + 235px);
 		}
 
 		@include responsive($res950) {

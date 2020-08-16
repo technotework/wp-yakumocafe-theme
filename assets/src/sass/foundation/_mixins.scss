@@ -116,6 +116,15 @@ font mixins
 	@include textFactory($f-main, $text, "regular", 2.8rem);
 	@include containerFactory($base1, 0, 0 0 0 0);
 	font-feature-settings: "palt" 1;
+
+	min-height: 100vh;
+
+	padding-bottom: 352px;
+
+	@include responsive($res520) {
+
+		padding-bottom: 251px;
+	}
 }
 
 @mixin ff {

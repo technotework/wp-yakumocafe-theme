@@ -64,3 +64,20 @@ a:active {
 	color: $link;
 }
 
+br.mob {
+
+	display: none;
+
+	@include responsive($res520) {
+		display: inline;
+	}
+}
+
+br.pc {
+
+	display: inline;
+
+	@include responsive($res520) {
+		display: none;
+	}
+}
