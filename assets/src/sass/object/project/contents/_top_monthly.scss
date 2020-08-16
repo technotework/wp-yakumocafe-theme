@@ -98,9 +98,9 @@
 		}
 
 		@include responsive($res520) {
-			top: calc(50% - 50px);
-			width: 57px;
-			height: 57px;
+			top: calc(50% - 61px);
+			width: 54px;
+			height: 54px;
 		}
 	}
 
@@ -126,7 +126,7 @@
 		}
 
 		@include responsive($res520) {
-			left: -9px;
+			left: -25px;
 		}
 	}
 
@@ -142,7 +142,7 @@
 		}
 
 		@include responsive($res520) {
-			right: -9px;
+			right: -25px;
 		}
 	}
 

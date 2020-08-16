@@ -1,0 +1,10 @@
+.p-fullscreen {
+
+	background-color: transparent;
+
+	@include responsive($res670) {
+
+		background-color: #000;
+		opacity: 0.6;
+	}
+}

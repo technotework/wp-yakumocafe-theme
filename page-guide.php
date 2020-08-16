@@ -44,7 +44,7 @@ get_header( 'guide' );
 			<div id="guide-map"></div>
 			<!--パネル-->
 			<div class="js-guide-panel p-guide-panel">
-				<div class="p-guide-panel__container  l-flex u-center">
+				<div class="p-guide-panel__container  l-flex-nw u-center">
 					<figure class="p-guide-panel__img">
 						<img alt="getPanelInfo.title" class="js-panel-img c-res-img" />
 					</figure>
@@ -64,7 +64,7 @@ get_header( 'guide' );
 			</div>
 		</div>
 	</article>
-	<div class="c-fullscreen js-fullscreen"></div>
+	<div class="c-fullscreen p-fullscreen js-fullscreen"></div>
 </main>
 
 <?php

@@ -2,6 +2,11 @@
 
 	width: 100%;
 	height: calc(100vh - 48px);
+
+	@include responsive($res520) {
+
+		height: calc(100vh - 130px);
+	}
 }
 
 /*========================
@@ -23,6 +28,30 @@
 
 	@include shadow(5px,0.5);
 
+	@include responsive($res990) {
+
+		top: 67px;
+		margin-left: 32px;
+	}
+
+	@include responsive($res800) {
+		width: 153px;
+		border-radius: $radius;
+		display: block;
+		top: auto;
+		left: 32px;
+		bottom: 388px;
+		margin: 0;
+	}
+
+
+	@include responsive($res520) {
+
+		top: auto;
+		left: 21px;
+		bottom: 309px;
+	}
+
 	&__item {
 
 		width: 149px;
@@ -32,6 +61,12 @@
 			color: $white;
 			background-color: $theme1;
 			border-right: solid 1px $white;
+
+			@include responsive($res800) {
+
+				border-right: none;
+				border-bottom: solid 1px $white;
+			}
 		}
 
 		label {
@@ -49,6 +84,12 @@
 			text-align: center;
 			user-select: none;
 			border-right: solid 1px $theme1;
+
+			@include responsive($res800) {
+
+				border-right: none;
+				border-bottom: solid 1px $theme1;
+			}
 		}
 
 		&:last-child {
@@ -59,6 +100,11 @@
 
 				border-radius: 0 50px 50px 0;
 				border: none;
+
+				@include responsive($res800) {
+
+					border-radius: 0 0 $radius $radius;
+				}
 			}
 
 			label.checked {
@@ -72,6 +118,11 @@
 			label {
 
 				border-radius: 50px 0 0 50px;
+
+				@include responsive($res800) {
+
+					border-radius: $radius $radius 0 0;
+				}
 			}
 		}
 
@@ -90,10 +141,17 @@
 
 	display: none;
 	position: absolute;
-	top: calc(100vh - 262px);
+	top: calc(100vh - 283px);
 	left: 0;
 	width: 100%;
 	z-index: 99999999;
+	padding: 0 40px;
+
+
+	@include responsive($res670) {
+		top: 90px;
+		padding: 0 42px;
+	}
 
 	&__container {
 		position: relative;
@@ -105,6 +163,10 @@
 		padding: 23px 20px;
 
 		@include shadow(7px,0.3);
+
+		@include responsive($res670) {
+			display: block;
+		}
 	}
 
 	&__img {
@@ -114,15 +176,22 @@
 		line-height: 0;
 		overflow: hidden;
 		margin-right: 23px;
+
+		@include responsive($res670) {
+			width: 100%;
+			margin: 0 0 1.6rem 0;
+		}
 	}
 
 	&__content {
 
 		max-width: 663px;
+		flex: 1;
 
 		h3 {
 			margin-bottom: unit(1);
 		}
+
 	}
 
 	&__close {
@@ -141,6 +210,13 @@
 		height: auto;
 		bottom: -41px;
 		left: -28px;
+
+		@include responsive($res670) {
+			width: 126px;
+			bottom: auto;
+			top: -21px;
+			left: -11px;
+		}
 	}
 }
 
