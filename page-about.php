@@ -11,13 +11,13 @@ get_header();
 	<main class="p-main">
 		<article class="p-content-about">
 			<!--ごあいさつ-->
-			<section>
+			<section class="p-section__second">
 				<div class="u-i-center">
 					<h3 class="c-h__article p-h__article">ごあいさつ</h3>
 				</div>
 
 				<!--コンテンツ-->
-				<div class="p-content-greet u-center l-flex">
+				<div class="p-content-greet u-center l-flex-nw">
 
 					<div class="p-content-greet__profile">
 						<figure class="p-content-greet__image">
@@ -51,13 +51,13 @@ get_header();
 			</section>
 
 			<!--こだわり-->
-			<section>
+			<section class="p-section__second">
 				<div class="u-i-center">
 					<h3 class="c-h__article p-h__article">私たちのこだわり</h3>
 				</div>
 
 				<!--コンテンツ-->
-				<div class="p-content-commit u-center l-flex">
+				<div class="p-content-commit u-center l-flex-nw">
 
 					<p class="p-content-commit__text c-para">
 						当店のこだわりは、選び抜いた豆と熟練の職人による、自家焙煎珈琲です。<br />

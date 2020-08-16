@@ -4,7 +4,7 @@
 	margin-top: unit(3);
 	margin-bottom: unit(2);
 
-	@include responsive($res4) {
+	@include responsive($res520) {
 		margin-top: unit(2);
 		margin-bottom: 4.2rem;
 	}
@@ -21,7 +21,7 @@
 		width: 320px;
 		margin-left: 32px;
 
-		@include responsive($res1) {
+		@include responsive($res1040) {
 
 			width: 667px;
 			margin: 0 auto;
@@ -31,7 +31,7 @@
 		&:last-child {
 			margin-left: 0;
 
-			@include responsive($res1) {
+			@include responsive($res1040) {
 
 				margin: 0 auto;
 			}
@@ -45,7 +45,7 @@
 		background-size: cover;
 		border-radius: $radius;
 
-		@include responsive($res1) {
+		@include responsive($res1040) {
 
 			height: auto;
 			padding-top: 60%;
@@ -58,12 +58,12 @@
 		text-align: justify;
 		letter-spacing: 0.23rem;
 
-		@include responsive($res1) {
+		@include responsive($res1040) {
 
 			padding-bottom: unit(2);
 		}
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 
 			padding-top: 1.6rem;
 			padding-bottom: unit(2);

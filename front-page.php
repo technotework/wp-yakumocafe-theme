@@ -58,7 +58,7 @@
 			<section class="p-section">
 
 				<div class="u-i-center">
-					<h2 class="c-h__article p-h__article">EVENT&TOPICS</h2>
+					<h2 class="c-h__article p-h__article__ls0">EVENT&TOPICS</h2>
 				</div>
 
 				<!--コンテンツ-->

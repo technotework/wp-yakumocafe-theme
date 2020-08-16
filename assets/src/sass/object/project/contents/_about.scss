@@ -3,6 +3,11 @@
 	background-image: url(images/about-cloud-bg.gif);
 	background-repeat: no-repeat;
 	background-position: top 425px right calc(50% + -536px);
+
+	@include responsive($res950) {
+
+		background-image: none;
+	}
 }
 
 /*ご挨拶*/
@@ -11,12 +16,24 @@
 	max-width: $base-width;
 	padding: unit(2) 0 unit(4) 0;
 
+	@include responsive($res800) {
+
+		display: block;
+	}
+
 	&__profile {
 
 		position: relative;
 		width: 320px;
 		margin-right: 60px;
 		padding-top: headshift(1.6rem);
+
+		@include responsive($res800) {
+
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: unit(2);
+		}
 
 	}
 
@@ -29,7 +46,7 @@
 	}
 
 	&__text {
-
+		flex: 1;
 		max-width: 644px;
 	}
 
@@ -49,14 +66,29 @@
 		height: 100px;
 		top: -45px;
 		left: -23px;
+
+		@include responsive($res800) {
+
+			width: 200px;
+			top: -36px;
+			left: -14px;
+		}
 	}
 
 	&__right-cloud {
 		position: absolute;
 		width: 235px;
 		height: 111px;
-		bottom: -55px;
+		top: 288px;
 		right: -45px;
+
+		@include responsive($res800) {
+
+			top: auto;
+			width: 199px;
+			bottom: -66px;
+			right: -23px;
+		}
 	}
 }
 
@@ -67,15 +99,29 @@
 	max-width: $base-width;
 	padding: unit(2) 0 unit(3) 0;
 
+	@include responsive($res800) {
+
+		display: block;
+	}
+
+
 	&__text {
 
-		width: 672px;
+		max-width: 672px;
+		flex: 1;
 	}
 
 	&__image {
 		width: 320px;
 		margin-left: 32px;
 		line-height: 0;
+
+		@include responsive($res800) {
+
+			width: 100%;
+			margin-left: 0;
+			margin-top: unit(1);
+		}
 	}
 
 }
@@ -89,6 +135,12 @@
 	&__text {
 
 		max-width: $base-width;
+
+
+		@include responsive($res1040) {
+
+			padding: 0 32px;
+		}
 	}
 
 	&__img {

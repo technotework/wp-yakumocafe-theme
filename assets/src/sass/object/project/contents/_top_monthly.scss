@@ -9,15 +9,15 @@
 	padding-top: unit(2);
 	padding-bottom: unit(3);
 
-	@include responsive($res1) {
+	@include responsive($res1040) {
 		background-position: top 6px left calc(50% + 524px), bottom 1px left calc(50% - 425px);
 	}
 
-	@include responsive($res2) {
+	@include responsive($res950) {
 		background-image: none;
 	}
 
-	@include responsive($res4) {
+	@include responsive($res520) {
 
 		padding-top: 3.2rem;
 		padding-bottom: 7rem;
@@ -53,7 +53,7 @@
 		max-width: 385px;
 		margin-top: unit(1);
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 			letter-spacing: 0.23rem;
 			margin-top: unit(0.5);
 		}
@@ -76,7 +76,7 @@
 		letter-spacing: 0.3rem;
 		z-index: 888;
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 			font-size: 3rem;
 			padding-bottom: 1rem 1rem 1.4rem 1rem;
 			right: 14px;
@@ -93,11 +93,11 @@
 		background-size: 100% auto;
 		z-index: 999;
 
-		@include responsive($res2) {
+		@include responsive($res950) {
 			top: calc(50% - 50px);
 		}
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 			top: calc(50% - 50px);
 			width: 57px;
 			height: 57px;
@@ -109,7 +109,7 @@
 		text-align: right;
 		margin-top: unit(0.5);
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 
 			margin-top: 1.8rem;
 		}
@@ -121,11 +121,11 @@
 		left: calc(50% - 454px);
 		background-image: url(images/top-menu-back.gif);
 
-		@include responsive($res2) {
+		@include responsive($res950) {
 			left: 16px;
 		}
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 			left: -9px;
 		}
 	}
@@ -136,12 +136,12 @@
 		left: calc(50% + 390px);
 		background-image: url(images/top-menu-next.gif);
 
-		@include responsive($res2) {
+		@include responsive($res950) {
 			left: auto;
 			right: 16px;
 		}
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 			right: -9px;
 		}
 	}
@@ -156,11 +156,11 @@
 		height: 121px;
 		z-index: 999;
 
-		@include responsive($res1) {
+		@include responsive($res1040) {
 			left: calc(50% - 462px);
 		}
 
-		@include responsive($res2) {
+		@include responsive($res950) {
 			display: none;
 		}
 	}
@@ -174,11 +174,11 @@
 		left: calc(50% + 270px);
 		z-index: 999;
 
-		@include responsive($res1) {
+		@include responsive($res1040) {
 			left: calc(50% + 238px);
 		}
 
-		@include responsive($res2) {
+		@include responsive($res950) {
 			display: none;
 		}
 	}

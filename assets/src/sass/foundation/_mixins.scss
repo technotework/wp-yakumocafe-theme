@@ -180,12 +180,13 @@ font mixins
 Base Layout Vars
 =================================*/
 
-$res1: 1040px;
-$res2: 950px;
-$res3: 712px;
-$res4: 520px;
+$res1040: 1040px;
+$res990: 990px;
+$res950: 950px;
+$res800: 800px;
+$res712: 712px;
+$res520: 520px;
 
-$res_sub1: 990px;
 
 @mixin responsive($w) {
 
@@ -196,7 +197,7 @@ $res_sub1: 990px;
 
 @mixin resMiniContainer {
 
-	margin: 0 16px;
+	margin: 0 32px;
 }
 
 //space

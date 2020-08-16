@@ -10,21 +10,21 @@
 			color: $black;
 		}
 
-		@include responsive($res1) {
+		@include responsive($res1040) {
 			padding: 0 32px;
 		}
 
-		@include responsive($res3) {
+		@include responsive($res712) {
 
 			@include resMiniContainer;
 			padding-bottom: unit(1);
 		}
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 
 			display: block;
 			margin: 0;
-			padding: 0 16px unit(1) 16px;
+			padding: 0 32px unit(1) 32px;
 		}
 	}
 
@@ -33,7 +33,7 @@
 		display: inline-block;
 		padding: 0 15px 0 30px;
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 			display: block;
 			padding: unit(1) 0 0 0;
 		}
@@ -53,7 +53,7 @@
 		height: 486px;
 		background-color: $black;
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 			height: 223px;
 		}
 	}

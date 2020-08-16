@@ -16,7 +16,7 @@
 		position: relative;
 		max-width: $base_width;
 
-		@include responsive($res2) {
+		@include responsive($res950) {
 			flex-direction: row-reverse;
 		}
 	}
@@ -29,7 +29,7 @@
 		color: $white;
 		padding-bottom: unit(2);
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 			padding-bottom: unit(1);
 		}
 
@@ -45,11 +45,11 @@
 		border-radius: $radius $radius 0 0;
 		cursor: pointer;
 
-		@include responsive($res1) {
+		@include responsive($res1040) {
 			right: 32px;
 		}
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 			left: calc(50% - 29px);
 		}
 
@@ -60,16 +60,16 @@
 
 	width: 440px;
 
-	@include responsive($res1) {
+	@include responsive($res1040) {
 		width: 330px;
 	}
 
-	@include responsive($res2) {
+	@include responsive($res950) {
 		width: 275px;
 		margin-left: 58px;
 	}
 
-	@include responsive($res4) {
+	@include responsive($res520) {
 		display: none;
 	}
 
@@ -85,7 +85,7 @@
 			letter-spacing: 0.15rem;
 		}
 
-		@include responsive($res2) {
+		@include responsive($res950) {
 
 			padding-top: 64px;
 		}
@@ -96,12 +96,12 @@
 		width: 440px;
 		padding: 82px 0 0 95px;
 
-		@include responsive($res1) {
+		@include responsive($res1040) {
 			width: 330px;
 			padding: 82px 0 0 64px;
 		}
 
-		@include responsive($res2) {
+		@include responsive($res950) {
 			display: none;
 		}
 	}
@@ -112,7 +112,7 @@
 		padding: 41px 0 23px 0;
 
 
-		@include responsive($res4) {
+		@include responsive($res520) {
 			width: 93px;
 			padding: unit(1) 0 23px 0;
 		}
@@ -134,7 +134,7 @@
 		@extend .p-footer-nav__chofu;
 		display: none;
 
-		@include responsive($res2) {
+		@include responsive($res950) {
 			display: flex;
 			margin: 5px 0 0 0;
 		}
@@ -146,7 +146,7 @@
 		height: 23px;
 		margin-left: 13px;
 
-		@include responsive($res2) {
+		@include responsive($res950) {
 			display: none;
 		}
 

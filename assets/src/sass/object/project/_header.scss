@@ -9,7 +9,7 @@
 		height: 56px;
 		background-color: $theme1;
 
-		@include responsive($res_sub1) {
+		@include responsive($res990) {
 			height: 12px;
 		}
 	}
@@ -30,10 +30,16 @@
 		overflow: hidden;
 		border-radius: 0 0 10px 10px;
 
-		@include responsive($res_sub1) {
+		@include responsive($res990) {
 			width: 137px;
 			height: 151px;
 			top: 8px;
+		}
+
+		@include responsive($res520) {
+
+			width: 99px;
+			left: 16px;
 		}
 	}
 
@@ -44,9 +50,40 @@
 		top: 18px;
 		right: 39px;
 
-		@include responsive($res_sub1) {
+		@include responsive($res990) {
 
 			top: 83px;
+		}
+
+		@include responsive($res712) {
+
+			right: 10px;
+		}
+
+		@include responsive($res520) {
+
+			width: 69px;
+			height: 69px;
+			top: 99px;
+			right: 10px;
+		}
+	}
+}
+
+
+.post-type-archive-event {
+
+	.p-header {
+
+		&__badge {
+
+			@include responsive($res520) {
+
+				width: 69px;
+				height: 69px;
+				top: 99px;
+				right: 10px;
+			}
 		}
 	}
 }
@@ -69,7 +106,7 @@
 
 .p-header-nav {
 
-	@include responsive($res_sub1) {
+	@include responsive($res990) {
 		display: none;
 	}
 
@@ -135,6 +172,17 @@
 
 	margin-top: unit(1);
 	margin-bottom: unit(1);
+
+	@include responsive($res1040) {
+		padding-left: 99px;
+		background-position: left 46px center;
+	}
+
+	@include responsive($res520) {
+		padding-left: 85px;
+		background-position: left 33px center;
+	}
+
 
 	li {
 

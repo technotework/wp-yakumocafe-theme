@@ -118,7 +118,7 @@
 			<?php
 				$args = array(
 
-					'menu'       => 'top',
+					'menu'       => 'top_mobile',
 					'menu_class' => 'p-mobile-nav__list',
 					'container'  => false,
 				);

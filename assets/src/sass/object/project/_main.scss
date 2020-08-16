@@ -2,7 +2,7 @@
 
 	margin-bottom: $footer_height;
 
-	@include responsive($res4) {
+	@include responsive($res520) {
 		margin-bottom: 252px;
 	}
 }

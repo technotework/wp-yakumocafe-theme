@@ -118,7 +118,7 @@
 			<?php
 				$args = array(
 
-					'menu'       => 'second',
+					'menu'       => 'second_mobile',
 					'menu_class' => 'p-mobile-nav__list',
 					'container'  => false,
 				);
