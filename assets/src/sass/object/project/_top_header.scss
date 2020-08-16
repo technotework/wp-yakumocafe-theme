@@ -66,6 +66,13 @@
 			width: 6.5vw;
 			left: calc(50% - 2.8vw);
 		}
+
+		@include responsive($res520) {
+
+			width: 8.3vw;
+			top: 51vw;
+			left: calc(50% - 3.5vw);
+		}
 	}
 
 }
