@@ -4,6 +4,13 @@
 	margin-bottom: unit(1);
 	border-bottom: solid 1px $gray1;
 
+	> section {
+
+		@include responsive($res712) {
+			display: block;
+		}
+	}
+
 	&:last-child {
 		border: none;
 	}
@@ -18,10 +25,36 @@
 		border-radius: $radius;
 		line-height: 0;
 		overflow: hidden;
+
+		@include responsive($res712) {
+
+			width: 100%;
+			margin-bottom: 1.6rem;
+		}
 	}
 
 	&__description {
 
 		max-width: 734px;
+		flex: 1;
+	}
+}
+
+
+.post-type-archive-event .p-h__page,
+.single-event .p-h__page {
+
+	@include responsive($res520) {
+
+		padding: 37px 0 0 133px;
+	}
+
+}
+
+.single-event .p-h__timestamp {
+
+	@include responsive($res712) {
+
+		display: none;
 	}
 }

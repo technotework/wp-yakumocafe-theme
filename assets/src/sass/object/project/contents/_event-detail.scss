@@ -1,11 +1,13 @@
 .p-content-event-detail {
 
+
 	&__mainimage {
 
 		width: 100%;
-		height: 336px;
+		height: auto;
 		overflow: hidden;
 		border-radius: $radius;
 		margin-bottom: unit(1);
+		line-height: 0;
 	}
 }

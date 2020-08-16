@@ -7,7 +7,7 @@
 
 ?>
 <li class="p-content-eventlist-item">
-	<section class="l-flex">
+	<section class="l-flex-nw">
 			<figure class="p-content-eventlist-item__fig">
 				<a href="<?php the_permalink(); ?>">
 					<img src="

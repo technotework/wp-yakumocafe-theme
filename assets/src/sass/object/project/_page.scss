@@ -2,12 +2,24 @@
 
 	max-width: $base-width;
 	padding: unit(2) 0 0 26px;
+
+	@include responsive($res712) {
+
+		padding: unit(1.25) 0 0 0;
+	}
+
 }
 
 .p-both-indent {
 
 	max-width: $base-width;
 	padding: unit(2) 90px 0 90px;
+
+	@include responsive($res712) {
+
+		padding: unit(1.25) 0 0 0;
+	}
+
 }
 
 .p-full {

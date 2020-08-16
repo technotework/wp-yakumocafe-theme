@@ -14,15 +14,31 @@
 		}
 	}
 
-	&__back a {
+	&__back {
 
-		@include respBG("images/back.gif","l",28px,40px);
+		@include responsive($res712) {
 
+			padding-left: 32px;
+		}
+
+		a {
+
+			@include respBG("images/back.gif","l",28px,40px);
+		}
 	}
 
-	&__next a {
 
-		@include respBG("images/next.gif","r",28px,40px);
-		text-align: right;
+	&__next {
+
+		@include responsive($res712) {
+
+			padding-right: 32px;
+		}
+
+		a {
+
+			@include respBG("images/next.gif","r",28px,40px);
+			text-align: right;
+		}
 	}
 }

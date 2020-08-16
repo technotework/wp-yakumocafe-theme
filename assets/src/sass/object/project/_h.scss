@@ -29,7 +29,11 @@
 		&__ls0 {
 
 			@extend .p-h__article;
-			letter-spacing: 0;
+
+			@include responsive($res712) {
+
+				letter-spacing: 0.1rem;
+			}
 		}
 	}
 
@@ -67,12 +71,3 @@
 	}
 }
 
-
-.post-type-archive-event .p-h__page,
-.single-event .p-h__page {
-
-	@include responsive($res520) {
-
-		padding: 37px 0 0 133px;
-	}
-}
