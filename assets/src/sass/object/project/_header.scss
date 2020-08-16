@@ -55,7 +55,7 @@
 			top: 83px;
 		}
 
-		@include responsive($res712) {
+		@include responsive($res715) {
 
 			right: 10px;
 		}
@@ -97,6 +97,24 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+
+	@include responsive($res1040) {
+
+		background-size: 119%;
+		background-position: left top;
+	}
+
+	@include responsive($res990) {
+
+		background-size: 132%;
+		background-position: left top;
+	}
+
+	@include responsive($res670) {
+
+		background-size: 185%;
+		background-position: left top;
+	}
 }
 
 
@@ -182,6 +200,7 @@
 		padding-left: 70px;
 		background-position: left 22px center;
 		margin-bottom: unit(1.25);
+
 	}
 
 

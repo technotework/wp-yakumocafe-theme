@@ -29,7 +29,7 @@
 		overflow: hidden;
 		border-radius: 0 0 10px 10px;
 
-		@include responsive($res712) {
+		@include responsive($res715) {
 			width: 25.8vw;
 			height: 28.5vw;
 			left: calc(50% - 30.8%);
@@ -45,7 +45,7 @@
 		transform: translateX(-50%);
 		z-index: 999999;
 
-		@include responsive($res712) {
+		@include responsive($res715) {
 			width: 17vw;
 			height: 17vw;
 			top: 21vw;
@@ -61,7 +61,7 @@
 		top: 46.3vw;
 		left: calc(50% - 1.69vw);
 
-		@include responsive($res712) {
+		@include responsive($res715) {
 
 			width: 6.5vw;
 			left: calc(50% - 2.8vw);

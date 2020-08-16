@@ -1,7 +1,7 @@
 
 .p-section {
 
-	@include responsive($res712) {
+	@include responsive($res715) {
 
 		@include resMiniContainer;
 	}
@@ -18,7 +18,7 @@
 
 .p-section__second2 {
 
-	@include responsive($res712) {
+	@include responsive($res715) {
 
 		padding: 0 32px;
 		margin: 0 auto;

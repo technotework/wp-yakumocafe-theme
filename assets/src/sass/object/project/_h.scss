@@ -30,7 +30,7 @@
 
 			@extend .p-h__article;
 
-			@include responsive($res712) {
+			@include responsive($res715) {
 
 				letter-spacing: 0.1rem;
 			}
@@ -42,7 +42,7 @@
 		letter-spacing: 0.4rem;
 		margin-bottom: unit(1);
 
-		@include responsive($res712) {
+		@include responsive($res715) {
 
 			margin-bottom: 1.6rem;
 		}

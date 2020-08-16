@@ -4,7 +4,7 @@
 
 	> section {
 
-		@include responsive($res712) {
+		@include responsive($res715) {
 
 			display: block;
 		}
@@ -24,7 +24,7 @@
 			height: 266px;
 		}
 
-		@include responsive($res712) {
+		@include responsive($res715) {
 
 			width: 100%;
 			height: auto;
