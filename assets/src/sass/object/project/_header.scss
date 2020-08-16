@@ -174,13 +174,14 @@
 	margin-bottom: unit(1);
 
 	@include responsive($res1040) {
-		padding-left: 99px;
-		background-position: left 46px center;
+		padding-left: 101px;
+		background-position: left 52px center;
 	}
 
 	@include responsive($res520) {
-		padding-left: 85px;
-		background-position: left 33px center;
+		padding-left: 70px;
+		background-position: left 22px center;
+		margin-bottom: unit(1.25);
 	}
 
 
