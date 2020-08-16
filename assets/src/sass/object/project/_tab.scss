@@ -2,6 +2,21 @@
 
 	margin: unit(2) 0;
 
+	@include responsive($res712) {
+
+		margin: unit(2) 0 unit(1) 0;
+	}
+
+	> ul {
+
+		@include responsive($res712) {
+
+			display: block;
+			width: 144px;
+			margin: 0 auto;
+		}
+	}
+
 	&__item {
 
 		width: 144px;
@@ -13,6 +28,11 @@
 		letter-spacing: 0.3rem;
 		cursor: pointer;
 		user-select: none;
+
+		@include responsive($res712) {
+
+			margin: 0;
+		}
 	}
 
 }

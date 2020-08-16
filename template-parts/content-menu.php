@@ -7,7 +7,7 @@
 
 ?>
 <li class="p-content-menulist-item">
-	<section class="l-flex">
+	<section class="l-flex-nw">
 		<figure class="p-content-menulist-item__fig u-ishadow">
 			<img src="<?php echo esc_url( get_field( 'menu_img' ) ); ?>" alt="<?php echo esc_html( get_field( 'menu_title' ) ); ?>" 
 			class="c-res-img"

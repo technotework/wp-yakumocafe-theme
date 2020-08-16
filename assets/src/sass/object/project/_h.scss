@@ -37,6 +37,11 @@
 
 		letter-spacing: 0.4rem;
 		margin-bottom: unit(1);
+
+		@include responsive($res712) {
+
+			margin-bottom: 1.6rem;
+		}
 	}
 
 	&__content2 {

@@ -2,6 +2,14 @@
 
 	margin-bottom: unit(2);
 
+	> section {
+
+		@include responsive($res712) {
+
+			display: block;
+		}
+	}
+
 	&__fig {
 		width: 232px;
 		height: 166px;
@@ -9,11 +17,29 @@
 		border-radius: $radius;
 		margin-right: 36px;
 		line-height: 0;
+
+		@include responsive($res1040) {
+
+			width: 372px;
+			height: 266px;
+		}
+
+		@include responsive($res712) {
+
+			width: 100%;
+			height: auto;
+			margin-bottom: 1.6rem;
+		}
 	}
 
 	&__description {
 
-		max-width: 214px;
+		width: 214px;
+		flex: 1;
+
+		@include responsive($res1040) {
+			width: auto;
+		}
 	}
 
 }
