@@ -14,7 +14,7 @@ get_header();
 	<main class="p-main">
 		<article class="p-main__article">
 			<!--イベント&トピックスー-->
-			<section>
+			<section class="p-section__second">
 				<div class="u-i-center">
 					<h3 class="c-h__article p-h__article">INFO</h3>
 				</div>
