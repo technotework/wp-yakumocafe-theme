@@ -11,7 +11,7 @@ get_header();
 <main class="p-main"> 
 	<article>
 		<!--ご予約-->
-		<section>
+		<section class="p-section__second">
 			<div class="u-i-center">
 				<h3 class="c-h__article p-h__article">ご予約</h3>
 			</div>

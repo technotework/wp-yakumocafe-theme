@@ -78,6 +78,11 @@
 			text-align: right;
 			letter-spacing: 0.2rem;
 
+			@include responsive($res670) {
+				top: 60px;
+			}
+
+
 			a {
 				color: $theme1;
 				font-weight: 700;
@@ -93,6 +98,11 @@
 			letter-spacing: 0.2rem;
 
 			@include respBG("images/back.gif","l",28px,40px);
+
+			@include responsive($res670) {
+				top: 60px;
+			}
+
 
 			a {
 				color: $theme1;
@@ -204,10 +214,18 @@
 
 			th {
 				width: 15%;
+
+				@include responsive($res950) {
+					width: 35%;
+				}
 			}
 
 			td {
 				width: 85%;
+
+				@include responsive($res950) {
+					width: 65%;
+				}
 			}
 
 			th,
