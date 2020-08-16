@@ -25,7 +25,7 @@
 			<div class="p-header__contents u-center">
 				<a href="/">
 					<h1 class="p-header__logo">
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/images/top_logo.gif' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="c-res-img">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/images/second-logo.gif' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="c-res-img">
 					</h1>
 				</a>
 

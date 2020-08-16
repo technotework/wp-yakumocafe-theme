@@ -108,7 +108,7 @@
 		width: 100%;
 		text-align: center;
 
-		@include responsive($res3) {
+		@include responsive($res_sub1) {
 
 			display: none;
 		}
@@ -171,7 +171,7 @@
 
 	display: none;
 
-	@include responsive($res3) {
+	@include responsive($res_sub1) {
 		display: block;
 	}
 }
@@ -190,11 +190,15 @@
 
 		position: absolute;
 		top: 0;
-		right: 16px;
+		right: 30px;
 		width: 41px;
 		height: 38px;
 		overflow: hidden;
 		z-index: 999;
+
+		@include responsive($res3) {
+			right: 16px;
+		}
 	}
 }
 
