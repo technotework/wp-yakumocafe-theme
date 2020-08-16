@@ -18,6 +18,7 @@
 </head>
 
 <body <?php body_class(); ?> id="pagetop">
+
 <?php wp_body_open(); ?>
 	<!--header-->
 	<header class="p-top-header js-top-header">

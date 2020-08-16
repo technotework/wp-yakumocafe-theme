@@ -105,6 +105,29 @@
 </script>
 <?php wp_footer(); ?>
 
+<!--moble menu-->
+<div class="p-mobile-nav-wrapper">
+	<div class="p-mobile-nav-container">
+		<div class="p-mobile-nav-container__btn js-mobile-nav-btn">
+			<img src="<?php echo esc_url( get_template_directory_uri() . '/images/mini-nav.png' ); ?>" class="c-res-img"
+				alt="ナビ">
+		</div>
+
+		<!--nav-->
+		<nav class="p-mobile-nav js-mobile-nav">
+			<?php
+				$args = array(
+
+					'menu'       => 'top',
+					'menu_class' => 'p-mobile-nav__list',
+					'container'  => false,
+				);
+				wp_nav_menu( $args );
+				?>
+		</nav>
+	</div>
+</div>
+<!--/moble menu-->
 </body>
 
 </html>

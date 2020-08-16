@@ -63,7 +63,8 @@
 
 		@include responsive($res3) {
 
-			display: none;
+			width: 6.5vw;
+			left: calc(50% - 2.8vw);
 		}
 	}
 
@@ -109,24 +110,15 @@
 
 		@include responsive($res3) {
 
-			display: block;
+			display: none;
 		}
 
 		> li {
 
-			@include responsive($res3) {
-
-				padding: 0 0 10px 0;
-				border-bottom: solid 1px $gray1;
-			}
 
 			&:first-child {
 				padding-left: 48px;
 
-				@include responsive($res3) {
-
-					padding: 0 0 10px 0;
-				}
 			}
 
 			position: relative;
@@ -149,12 +141,6 @@
 				top: -2px;
 				right: -25px;
 
-				@include responsive($res3) {
-
-					content: "";
-					top: 0;
-					right: 0;
-				}
 			}
 
 		}
@@ -167,5 +153,88 @@
 		}
 	}
 
+}
+
+/*========================
+* モバイルナビ
+========================*/
+
+.p-mobile-nav-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+
+	z-index: 99999999;
+
+	display: none;
+
+	@include responsive($res3) {
+		display: block;
+	}
+}
+
+.p-mobile-nav-container {
+
+	position: sticky;
+	width: 100%;
+	height: 12px;
+	top: 0;
+	left: 0;
+	pointer-events: auto;
+	background-color: $theme1;
+
+	&__btn {
+
+		position: absolute;
+		top: 0;
+		right: 16px;
+		width: 41px;
+		height: 38px;
+		overflow: hidden;
+		z-index: 999;
+	}
+}
+
+.p-mobile-nav {
+
+	display: none;
+	position: absolute;
+	width: 100%;
+	top: 12px;
+	left: 0;
+
+	&__list {
+
+		width: 100%;
+		text-align: center;
+		background-color: $white;
+
+		> li {
+
+			position: relative;
+			padding: 18px 0 4px 0;
+			margin-bottom: 10px;
+			border-bottom: solid 1px $gray1;
+
+			> a {
+
+				@include textFactory(1.6rem,$text2,"bold",$space-unit);
+				letter-spacing: 0.1rem;
+			}
+
+			> a:hover {
+				color: $theme3;
+			}
+
+			&:first-child {
+
+				padding: 41px 0 4px 0;
+			}
+		}
+
+	}
 
 }
