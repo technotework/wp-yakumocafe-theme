@@ -1,0 +1,18 @@
+.p-notfound {
+
+	padding: unit(3) 0 unit(6) 0;
+
+	&__img {
+
+		width: 139px;
+		height: auto;
+		margin: 0 auto;
+		padding-bottom: 20px;
+	}
+
+	&__text {
+
+		text-align: center;
+		color: #3b7d0b;
+	}
+}

@@ -62,6 +62,10 @@
 					$h2_page_title = 'reserve';
 				}
 				echo esc_html( strtoupper( $h2_page_title ) );
+			} elseif ( is_404() ) {
+
+				echo 'NOT FOUND';
+
 			} else {
 
 				echo esc_html( get_post_type_object( get_post_type() )->label );
@@ -84,6 +88,10 @@
 					}
 
 					echo esc_html( '/' . $pan_directory );
+				} elseif ( is_404() ) {
+
+					echo '/';
+
 				} else {
 					echo esc_html( '/' . get_post_type_object( get_post_type() )->name );
 				}
@@ -98,6 +106,10 @@
 						$h2_page_title = 'reserve';
 					}
 					echo esc_html( strtoupper( $h2_page_title ) );
+				} elseif ( is_404() ) {
+
+					echo 'NOT FOUND';
+
 				} else {
 					echo esc_html( get_post_type_object( get_post_type() )->label );
 				}
