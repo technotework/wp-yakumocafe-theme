@@ -92,6 +92,12 @@
 			}
 		}
 
+		_:-ms-input-placeholder,
+		label {
+			padding-top: 5px;
+		}
+
+
 		&:last-child {
 
 			border: none;

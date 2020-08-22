@@ -34,7 +34,7 @@
 
 	&__description {
 
-		width: 214px;
+		min-width: 214px;
 		flex: 1;
 
 		@include responsive($res1040) {

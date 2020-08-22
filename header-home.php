@@ -46,7 +46,7 @@
 			</svg>
 
 			<svg class="p-top-header-main__image">
-				<image xlink:href="<?php echo esc_url( get_template_directory_uri() . '/images/top_main.jpg' ); ?>" width="100%" clip-path="url(#mask)" />
+				<image xlink:href="<?php echo esc_url( get_template_directory_uri() . '/images/top_main.jpg' ); ?>" width="100%" height="100%" clip-path="url(#mask)" />
 			</svg>
 
 		</div>
