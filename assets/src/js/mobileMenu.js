@@ -25,9 +25,9 @@ function toggle(){
 
 		if($(this).is(':visible')){
 
-			$(".c-fullscreen").show();
+			$(".js-mobile-nav-fullscreen").show();
 		}else{
-			$(".c-fullscreen").hide();
+			$(".js-mobile-nav-fullscreen").hide();
 		}
 	});
 }
