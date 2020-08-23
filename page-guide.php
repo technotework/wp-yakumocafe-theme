@@ -16,10 +16,11 @@ get_header( 'guide' );
 			<nav>
 				<ul class="p-guide-nav l-flex">
 					<li class="p-guide-nav__item">
-						<label for="shop">
-							<input type="checkbox" name="shop" id="shop" value="shop" />
-							ショップ
+						<label for="nature">
+							<input type="checkbox" name="nature" id="nature" value="nature" />
+							公園と自然
 						</label>
+						
 					</li>
 					<li class="p-guide-nav__item">
 						<label for="amuse">
@@ -28,9 +29,9 @@ get_header( 'guide' );
 						</label>
 					</li>
 					<li class="p-guide-nav__item">
-						<label for="nature">
-							<input type="checkbox" name="nature" id="nature" value="nature" />
-							公園と自然
+						<label for="shop">
+							<input type="checkbox" name="shop" id="shop" value="shop" />
+							ショップ
 						</label>
 					</li>
 					<li class="p-guide-nav__item">

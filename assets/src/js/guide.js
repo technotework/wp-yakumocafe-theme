@@ -209,8 +209,8 @@ function hidePanel(){
  */
 function setupCBHandler() {
 
-	$(".p-guide-nav li input#shop").prop("checked",true);
-	setCheckStyle($(".p-guide-nav li input#shop"));
+	$(".p-guide-nav li input#nature").prop("checked",true);
+	setCheckStyle($(".p-guide-nav li input#nature"));
 
 	$(".p-guide-nav li input").on("change", function (e) {
 
