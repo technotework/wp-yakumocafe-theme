@@ -34,39 +34,59 @@ function init() {
  */
 function loadJson(callback) {
 
+	const baseURL = '/wp-json/wp/v2/guide-api';
 	//WP APIからデータ取得
-	axios.get('/wp-json/wp/v2/guide-api')
+	axios.get(baseURL)
 		.then(response => {
-
-			const res = response.data;
-			//新しいJSONの構築
-			let json = [];
-			for (let i = 0; i < res.length; i++) {
-
-				const result = {
-					img: res[i].acf.guide_img,
-					title: res[i].acf.guide_title,
-					text: res[i].acf.guide_text,
-					label: res[i].acf.guide_label,
-					lat: res[i].acf.guide_lat,
-					lng: res[i].acf.guide_long
-				}
-
-				//tagを数字から文字に直す
-				const tags = res[i].tags;
-				let newTagArray = [];
-				for (let j = 0; j < tags.length; j++) {
-
-					newTagArray.push(tag[tags[j]]);
-				}
-				result.types = newTagArray;
-
-				json.push(result);
+			//ページ数取得
+			let pages = response.headers["x-wp-totalpages"];
+			//リクエストリスト作成
+			let pageList = [];
+			for (let i = 1; i <= pages; i++) {
+				pageList.push(axios.get(baseURL + "?page=" + i));
 			}
+			//Promise all
+			Promise.all(pageList).then(val =>{
+				let res = [];
+				for (let i = 0; i < val.length; i++) {
+					//取得結果の配列
+					let list = val[i].data; 
+					//取得結果の配列を統合
+					for (let j = 0; j < list.length; j++) {
+						res.push(list[j]);
+					}
+				}
 
-			guides = json;
-			//完了
-			callback();
+				//新しいJSONの構築
+				let json = [];
+				for (let k = 0; k < res.length; k++) {
+
+					const result = {
+						img: res[k].acf.guide_img,
+						title: res[k].acf.guide_title,
+						text: res[k].acf.guide_text,
+						label: res[k].acf.guide_label,
+						lat: res[k].acf.guide_lat,
+						lng: res[k].acf.guide_long
+					}
+
+					//tagを数字から文字に直す
+					const tags = res[k].tags;
+					let newTagArray = [];
+					for (let i = 0; i < tags.length; i++) {
+
+						newTagArray.push(tag[tags[i]]);
+					}
+					result.types = newTagArray;
+
+					json.push(result);
+				}
+				//格納
+				guides = json;
+				//完了
+				callback();
+			});
+			
 		});
 
 }
