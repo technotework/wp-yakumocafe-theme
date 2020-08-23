@@ -20,12 +20,11 @@ get_header( 'guide' );
 							<input type="checkbox" name="nature" id="nature" value="nature" />
 							公園と自然
 						</label>
-						
 					</li>
 					<li class="p-guide-nav__item">
-						<label for="amuse">
-							<input type="checkbox" name="amuse" id="amuse" value="amuse" />
-							アミューズメント
+						<label for="shrine">
+							<input type="checkbox" name="shrine" id="shrine" value="shrine" />
+							神社仏閣
 						</label>
 					</li>
 					<li class="p-guide-nav__item">
@@ -35,9 +34,9 @@ get_header( 'guide' );
 						</label>
 					</li>
 					<li class="p-guide-nav__item">
-						<label for="shrine">
-							<input type="checkbox" name="shrine" id="shrine" value="shrine" />
-							神社仏閣
+					<label for="amuse">
+							<input type="checkbox" name="amuse" id="amuse" value="amuse" />
+							アミューズメント
 						</label>
 					</li>
 				</ul>
