@@ -29,6 +29,7 @@
 	left: 0;
 	pointer-events: auto;
 	background-color: $theme1;
+	z-index: 9999999;
 
 	&__btn {
 
@@ -38,7 +39,7 @@
 		width: 54px;
 		height: 51px;
 		overflow: hidden;
-		z-index: 999;
+		z-index: 99999999;
 
 		@include responsive($res715) {
 			right: 16px;
@@ -58,6 +59,11 @@
 	width: 100%;
 	top: 12px;
 	left: 0;
+
+	&__full {
+		display: none;
+		pointer-events: auto;
+	}
 
 	&__list {
 

@@ -126,6 +126,7 @@
 				?>
 		</nav>
 	</div>
+	<div class="c-fullscreen p-mobile-nav__full js-mobile-nav-fullscreen"></div>
 </div>
 <!--/moble menu-->
 </body>

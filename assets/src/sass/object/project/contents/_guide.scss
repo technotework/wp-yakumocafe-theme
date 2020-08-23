@@ -256,3 +256,10 @@
 		height: 100%;
 	}
 }
+
+_:-ms-input-placeholder,
+.js-info-box {
+
+	@include ffie;
+	padding-top: 5px;
+}
