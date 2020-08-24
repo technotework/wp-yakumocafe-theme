@@ -266,19 +266,4 @@ function wpqw_allowed_block_types( $allowed_block_types ) {
 }
 add_filter( 'allowed_block_types', 'wpqw_allowed_block_types' );
 
-/**
- * Menu html replace
- *
- * @param string $menu menuitem.
- */
-function replace_menu_html( $menu ) {
-	if ( is_singular( 'event' ) ) {
-		$menu = str_replace( '<li id="menu-item-184" class="', '<li id="menu-item-184" class="current-menu-item ', $menu );
-	} elseif ( is_page( 'booking-form' ) ) {
 
-		$menu = str_replace( '<li id="menu-item-175" class="', '<li id="menu-item-175" class="current-menu-item ', $menu );
-	}
-	return $menu;
-}
-
-add_filter( 'wp_nav_menu', 'replace_menu_html' );
