@@ -146,8 +146,9 @@ function createMakers(json) {
 			icon: '/wp-content/themes/yakumocafe/images/place-marker.png'
 		});
 
-		google.maps.event.addListener(marker, "click", function(e){ 
-			let label = $(e.ub.target).parent()[0].title;
+		google.maps.event.addListener(marker, "click", function(event){
+			
+			let label = $(event.vb.target).parent()[0].title;
 			setPanel(label);
 		 });
 		bounds.extend(marker.position);
